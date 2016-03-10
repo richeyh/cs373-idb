@@ -1,7 +1,15 @@
 from extensions import DB
 
+
 class Author(DB.model):
-	#need to add fields below
+	"""
+	id: primary key in the database
+	first_name: the first name of the author
+	last_name: the last name of the author
+	book_count: # of books in the database by the author
+	best_seller_date: last date of best seller by author
+	Books: all books the author wrote
+	"""
 	__tablename__="author"
 	id = DB.Column(DB.Integer, primary_key=True)
 	first_name = DB.Column(DB.String(150))
@@ -10,18 +18,39 @@ class Author(DB.model):
 	best_seller_date = DB.Column(DB.date())
 	Books = DB.relationship("Book")
 
+
 class Publisher(DB.model):
-	#need to add fields below
+	"""
+	id: primary key in the database
+	name: name of the publisher
+	location: location of the publisher
+	book_count: number of books by the publisher
+	Books: all books published 
+	metadata: search data for the publisher in this case all the book
+	categories
+	"""
 	__tablename__="publisher"
 	id = DB.Column(DB.Integer, primary_key=True)
 	name = DB.Column(DB.String(150))
 	location = DB.Column(DB.String(150))
 	book_count = DB.Column(DB.Integer)
 	Books = DB.relationship("Book")
-	metadata = DB.Column(DB.String(256)) #categories of books they are known for
+	metadata = DB.Column(DB.String(256))
+
 
 class Book(DB.model):
-	#need to add fields below
+	"""
+	id: primary key for the book object
+	isbn: the isbn # for the book
+	title: title of the book
+	summary: summary of the book by new york times
+	price: prise of the book
+	best_seller_date: date it made best seller best_seller_list
+	best_seller_list: the list or category it made the list for
+	book_image: url to the image for the book
+	author_id: primary key to the books author for linking
+	publisher_id: primary key to the books publisher for linking
+	"""
 	__tablename__="book "
 	id = DB.Column(DB.Integer, primary_key=True)
 	isbn = DB.Column(DB.String(150))
@@ -36,6 +65,16 @@ class Book(DB.model):
 
 
 class TeamMember(DB.model):
+	"""
+	id: primary key for TeamMember
+	image_url: url of image for picture
+	name: name of user
+	bio: biography for user
+	resp: responsibilities
+	issue: # of issues created
+	commits: # of commits
+	tests: # of tests written
+	"""
 	id = DB.Column(DB.Integer, primary_key=True)
 	image_url = DB.Column(DB.String(150))
 	name = DB.Column(DB.String(150))
