@@ -4,7 +4,8 @@ class Author(DB.model):
 	#need to add fields below
 	__tablename__="author"
 	id = DB.Column(DB.Integer, primary_key=True)
-	name = DB.Column(DB.String(150))
+	first_name = DB.Column(DB.String(150))
+	last_name = DB.Column(DB.String(150))
 	book_count = DB.Column(DB.Integer)
 	best_seller_date = DB.Column(DB.date())
 	Books = DB.relationship("Book")
@@ -17,6 +18,7 @@ class Publisher(DB.model):
 	location = DB.Column(DB.String(150))
 	book_count = DB.Column(DB.Integer)
 	Books = DB.relationship("Book")
+	metadata = DB.Column(DB.String(256)) #categories of books they are known for
 
 class Book(DB.model):
 	#need to add fields below
