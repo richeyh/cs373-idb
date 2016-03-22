@@ -15,7 +15,7 @@ class Author(DB.Model):
     first_name = DB.Column(DB.String(150))
     last_name = DB.Column(DB.String(150))
     book_count = DB.Column(DB.Integer)
-    best_seller_date = DB.Column(DB.date())
+    best_seller_date = DB.Column(DB.Date())
     Books = DB.relationship("Book")
 
 
@@ -38,10 +38,10 @@ class Book(DB.Model):
     title = DB.Column(DB.String(150))
     summary = DB.Column(DB.Text())
     price = DB.Column(DB.String(150))
-    best_seller_date = DB.Column(DB.date())
+    best_seller_date = DB.Column(DB.Date())
     best_seller_list = DB.Column(DB.String(150))
     book_image = DB.Column(DB.String(150))
-    author_id = DB.Column(DB.Integer, DB.ForeignKey(Author))
+    author_id = DB.Column(DB.Integer, DB.ForeignKey(Author.id))
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
 
