@@ -28,3 +28,5 @@ script:
     
 notifications:
   slack: booksweepers:5JFI2w3n1TQousAyljODwLua
+  on_success: always
+  on_failure: always
