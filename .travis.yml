@@ -25,3 +25,6 @@ script:
     - make status
     - ls -al
     - make check
+    
+notifications:
+  slack: booksweepers:5JFI2w3n1TQousAyljODwLua
