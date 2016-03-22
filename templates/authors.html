@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <aside class="fh5co-page-heading">
 	<div class="container">
 		<div class="row">
@@ -13,40 +14,90 @@
 	</div>
 </aside>
 
-<table border="1" align="center">
-	<col width="100">
-	<col width="100">
-	<col width="90">
-	<col width="200">
-	<col width="150">
 
-	<tr>
-		<th>Last Name</th>
-		<th>First Name</th>
-		<th>Book count</th>
-		<th>Most Recent Book in List</th>
-		<th>Best Seller Date</th>
-	</tr>
-	<tr>
-		<td>Doerr</td>
-		<td>Anthony</td>
-		<td align="center">1</td>
-		<td>All the Light We Cannot See</td>
-		<td>2016-03-12</td>
-	</tr>
-	<tr>
-		<td>Hawkins</td>
-		<td>Paula</td>
-		<td align="center">1</td>
-		<td>The Girl on the Train</td>
-		<td>2016-03-12</td>
-	</tr>
-	<tr>
-		<td>Lee</td>
-		<td>Harper</td>
-		<td align="center">1</td>
-		<td>Go Set a Watchman</td>
-		<td>2016-03-12</td>
-	</tr>
-</table>
+
+<div class="controller" ng-app="myApp" ng-controller="authorsCtrl">
+	<form>
+		<div class="form-group">
+			<div class="input-group">
+				<!-- <div class="input-group-addon"><i class="fa fa-search"></i></div> -->
+				<input type="text" class="form-control" placeholder="Search author" ng-model="searchAuthor">
+			</div>      
+		</div>
+	</form>
+	<table border="1" align="center">
+		<col width="100">
+		<col width="100">
+		<col width="90">
+		<col width="200">
+		<col width="150">
+		<thead>
+			<tr>
+				<th>
+					<a href='#' ng-click="sortType = 'lastName'; sortReverse = !sortReverse">
+					Last Name
+					<span ng-show="sortType == 'lastName' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'lastName' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'firstName'; sortReverse = !sortReverse">
+						First Name
+					<span ng-show="sortType == 'firstName' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'firstName' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'count'; sortReverse = !sortReverse">
+					Book count
+					<span ng-show="sortType == 'count' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'count' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'recent'; sortReverse = !sortReverse">
+					Most Recent Book in List
+					<span ng-show="sortType == 'recent' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'recent' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'date'; sortReverse = !sortReverse">
+					Best Seller Date
+					<span ng-show="sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'date' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchAuthor">
+				<td>{{x.lastName}}</td>
+				<td>{{x.firstName}}</td>
+				<td>{{x.count}}</td>
+				<td>{{x.recent}}</td>
+				<td>{{x.date}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script>
+var doerrArray = {lastName: 'Doerr', firstName: 'Anthony', count: 1, recent: 'All the Light We Cannot See', date: '2016-03-12'};
+var hawkinsArray = {lastName: 'Hawkins', firstName: 'Paula', count: 1, recent: 'The Girl on the Train', date: '2016-03-12'};
+var leeArray = {lastName: 'Lee', firstName: 'Harper', count: 1, recent: 'Go Set a Watchman', date: '2016-03-12'};
+
+var app = angular.module('myApp', []);
+app.controller('authorsCtrl', function($scope){
+	$scope.sortType = 'lastName';
+	$scope.sortReverse = false;
+	$scope.searchAuthor = '';
+
+	$scope.array = [doerrArray, hawkinsArray, leeArray];
+
+	angular.forEach($scope.array, function(value, index){
+		$scope.lastName = value.lastName;
+		$scope.firstName = value.firstName;
+		$scope.count = value.count;
+		$scope.recent = value.recent;
+		$scope.date = value.date;
+	});
+});
+</script>
+
 {% endblock %}
