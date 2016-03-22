@@ -17,3 +17,8 @@ def generate_application(config=None):
     admin = Admin(app, name="IDB", template_mode='bootstrap3')
     admin.add_view(ModelView(TeamMember, DB.session))
     return app
+
+
+if __name__ == "__main__":
+    app = generate_application()
+    app.run(host='0.0.0.0', port=8888)
