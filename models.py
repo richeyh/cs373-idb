@@ -1,7 +1,7 @@
 from extensions import DB
 
 
-class Author(DB.model):
+class Author(DB.Model):
     """
     id: primary key in the database
     first_name: the first name of the author
@@ -19,7 +19,7 @@ class Author(DB.model):
     Books = DB.relationship("Book")
 
 
-class Book(DB.model):
+class Book(DB.Model):
     """
     id: primary key for the book object
     isbn: the isbn # for the book
@@ -46,7 +46,7 @@ class Book(DB.model):
     author = DB.relationship(Author)
 
 
-class TeamMember(DB.model):
+class TeamMember(DB.Model):
     """
     id: primary key for TeamMember
     image_url: url of image for picture
