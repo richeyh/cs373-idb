@@ -68,8 +68,8 @@
 		<tbody>
 			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchAuthor">
 				{% raw %}
-				<td><a href="{{ url_for('.Author')}}">{{x.last_name}}</a></td>
-				<td><a href="{{ url_for('.Author')}}">{{x.first_name}}</a></td>
+				<td>{{x.last_name}}</td>
+				<td>{{x.first_name}}</td>
 				<td>{{x.book_count}}</td>
 				<td>{{x.recent_book}}</td>
 				<td>{{x.best_seller_date}}</td>
@@ -87,13 +87,13 @@ app.controller('authorsCtrl', function($scope){
 	$scope.searchAuthor = '';
 
 	$scope.array = {{authors|safe}};
-<!-- 
+
 	angular.forEach($scope.array, function(value, index){
 		$scope.lastName = value.lastName;
 		$scope.firstName = value.firstName;
 		$scope.count = value.count;
 		$scope.recent = value.recent;
 		$scope.date = value.date;
-	}); -->
+	});
 });
 {% endblock %}
