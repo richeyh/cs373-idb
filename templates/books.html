@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<aside class="fh5co-page-heading">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="fh5co-page-heading-lead">
+					Books
+				</h1>
+			</div>
+		</div>
+	</div>
+</aside>
+
+<div class="controller" ng-app="myApp" ng-controller="booksCtrl">
+	<form>
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search book" ng-model="searchBook">
+			</div>      
+		</div>
+	</form>
+	<table border="1" align="center">
+		<col width="200">
+		<col width="100">
+		<col width="100">
+		<col width="150">
+		<col width="100">
+		<col width="150">
+		<col width="150">
+		<thead>
+			<tr>
+				<th>
+					<a href='#' ng-click="sortType = 'title'; sortReverse = !sortReverse">
+					Title
+					<span ng-show="sortType == 'title' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'title' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'firstName'; sortReverse = !sortReverse">
+					First Name
+					<span ng-show="sortType == 'firstName' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'firstName' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'lastName'; sortReverse = !sortReverse">
+					Last Name
+					<span ng-show="sortType == 'lastName' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'lastName' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'publisher'; sortReverse = !sortReverse">
+					Publisher
+					<span ng-show="sortType == 'publisher' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'publisher' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'list'; sortReverse = !sortReverse">
+					Best Seller List
+					<span ng-show="sortType == 'list' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'list' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'date'; sortReverse = !sortReverse">
+					Best Seller Date
+					<span ng-show="sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'date' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'ISBN'; sortReverse = !sortReverse">
+					ISBN
+					<span ng-show="sortType == 'ISBN' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'ISBN' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchBook">
+				<td>{{x.title}}</td>
+				<td>{{x.firstName}}</td>
+				<td>{{x.lastName}}</td>
+				<td>{{x.publisher}}</td>
+				<td>{{x.list}}</td>
+				<td>{{x.date}}</td>
+				<td>{{x.ISBN}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script>
+var doerrArray = {title: 'All the Light We Cannot See', firstName: 'Anthony', lastName: 'Doerr', publisher: 'Scribner', list: 'Hardcover', date: '2016-03-12', ISBN: '978-1-4767-4658-6'};
+var hawkinsArray = {title: 'The Girl on the Train', firstName: 'Paula', lastName: 'Hawkins', publisher: 'Riverhead', list: 'Hardcover', date: '2016-03-12', ISBN: '978-1-59463-366-9'};
+var leeArray = {title: 'Go Set a Watchman', firstName: 'Harper', lastName: 'Lee', publisher: 'HarperCollins', list:'Hardcover', date: '2016-03-12', ISBN: '978-0-06-240985-0'};
+
+var app = angular.module('myApp', []);
+app.controller('booksCtrl', function($scope){
+	$scope.sortType = 'title';
+	$scope.sortReverse = false;
+	$scope.searchBook = '';
+
+	$scope.array = [doerrArray, hawkinsArray, leeArray];
+
+	angular.forEach($scope.array, function(value, index){
+		$scope.title = value.title;
+		$scope.firstName = value.firstName;
+		$scope.lastName = value.lastName;
+		$scope.publisher = value.publisher;
+		$scope.list = value.list;
+		$scope.date = value.date;
+		$scope.ISBN = value.ISBN;
+	});
+});
+</script>
+{% endblock %}

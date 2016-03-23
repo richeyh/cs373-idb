@@ -32,7 +32,7 @@ class Book(DB.Model):
     author_id: primary key to the books author for linking
     publisher_id: primary key to the books publisher for linking
     """
-    __tablename__ = "book "
+    __tablename__ = "book"
     id = DB.Column(DB.Integer, primary_key=True)
     isbn = DB.Column(DB.String(150))
     title = DB.Column(DB.String(150))

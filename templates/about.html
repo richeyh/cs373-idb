@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Family Picture -->
+	<div class="fh5co-bg-section" style="background-image: url({{ url_for('static', filename='images/puppy.jpg') }}); background-attachment: fixed;">
+			<div class="fh5co-overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="fh5co-hero-wrap">
+							<div class="fh5co-hero-intro text-center">
+								<h1 class="fh5co-lead"><span class="quo">&ldquo;</span>We should have done it. All those drug charges Hahaha<span class="quo">&rdquo;</span></h1>
+								<p class="author">&mdash; <cite>Richey</cite></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- End Family Picture -->
+	
+	<div class="fh5co-spacer fh5co-spacer-lg"></div>
+
+	<!-- Members -->
+		<div class="container" id="fh5co-products">
+			<div class="row text-left">
+				<div class="col-md-8">
+					<h2 class="fh5co-section-lead">We are The BookSweepers</h2>
+					<h3 class="fh5co-section-sub-lead">Our team is more than a group forced together for the sake of necessity, we are a family. </h3>
+				</div>
+				<div class="fh5co-spacer fh5co-spacer-md"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="{{ url_for('static', filename='images/slide_1.jpg') }}" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Rachel Choi</h4>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul>
+                            <li>Responsibilities: {{member.responsibility}}</li>
+                            <li>Number of Commits: {{member.commits}}</li>
+                            <li>Issues Closed: {{member.issues}}</li>
+                            <li>Number of Unit Tests: {{member.unitTests}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="{{ url_for('static', filename='images/slide_2.jpg') }}" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Ruzseth Anne Dela Cruz</h4>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul>
+                            <li>Responsibilities: {{member.responsibility}}</li>
+                            <li>Number of Commits: {{member.commits}}</li>
+                            <li>Issues Closed: {{member.issues}}</li>
+                            <li>Number of Unit Tests: {{member.unitTests}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="visible-sm-block visible-xs-block clearfix"></div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="{{ url_for('static', filename='images/slide_3.jpg') }}" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Richard Huettel</h4>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul>
+                            <li>Responsibilities: {{member.responsibility}}</li>
+                            <li>Number of Commits: {{member.commits}}</li>
+                            <li>Issues Closed: {{member.issues}}</li>
+                            <li>Number of Unit Tests: {{member.unitTests}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="{{ url_for('static', filename='images/slide_4.jpg') }}" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Timothy Lo</h4>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul>
+                            <li>Responsibilities: {{member.responsibility}}</li>
+                            <li>Number of Commits: {{member.commits}}</li>
+                            <li>Issues Closed: {{member.issues}}</li>
+                            <li>Number of Unit Tests: {{member.unitTests}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="{{ url_for('static', filename='images/slide_4.jpg') }}" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Kyung Yoo</h4>
+						<p>I like to live a simple life.</p>
+						<ul>
+                            <li>Responsibilities: {{member.responsibility}}</li>
+                            <li>Number of Commits: {{member.commits}}</li>
+                            <li>Issues Closed: {{member.issues}}</li>
+                            <li>Number of Unit Tests: {{member.unitTests}}</li>
+                        </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- End Members -->
+
+	<!-- Tools -->
+	<div class="container">
+		<div class="row">
+	        <div class="col-md-4 col-sm-6">
+	            <h2>Team Stats</h2>
+	            <ul>
+	                <li>Total Commits: TBD</li>
+	                <li>Total GitHub Issues: TBD</li>
+	                <li>Total Unit Tests: TBD</li>
+	                <li><a href="http://docs.#.apiary.io/#" target=”_blank”>Apiary API -under construction-</a></li>
+	                <li><a href="https://github.com/richeyh/cs373-idb/issues" target=”_blank”>GitHub Issue Tracker</a></li>
+	                <li><a href="https://github.com/richeyh/cs373-idb" target=”_blank”>GitHub Repo</a></li>
+	                <li><a href="https://github.com/richeyh/cs373-idb/wiki" target=”_blank”>GitHub Wiki</a></li>
+	            </ul>
+	        </div>
+
+	        <div class="col-md-4 col-sm-6">
+	            <h2>Data</h2>
+	            <ul>
+	                <li>Data Sources: <a href="http://developer.nytimes.com/docs/read/best_sellers_api">NYTimes Best Sellers API</a></li>
+	                <li>Data Scraping: <a href="https://github.com/richeyh/cs373-idb/wiki">GitHub Wiki / Data Scraping -under construction-</a></li></li>
+	            </ul>
+	        </div>
+
+	        <div class="col-md-4 col-sm-6 col-xs-12">
+	            <h2>Other Pages</h2>
+	            <ul>
+	                <li><a href="#">Run Unit Tests -under construction-</a></li>
+	            </ul>
+	        </div>
+
+	        <div class="col-lg-9 col-md-12 col-sm-6 ">
+	            <h2>Tools</h2>
+	            <ul>
+	                <li>API
+	                    <ul>
+	                        <li><a href="https://apiary.io/">Apiary</a></li>
+	                        <li><a href="http://developer.nytimes.com/docs/read/best_sellers_api">NYTimes Best Sellers API</a></li>
+	                    </ul>
+	                </li>
+	                <li>Collaboration
+	                    <ul>
+	                        <li><a href="https://slack.com/">Slack</a></li>
+	                        <li><a href="https://github.com/">Github</a></li>
+	                        <li><a href="https://trello.com/">Trello</a></li>
+	                    </ul>
+	                </li>
+	                <li>Database
+	                    <ul>
+	                        <li><a href="#"></a>-under construction-</li>
+	                    </ul>
+	                </li>
+
+	                <li>Front-end
+	                <br>
+	                    <ul>
+	                        <li><a href="http://getbootstrap.com/">Boostrap</a></li>
+	                        <li><a href="http://flask.pocoo.org/">Flask</a></li>
+	                    </ul>
+	                </li>
+	                <li>Data Modeling
+	                    <ul>
+	                        <li><a href="http://yuml.me/">yUML</a></li>
+	                    </ul>
+	                </li>
+	                <li>Server/Hosting
+	                    <ul>
+	                        <li><a href="https://nc.me/">Namecheap</a></li>
+	                        <li><a href="http://getcarina.com">Carina by Rackspace</a></li>
+	                    </ul>
+	                </li>
+	                <li>Testing
+	                    <ul>
+	                        <li><a href="https://coverage.readthedocs.org/en/coverage-4.0.2/">Coverage</a></li>
+	                    </ul>
+	                </li>
+	                <li>Extra<br>
+	                   <ul>
+	                   		<li>-under construction-</li>
+	                   	</ul>
+	                </li>
+	                <li>Media
+	                    <ul>
+							<li><a href="https://www.facebook.com/nytbooks/">Facebook</a></li>
+							<li><a href="https://twitter.com/nytimesbooks?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+							<li><a href="https://www.instagram.com/explore/tags/nytimesbooks/">Instagram</a></li>
+							<li><a href="https://www.youtube.com/user/TheNewYorkTimes">Youtube</a></li>
+						</ul>
+	                </li>
+	            </ul>
+	        </div>
+        </div>
+    </div>
+
+	<!-- End Tools -->
+
+	<div class="fh5co-spacer fh5co-spacer-lg"></div>
+{% endblock %}

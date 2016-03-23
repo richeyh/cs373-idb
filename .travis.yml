@@ -1,0 +1,32 @@
+# http://docs.travis-ci.com/user/build-configuration/
+
+language: python
+
+python:
+    - "3.4"
+
+sudo: false
+
+install:
+    - pip install --upgrade pip
+    - pip --version
+    - pip install coverage
+    - pip install numpy
+    - pip install -r reqs.txt
+
+before_script:
+    - uname -a
+    - printenv
+    - pip list
+
+script:
+    - date
+    - ls -al
+    - make status
+    - ls -al
+    - make check
+    
+notifications:
+  slack: booksweepers:5JFI2w3n1TQousAyljODwLua
+  on_success: always
+  on_failure: always
