@@ -29,3 +29,9 @@ class AboutView(MethodView):
             total["tests"] = total["tests"] + attributes["tests"]
         members["total"] = total
         return render_template("about.html", members=members)
+
+
+class BooksView(MethodView):
+
+    def get(self):
+        return render_template("books.html")

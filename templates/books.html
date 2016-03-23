@@ -78,6 +78,7 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchBook">
+			{% raw %}
 				<td>{{x.title}}</td>
 				<td>{{x.firstName}}</td>
 				<td>{{x.lastName}}</td>
@@ -85,6 +86,7 @@
 				<td>{{x.list}}</td>
 				<td>{{x.date}}</td>
 				<td>{{x.ISBN}}</td>
+			{% endraw %}
 			</tr>
 		</tbody>
 	</table>
