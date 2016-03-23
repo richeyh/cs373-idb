@@ -28,19 +28,13 @@
 {% block javascript %}
 var happ = angular.module('myHeader', []);
 happ.controller('headerCtrl', function($scope){
-	$scope.array = {"last_name": 'Doerr', "first_name": 'Anthony',
-            "book_count": 1, "recent_book": books[0]["title"],
-            "best_seller_date": '2016-03-12', "id":1};
-	<!-- $scope.array = {{authors|safe}}; -->
+	$scope.array = {{author|safe}};
 	$scope.full_name = $scope.array.first_name + " " $scope.array.last_name;
 
 });
 
 var app = angular.module('myApp', []);
 app.controller('authorCtrl', function($scope){
-	$scope.array = {"last_name": 'Doerr', "first_name": 'Anthony',
-            "book_count": 1, "recent_book": books[0]["title"],
-            "best_seller_date": '2016-03-12', "id":1};
-	<!-- $scope.array = {{authors|safe}}; -->
+	$scope.array = {{author|safe}};
 });
 {% endblock %}

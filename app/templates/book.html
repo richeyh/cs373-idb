@@ -29,24 +29,14 @@
 {% block javascript %}
 var happ = angular.module('myHeader', []);
 happ.controller('headerCtrl', function($scope){
-	$scope.array = {"title": 'All the Light We Cannot See',
-          "firstName": 'Anthony', "lastName": 'Doerr',
-          "publisher": 'Scribner', "best_seller_list": 'Hardcover',
-          "best_seller_date": '2016-03-12', "ISBN": '9781476746586',
-          "Link": "", "id": 1};
-	<!-- $scope.array = {{books|safe}}; -->
+	$scope.array = {{book|safe}};
 	$scope.full_name = $scope.array.first_name + " " $scope.array.last_name;
 
 });
 
 var app = angular.module('myApp', []);
 app.controller('bookCtrl', function($scope){
-	$scope.array = {"title": 'All the Light We Cannot See',
-          "firstName": 'Anthony', "lastName": 'Doerr',
-          "publisher": 'Scribner', "best_seller_list": 'Hardcover',
-          "best_seller_date": '2016-03-12', "ISBN": '9781476746586',
-          "Link": "", "id": 1};
-	<!-- $scope.array = {{books|safe}}; -->
+	$scope.array = {{book|safe}};
 	$scope.full_name = $scope.array.first_name + " " + $scope.array.last_name;
 });
 {% endblock %}
