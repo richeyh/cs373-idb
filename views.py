@@ -20,9 +20,10 @@ class IndexView(MethodView):
 class AboutView(MethodView):
 
     def get(self):
-    	# dynamic snippet to total issues and commits
+        # dynamic snippet to total issues and commits
         total = {"issues": 0, "commits": 0, "tests": 0}
-        for name, attributes in members:
+        for name in members:
+            attributes = members[name]
             total["issues"] = total["issues"] + attributes["issues"]
             total["commits"] = total["commits"] + attributes["commits"]
             total["tests"] = total["tests"] + attributes["tests"]
