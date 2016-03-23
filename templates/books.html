@@ -83,8 +83,8 @@
 				<td>{{x.firstName}}</td>
 				<td>{{x.lastName}}</td>
 				<td>{{x.publisher}}</td>
-				<td>{{x.list}}</td>
-				<td>{{x.date}}</td>
+				<td>{{x.best_seller_list}}</td>
+				<td>{{x.best_seller_date}}</td>
 				<td>{{x.ISBN}}</td>
 			{% endraw %}
 			</tr>
@@ -99,7 +99,7 @@ app.controller('booksCtrl', function($scope){
 	$scope.sortReverse = false;
 	$scope.searchBook = '';
 
-	$scope.array = {{books}};
+	$scope.array = {{books|safe}};
 
 	angular.forEach($scope.array, function(value, index){
 		$scope.title = value.title;
