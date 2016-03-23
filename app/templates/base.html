@@ -16,12 +16,12 @@
 	<meta name="keywords" content="software engineering project, database, New York Times Bestsellers, books" />
 	<meta name="team" content="The BookSweepers" />
 
-	<!-- 
+	<!--
 	//////////////////////////////////////////////////////
 
-	FREE HTML5 TEMPLATE 
+	FREE HTML5 TEMPLATE
 	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
+
 	Website: 		http://freehtml5.co/
 	Email: 			info@freehtml5.co
 	Twitter: 		http://twitter.com/fh5co
@@ -46,7 +46,7 @@
 	<!-- Google Webfonts -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
 	<!-- Icomoon Icon Fonts-->
@@ -74,14 +74,14 @@
 	<header id="fh5co-header" role="banner">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
-				<div class="navbar-header"> 
+				<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="navbar-brand" href="index.html">IBDB.ME</a>
+				<a class="navbar-brand" href="home.html">IBDB.ME</a>
 				</div>
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="index.html"><span>Home <span class="border"></span></span></a></li>
+						<li class="active"><a href="home.html"><span>Home <span class="border"></span></span></a></li>
 						<li><a href="{{ url_for('.About')}}"><span>Meet the Team <span class="border"></span></span></a></li>
 						<li><a href="{{ url_for('.Books')}}"><span>Books <span class="border"></span></span></a></li>
 						<li><a href="{{ url_for('.Authors')}}"><span>Authors <span class="border"></span></span></a></li>
@@ -96,7 +96,7 @@
 		{% endblock %}
 	</div>
 
-	<footer id="fh5co-footer">	
+	<footer id="fh5co-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
@@ -153,5 +153,5 @@
 			{% endblock %}
 	</script>
 </body>
-	
+
 </html>

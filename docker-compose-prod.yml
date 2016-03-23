@@ -7,7 +7,7 @@ services:
     extends:
       file: docker-compose-common.yml
       service: lb
-    image: booksweepers/ibdb_lb
+    image: rychoi/cs373idb_lb
     environment:
       # Always deploy to n1 so the lb always has the same IP address. This is
       # just for convenience and isn't strictly necessary.
@@ -17,7 +17,7 @@ services:
     extends:
       file: docker-compose-common.yml
       service: app
-    image: booksweepers/ibdb_app
+    image: rychoi/cs373idb_app
     expose:
       # Expose port 8000 so it's only visibile on the container, not the host
       - "8000"
@@ -29,7 +29,7 @@ services:
   #   extends:
   #     file: docker-compose-common.yml
   #     service: db
-  #   image: etoews/pythonwebapp_db
+  #   image: rychoi/cs373idb_db
   #   expose:
   #     # Expose port 3306 so it's only visibile on the container, not the host
   #     - "3306"
