@@ -35,3 +35,9 @@ class BooksView(MethodView):
 
     def get(self):
         return render_template("books.html")
+
+
+class AuthorsView(MethodView):
+
+    def get(self):
+        return render_template("authors.html")

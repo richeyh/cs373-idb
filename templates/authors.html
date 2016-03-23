@@ -67,17 +67,19 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchAuthor">
+				{% raw %}
 				<td>{{x.lastName}}</td>
 				<td>{{x.firstName}}</td>
 				<td>{{x.count}}</td>
 				<td>{{x.recent}}</td>
 				<td>{{x.date}}</td>
+				{% endraw %}
 			</tr>
 		</tbody>
 	</table>
 </div>
-
-<script>
+{% endblock %}
+{% block javascript %}
 var doerrArray = {lastName: 'Doerr', firstName: 'Anthony', count: 1, recent: 'All the Light We Cannot See', date: '2016-03-12'};
 var hawkinsArray = {lastName: 'Hawkins', firstName: 'Paula', count: 1, recent: 'The Girl on the Train', date: '2016-03-12'};
 var leeArray = {lastName: 'Lee', firstName: 'Harper', count: 1, recent: 'Go Set a Watchman', date: '2016-03-12'};
@@ -98,6 +100,4 @@ app.controller('authorsCtrl', function($scope){
 		$scope.date = value.date;
 	});
 });
-</script>
-
 {% endblock %}
