@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
+	<aside class="fh5co-page-heading">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="fh5co-page-heading-lead">
+						{% raw %}
+						{{full_name}}
+						{% endraw %}
+					</h1>
+				</div>
+			</div>
+		</div>
+	</aside>
+</div>
+
+<div class="controller" ng-app="myApp" ng-controller="authorCtrl">
+	<p>Number of books that have been on the Best Sellers List: {{array.book_count}}</p>
+	<p>Latest book on the Best Sellers List: {{array.recent_name}}</p>
+	<p>Latest week the book has been on the Best Sellers List: {{array.best_seller_date}}</p>
+
+</div>
+{% endblock %}
+{% block javascript %}
+var happ = angular.module('myHeader', []);
+happ.controller('headerCtrl', function($scope){
+	$scope.array = {"last_name": 'Doerr', "first_name": 'Anthony',
+            "book_count": 1, "recent_book": books[0]["title"],
+            "best_seller_date": '2016-03-12', "id":1};
+	<!-- $scope.array = {{authors|safe}}; -->
+	$scope.full_name = $scope.array.first_name + " " $scope.array.last_name;
+
+});
+
+var app = angular.module('myApp', []);
+app.controller('authorCtrl', function($scope){
+	$scope.array = {"last_name": 'Doerr', "first_name": 'Anthony',
+            "book_count": 1, "recent_book": books[0]["title"],
+            "best_seller_date": '2016-03-12', "id":1};
+	<!-- $scope.array = {{authors|safe}}; -->
+});
+{% endblock %}
