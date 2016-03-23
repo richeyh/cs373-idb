@@ -9,6 +9,21 @@ members = {
     "Timothy": {"issues": 5, "commits": 5, "tests": 0, "resp": "html and angular"},
     "Kyung": {"issues": 5, "commits": 5, "tests": 0, "resp": "unit tests and apiuary"}
 }
+books = [{"title": 'All the Light We Cannot See',
+          "firstName": 'Anthony', "lastName": 'Doerr',
+          "publisher": 'Scribner', "best_seller_list": 'Hardcover',
+          "best_seller_date": '2016-03-12', "ISBN": '978-1-4767-4658-6',
+          "Link": "", "id": 1},
+         {"title": 'The Girl on the Train', "firstName": 'Paula',
+          "lastName": 'Hawkins', "publisher": 'Riverhead',
+          "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
+             "ISBN": '978-1-59463-366-9',
+             "id": 2, "Link": ""},
+         {"title": 'Go Set a Watchman', "firstName": 'Harper',
+          "lastName": 'Lee', "publisher": 'HarperCollins',
+          "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
+             "ISBN": '978-0-06-240985-0', "id": 3, "Link": ""}
+         ]
 
 
 class IndexView(MethodView):
@@ -34,7 +49,7 @@ class AboutView(MethodView):
 class BooksView(MethodView):
 
     def get(self):
-        return render_template("books.html")
+        return render_template("books.html", books=books)
 
 
 class AuthorsView(MethodView):

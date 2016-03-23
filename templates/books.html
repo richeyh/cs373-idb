@@ -93,17 +93,13 @@
 </div>
 {% endblock %}
 {% block javascript %}
-var doerrArray = {title: 'All the Light We Cannot See', firstName: 'Anthony', lastName: 'Doerr', publisher: 'Scribner', list: 'Hardcover', date: '2016-03-12', ISBN: '978-1-4767-4658-6'};
-var hawkinsArray = {title: 'The Girl on the Train', firstName: 'Paula', lastName: 'Hawkins', publisher: 'Riverhead', list: 'Hardcover', date: '2016-03-12', ISBN: '978-1-59463-366-9'};
-var leeArray = {title: 'Go Set a Watchman', firstName: 'Harper', lastName: 'Lee', publisher: 'HarperCollins', list:'Hardcover', date: '2016-03-12', ISBN: '978-0-06-240985-0'};
-
 var app = angular.module('myApp', []);
 app.controller('booksCtrl', function($scope){
 	$scope.sortType = 'title';
 	$scope.sortReverse = false;
 	$scope.searchBook = '';
 
-	$scope.array = [doerrArray, hawkinsArray, leeArray];
+	$scope.array = {{books}};
 
 	angular.forEach($scope.array, function(value, index){
 		$scope.title = value.title;

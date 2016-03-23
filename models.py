@@ -37,7 +37,7 @@ class Book(DB.Model):
     isbn = DB.Column(DB.String(150))
     title = DB.Column(DB.String(150))
     summary = DB.Column(DB.Text())
-    price = DB.Column(DB.String(150))
+    link = DB.Column(DB.String(256))
     best_seller_date = DB.Column(DB.Date())
     best_seller_list = DB.Column(DB.String(150))
     book_image = DB.Column(DB.String(150))
