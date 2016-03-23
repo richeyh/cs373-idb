@@ -13,12 +13,11 @@ install:
     - pip install Flask
     - pip install Flask-Script
     - pip install Flask-SQLAlchemy
-    - pip install pymssql
     - pip install gunicorn
     - pip install requests
     - pip install coverage
     - pip install numpy
-    - pip install -r reqs.txt
+    - pip install -r app/requirements.txt
 
 before_script:
     - uname -a
