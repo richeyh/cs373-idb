@@ -67,3 +67,8 @@ class AuthorsView(MethodView):
 
     def get(self):
         return render_template("authors.html", authors=authors)
+
+class AuthorView(MethodView):
+
+    def get(self):
+        return render_template("author.html", authors=authors)
