@@ -10,6 +10,12 @@ sudo: false
 install:
     - pip install --upgrade pip
     - pip --version
+    - pip install Flask
+    - pip install Flask-Script
+    - pip install Flask-SQLAlchemy
+    - pip install pymssql
+    - pip install gunicorn
+    - pip install requests
     - pip install coverage
     - pip install numpy
     - pip install -r reqs.txt
@@ -25,7 +31,7 @@ script:
     - make status
     - ls -al
     - make check
-    
+
 notifications:
   slack: booksweepers:5JFI2w3n1TQousAyljODwLua
   on_success: always

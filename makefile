@@ -1,12 +1,13 @@
-FILES :=                              \
-    .travis.yml                       \
-    .gitignore                      \
-    apiary.aqib                       \
-    IDB1.log                        \
-    models.html                     \
+FILES :=                         \
+    .travis.yml                  \
+    .gitignore                   \
+	makefile                     \
+    apiary.aqib                  \
+    IDB1.log                     \
+    models.html                  \
     models.py                    \
     tests.py                     \
-    UML.pdf               
+    UML.pdf
 
 check:
 	@not_found=0;                                 \

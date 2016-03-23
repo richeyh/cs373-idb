@@ -8,4 +8,4 @@ WORKDIR /src
 
 RUN pip install -r requirements.txt
 
-CMD python3 application.py
+CMD gunicorn app:app -b 0.0.0.0:8000
