@@ -87,13 +87,5 @@ app.controller('authorsCtrl', function($scope){
 	$scope.searchAuthor = '';
 
 	$scope.array = {{authors|safe}};
-
-	angular.forEach($scope.array, function(value, index){
-		$scope.lastName = value.lastName;
-		$scope.firstName = value.firstName;
-		$scope.count = value.count;
-		$scope.recent = value.recent;
-		$scope.date = value.date;
-	});
 });
 {% endblock %}

@@ -80,8 +80,8 @@
 			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchBook">
 			{% raw %}
 				<td>{{x.title}}</td>
-				<td>{{x.firstName}}</td>
-				<td>{{x.lastName}}</td>
+				<td>{{x.first_name}}</td>
+				<td>{{x.last_name}}</td>
 				<td>{{x.publisher}}</td>
 				<td>{{x.best_seller_list}}</td>
 				<td>{{x.best_seller_date}}</td>
@@ -100,15 +100,5 @@ app.controller('booksCtrl', function($scope){
 	$scope.searchBook = '';
 
 	$scope.array = {{books|safe}};
-
-	angular.forEach($scope.array, function(value, index){
-		$scope.title = value.title;
-		$scope.firstName = value.firstName;
-		$scope.lastName = value.lastName;
-		$scope.publisher = value.publisher;
-		$scope.list = value.list;
-		$scope.date = value.date;
-		$scope.ISBN = value.ISBN;
-	});
 });
 {% endblock %}
