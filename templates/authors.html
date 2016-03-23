@@ -68,11 +68,11 @@
 		<tbody>
 			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchAuthor">
 				{% raw %}
-				<td>{{x.lastName}}</td>
-				<td>{{x.firstName}}</td>
-				<td>{{x.count}}</td>
-				<td>{{x.recent}}</td>
-				<td>{{x.date}}</td>
+				<td>{{x.last_name}}</td>
+				<td>{{x.first_name}}</td>
+				<td>{{x.book_count}}</td>
+				<td>{{x.recent_book}}</td>
+				<td>{{x.best_seller_date}}</td>
 				{% endraw %}
 			</tr>
 		</tbody>
