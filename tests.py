@@ -55,22 +55,6 @@ class TestModels (TestCase):
 		testbook = Book.query.filter_by(title='THE GIRL ON THE TRAIN').all()
 		self.assertEqual(testbook[0].author.first_name, 'Paula')
 
-	# ----------
-	# TeamMember
-	# ----------
-
-	def test_model_teammember_1(self):
-		testmember = TeamMember.query.get(1)
-		self.assertEqual(testmember.id, 1)
-
-	def test_model_teammember_2(self):
-		testmember = TeamMember.query.filter_by(name='Richard Huettel')
-		self.assertEqual(testmember[0].name='Richard Huettel')
-
-	def test_model_teammember_3(self):
-		testmember = TeamMember.query.filter_by(name='Rachel Choi')
-		self.assertEqual(testmember[0].name='Rachel Choi')
-
 # ----
 # Main
 # ----
