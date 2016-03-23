@@ -10,19 +10,19 @@ members = {
     "Kyung": {"issues": 5, "commits": 5, "tests": 0, "resp": "unit tests and apiuary"}
 }
 books = [{"title": 'All the Light We Cannot See',
-          "firstName": 'Anthony', "lastName": 'Doerr',
+          "first_name": 'Anthony', "last_name": 'Doerr',
           "publisher": 'Scribner', "best_seller_list": 'Hardcover',
-          "best_seller_date": '2016-03-12', "ISBN": '978-1-4767-4658-6',
+          "best_seller_date": '2016-03-12', "ISBN": '9781476746586',
           "Link": "", "id": 1},
-         {"title": 'The Girl on the Train', "firstName": 'Paula',
-          "lastName": 'Hawkins', "publisher": 'Riverhead',
+         {"title": 'The Girl on the Train', "first_name": 'Paula',
+          "last_name": 'Hawkins', "publisher": 'Riverhead',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
-             "ISBN": '978-1-59463-366-9',
+             "ISBN": '9781594633669',
              "id": 2, "Link": ""},
-         {"title": 'Go Set a Watchman', "firstName": 'Harper',
-          "lastName": 'Lee', "publisher": 'HarperCollins',
+         {"title": 'Go Set a Watchman', "first_name": 'Harper',
+          "last_name": 'Lee', "publisher": 'HarperCollins',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
-             "ISBN": '978-0-06-240985-0', "id": 3, "Link": ""}
+             "ISBN": '9780062409850', "id": 3, "Link": ""}
          ]
 
 authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
