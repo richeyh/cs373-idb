@@ -29,6 +29,10 @@ script:
     - ls -al
     - make status
     - ls -al
+    - make models.html
+    - ls -al
+    - make IDB1.log
+    - ls -al
     - make check
 
 notifications:
