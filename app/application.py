@@ -11,6 +11,10 @@ from blueprints import blueprint
 from models import TeamMember
 
 
+class FileAdmin2(FileAdmin):
+    """ fake dupe class to avoid the name collision"""
+
+
 def generate_application(config=None):
     app = Flask(__name__)
     app.config.from_object('config')
@@ -22,7 +26,7 @@ def generate_application(config=None):
     path1 = op.join(op.dirname(__file__), 'static')
     path2 = op.join(op.dirname(__file__), 'templates')
     admin.add_view(FileAdmin(path1, '/static/', name='Static Files'))
-    admin.add_view(FileAdmin(path2, '/templates/', name='Template Files'))
+    admin.add_view(FileAdmin2(path2, '/templates/', name='Template Files'))
     admin.add_view(ModelView(TeamMember, DB.session))
     return app
 
