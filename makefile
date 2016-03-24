@@ -52,7 +52,7 @@ status:
 	git status
 
 models.html: models.py
-	pydoc3 -w models.py
+	pydoc -w models.py
 
 IDB1.log:
 	git log > IDB1.log
