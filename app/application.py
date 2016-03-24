@@ -14,6 +14,7 @@ from models import TeamMember
 def generate_application(config=None):
     app = Flask(__name__)
     app.config.from_object('config')
+    app.jinja_env.add_extension('jinja2.ext.do')
     DB.init_app(app)
     # blueprint registration
     app.register_blueprint(blueprint)
