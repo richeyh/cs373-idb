@@ -25,19 +25,18 @@ class Book(DB.Model):
     isbn: the isbn # for the book
     title: title of the book
     summary: summary of the book by new york times
-    price: prise of the book
     best_seller_date: date it made best seller best_seller_list
     best_seller_list: the list or category it made the list for
     book_image: url to the image for the book
     author_id: primary key to the books author for linking
-    publisher_id: primary key to the books publisher for linking
+    publisher: publisher who published the book
+    author: author who wrote the book
     """
     __tablename__ = "book"
     id = DB.Column(DB.Integer, primary_key=True)
     isbn = DB.Column(DB.String(150))
     title = DB.Column(DB.String(150))
     summary = DB.Column(DB.Text())
-    link = DB.Column(DB.String(256))
     best_seller_date = DB.Column(DB.Date())
     best_seller_list = DB.Column(DB.String(150))
     book_image = DB.Column(DB.String(150))
