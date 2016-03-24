@@ -23,7 +23,9 @@
     {% raw %}
     <img src="{{array.Link}}"></img>
     {% endraw %}
-    <h4>Author: <a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></h3>
+    <h4>Author</h4> 
+
+    <p><a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
 
     {% raw %}
     <h4>PUBLISHER</h4>
