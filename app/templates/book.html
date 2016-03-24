@@ -19,8 +19,8 @@
 </div>
 
 <div class="controller" ng-app="myApp" ng-controller="bookCtrl">
+	<p>Author: <a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
 {% raw %}
-	<p>Author: {{full_name}}</p>
 	<p>Publisher: {{array.publisher}}</p>
 	<p>Latest week on the Best Sellers List: {{array.best_seller_date}}</p>
 	<p>International Standard Book Number (ISBN): {{array.ISBN}}</p>
@@ -37,7 +37,7 @@ happ.controller('headerCtrl', function($scope){
 var app = angular.module('myApp', []);
 app.controller('bookCtrl', function($scope){
 	$scope.array = {{book|safe}};
-	$scope.full_name = $scope.array.first_name + " " + $scope.array.last_name;
+	$scope.full_name =$scope.array.first_name + " " + $scope.array.last_name;
 });
 
 angular.element(document).ready(function() {
