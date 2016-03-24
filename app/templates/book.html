@@ -1,5 +1,18 @@
 {% extends "base.html" %}
 
+{% block FacebookPlugin %}
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+{% endblock %}
+
 {% block content %}
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
@@ -19,10 +32,14 @@
 </div>
 
 <div class="controller" ng-app="myApp" ng-controller="bookCtrl">
-
 {% raw %}
 	<img src="{{array.Link}}"></img>
 	<p>Author: {{full_name}}</p>
+{% endraw %}
+
+<p>Author: <a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
+
+{% raw %}
 	<p>Publisher: {{array.publisher}}</p>
 	<p>Latest week on the Best Sellers List: {{array.best_seller_date}}</p>
 	<p>International Standard Book Number (ISBN): {{array.ISBN}}</p>
@@ -39,7 +56,7 @@ happ.controller('headerCtrl', function($scope){
 var app = angular.module('myApp', []);
 app.controller('bookCtrl', function($scope){
 	$scope.array = {{book|safe}};
-	$scope.full_name = $scope.array.first_name + " " + $scope.array.last_name;
+	$scope.full_name =$scope.array.first_name + " " + $scope.array.last_name;
 });
 
 angular.element(document).ready(function() {

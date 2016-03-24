@@ -35,7 +35,9 @@
 <div class="controller" ng-app="myApp" ng-controller="authorCtrl">
 {% raw %}
 	<p>Number of books that have been on the Best Sellers List: {{array.book_count}}</p>
-	<p>Latest book on the Best Sellers List: {{array.recent_book}}</p>
+{% endraw %}
+	<p>Latest book on the Best Sellers List: <a href = "{{url_for('.Book',book_id= author.book_id)}}">{% raw %}{{array.recent_book}}{% endraw %}</a></p>
+{% raw %}
 	<p>Latest week the book has been on the Best Sellers List: {{array.best_seller_date}}</p>
 	<div class="fb-page" data-href="{{array.Link}}" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="{{array.Link}}"><a href="{{array.Link}}">{{full_name}}</a></blockquote></div></div>
 {% endraw %}

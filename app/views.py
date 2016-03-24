@@ -13,20 +13,21 @@ books = [{"title": 'All the Light We Cannot See',
           "first_name": 'Anthony', "last_name": 'Doerr',
           "publisher": 'Scribner', "best_seller_list": 'Hardcover',
           "best_seller_date": '2016-03-12', "ISBN": '9781476746586',
-          "Link": "http://t2.gstatic.com/images?q=tbn:ANd9GcQNwFitSZQv7-IP7HkD6AJv_1M0VF4cQ5ydz6dlQU_w9IipF2zu", "id": 0},
+          "Link": "http://t2.gstatic.com/images?q=tbn:ANd9GcQNwFitSZQv7-IP7HkD6AJv_1M0VF4cQ5ydz6dlQU_w9IipF2zu", "id": 0, "author_id": 0},
          {"title": 'The Girl on the Train', "first_name": 'Paula',
           "last_name": 'Hawkins', "publisher": 'Riverhead',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
              "ISBN": '9781594633669',
-             "id": 1, "Link": "http://t0.gstatic.com/images?q=tbn:ANd9GcT7qekXzNKAn6ca_gmMP0yczMpJuhN5FAE80JbbYs5aYXk4u7Dd"},
+             "id": 1, "Link": "http://t0.gstatic.com/images?q=tbn:ANd9GcT7qekXzNKAn6ca_gmMP0yczMpJuhN5FAE80JbbYs5aYXk4u7Dd", "author_id": 1},
          {"title": 'Go Set a Watchman', "first_name": 'Harper',
           "last_name": 'Lee', "publisher": 'HarperCollins',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
-             "ISBN": '9780062409850', "id": 2, "Link": "http://www.wired.com/wp-content/uploads/2015/07/go-set-a-watchman-582x890.jpg"}
-         ]
+             "ISBN": '9780062409850', "id": 2, "Link": "http://www.wired.com/wp-content/uploads/2015/07/go-set-a-watchman-582x890.jpg", "author_id": 2}
+             ]
 
 authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
             "book_count": 1, "recent_book": books[0]["title"],
+<<<<<<< HEAD
             "best_seller_date": '2016-03-12', "id":0, "Link": "https://www.facebook.com/anthonydoerr"},
            {"last_name": 'Hawkins', "first_name": 'Paula',
             "book_count": 1, "recent_book": books[1]["title"],
@@ -34,6 +35,18 @@ authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
            {"last_name": 'Lee', "first_name": 'Harper',
             "book_count": 1, "recent_book": books[2]["title"],
             "best_seller_date": '2016-03-12', "id":2, "Link": "https://www.facebook.com/harperlee"}
+=======
+            "best_seller_date": '2016-03-12', "id":0,
+            "book_id":0},
+           {"last_name": 'Hawkins', "first_name": 'Paula',
+            "book_count": 1, "recent_book": books[1]["title"],
+            "best_seller_date": '2016-03-12', "id":1,
+            "book_id":1},
+           {"last_name": 'Lee', "first_name": 'Harper',
+            "book_count": 1, "recent_book": books[2]["title"],
+            "best_seller_date": '2016-03-12', "id":2,
+            "book_id":2}
+>>>>>>> 62290bfe96a5b12650cf3d6c5c26f74c91a130ac
            ]
 total = {"issues": 0, "commits": 0, "tests": 0}
 # dynamic snippet to total issues and commits
