@@ -19,7 +19,10 @@
 </div>
 
 <div class="controller" ng-app="myApp" ng-controller="bookCtrl">
-	<p>Author: <a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
+{% raw %}
+	<img src="{{array.link}}"></img>
+{% endraw %}
+<p>Author: <a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
 {% raw %}
 	<p>Publisher: {{array.publisher}}</p>
 	<p>Latest week on the Best Sellers List: {{array.best_seller_date}}</p>
