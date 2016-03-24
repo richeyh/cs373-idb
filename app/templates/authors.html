@@ -90,7 +90,7 @@ app.controller('authorsCtrl', function($scope){
 	$scope.array = [
 		{% for author in authors %}
 			{% do author.update({'link':url_for('.Author',author_id=author["id"])}) %}
-			{{ author|safe }}
+			{{ author|safe }} ,
 		{% endfor %}
 	];
 });
