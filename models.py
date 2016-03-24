@@ -3,7 +3,9 @@ The module for all SQLAlchemy database models
 """
 from extensions import DB
 
-
+"""
+An Author Model
+"""
 class Author(DB.Model):
     """
     An author of a book.
@@ -26,7 +28,9 @@ class Author(DB.Model):
     Books = DB.relationship("Book")
     link = DB.Column(DB.String(256))
 
-
+"""
+A Book Model
+"""
 class Book(DB.Model):
     """
     A Book object to hold information.
@@ -55,7 +59,9 @@ class Book(DB.Model):
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
 
-
+"""
+A TeamMember model
+"""
 class TeamMember(DB.Model):
     """
     A TeamMember object for use latter to track changing statistics.
