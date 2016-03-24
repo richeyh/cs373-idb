@@ -27,13 +27,13 @@ books = [{"title": 'All the Light We Cannot See',
 
 authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
             "book_count": 1, "recent_book": books[0]["title"],
-            "best_seller_date": '2016-03-12', "id":0},
+            "best_seller_date": '2016-03-12', "id":0, "Link": "https://www.facebook.com/anthonydoerr"},
            {"last_name": 'Hawkins', "first_name": 'Paula',
             "book_count": 1, "recent_book": books[1]["title"],
-            "best_seller_date": '2016-03-12', "id":1},
+            "best_seller_date": '2016-03-12', "id":1, "Link": "https://www.facebook.com/PaulaHawkinsWriter"},
            {"last_name": 'Lee', "first_name": 'Harper',
             "book_count": 1, "recent_book": books[2]["title"],
-            "best_seller_date": '2016-03-12', "id":2}
+            "best_seller_date": '2016-03-12', "id":2, "Link": "https://www.facebook.com/harperlee"}
            ]
 total = {"issues": 0, "commits": 0, "tests": 0}
 # dynamic snippet to total issues and commits
