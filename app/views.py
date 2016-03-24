@@ -13,16 +13,16 @@ books = [{"title": 'All the Light We Cannot See',
           "first_name": 'Anthony', "last_name": 'Doerr',
           "publisher": 'Scribner', "best_seller_list": 'Hardcover',
           "best_seller_date": '2016-03-12', "ISBN": '9781476746586',
-          "Link": "", "id": 0},
+          "Link": "http://t2.gstatic.com/images?q=tbn:ANd9GcQNwFitSZQv7-IP7HkD6AJv_1M0VF4cQ5ydz6dlQU_w9IipF2zu", "id": 0},
          {"title": 'The Girl on the Train', "first_name": 'Paula',
           "last_name": 'Hawkins', "publisher": 'Riverhead',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
              "ISBN": '9781594633669',
-             "id": 1, "Link": ""},
+             "id": 1, "Link": "http://t0.gstatic.com/images?q=tbn:ANd9GcT7qekXzNKAn6ca_gmMP0yczMpJuhN5FAE80JbbYs5aYXk4u7Dd"},
          {"title": 'Go Set a Watchman', "first_name": 'Harper',
           "last_name": 'Lee', "publisher": 'HarperCollins',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
-             "ISBN": '9780062409850', "id": 2, "Link": ""}
+             "ISBN": '9780062409850', "id": 2, "Link": "http://www.wired.com/wp-content/uploads/2015/07/go-set-a-watchman-582x890.jpg"}
          ]
 
 authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
