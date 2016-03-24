@@ -1,3 +1,6 @@
+"""
+The module for all SQLAlchemy database models
+"""
 from extensions import DB
 
 
