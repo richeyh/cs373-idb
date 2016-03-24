@@ -21,12 +21,12 @@
 
 <div align="center" class="controller" ng-app="myApp" ng-controller="bookCtrl">
     {% raw %}
-    <img src="{{array.book_image}}"></img>
+    <img src="{{array.Link}}"></img>
     {% endraw %}
+</div>
+<div align="center" class="span4 profile-info" >
     <h4>Author</h4> 
-
     <p><a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
-
     {% raw %}
     <h4>PUBLISHER</h4>
     <p>{{array.publisher}}</p>
