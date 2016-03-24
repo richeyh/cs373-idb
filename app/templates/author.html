@@ -27,16 +27,23 @@
 
 </div>
 {% endblock %}
+
+
 {% block javascript %}
 var happ = angular.module('myHeader', []);
 happ.controller('headerCtrl', function($scope){
 	$scope.array = {{author|safe}};
-	$scope.full_name = $scope.array.first_name + " "+$scope.array.last_name;
+	$scope.full_name = $scope.array.first_name + " " + $scope.array.last_name;
 
 });
 
 var app = angular.module('myApp', []);
 app.controller('authorCtrl', function($scope){
 	$scope.array = {{author|safe}};
+
 });
+
+angular.element(document).ready(function() {
+ 	angular.bootstrap(document, ['myHeader','myApp'])});
+
 {% endblock %}

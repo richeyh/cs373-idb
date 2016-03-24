@@ -27,12 +27,11 @@
 {% endraw %}
 </div>
 {% endblock %}
+
 {% block javascript %}
 var happ = angular.module('myHeader', []);
 happ.controller('headerCtrl', function($scope){
 	$scope.array = {{book|safe}};
-	$scope.full_name = $scope.array.first_name + " " +$scope.array.last_name;
-
 });
 
 var app = angular.module('myApp', []);
@@ -40,4 +39,8 @@ app.controller('bookCtrl', function($scope){
 	$scope.array = {{book|safe}};
 	$scope.full_name = $scope.array.first_name + " " + $scope.array.last_name;
 });
+
+angular.element(document).ready(function() {
+  	angular.bootstrap(document, ['myHeader','myApp'])});
+
 {% endblock %}
