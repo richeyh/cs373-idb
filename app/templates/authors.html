@@ -73,6 +73,7 @@
 				<td>{{x.book_count}}</td>
 				<td>{{x.recent_book}}</td>
 				<td>{{x.best_seller_date}}</td>
+				<td><a href="{{x.link}}">Link</a></td>
 				{% endraw %}
 			</tr>
 		</tbody>
@@ -86,6 +87,11 @@ app.controller('authorsCtrl', function($scope){
 	$scope.sortReverse = false;
 	$scope.searchAuthor = '';
 
-	$scope.array = {{authors|safe}};
+	$scope.array = [
+		{% for author in authors %}
+			{% do author.update({'link':url_for('.Author',author_id=author["id"])}) %}
+			{{ author|safe }}
+		{% endfor %}
+	];
 });
 {% endblock %}

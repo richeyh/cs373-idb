@@ -13,27 +13,27 @@ books = [{"title": 'All the Light We Cannot See',
           "first_name": 'Anthony', "last_name": 'Doerr',
           "publisher": 'Scribner', "best_seller_list": 'Hardcover',
           "best_seller_date": '2016-03-12', "ISBN": '9781476746586',
-          "Link": "", "id": 1},
+          "Link": "", "id": 0},
          {"title": 'The Girl on the Train', "first_name": 'Paula',
           "last_name": 'Hawkins', "publisher": 'Riverhead',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
              "ISBN": '9781594633669',
-             "id": 2, "Link": ""},
+             "id": 1, "Link": ""},
          {"title": 'Go Set a Watchman', "first_name": 'Harper',
           "last_name": 'Lee', "publisher": 'HarperCollins',
           "best_seller_list": 'Hardcover', "best_seller_date": '2016-03-12',
-             "ISBN": '9780062409850', "id": 3, "Link": ""}
+             "ISBN": '9780062409850', "id": 2, "Link": ""}
          ]
 
 authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
             "book_count": 1, "recent_book": books[0]["title"],
-            "best_seller_date": '2016-03-12', "id":1},
+            "best_seller_date": '2016-03-12', "id":0},
            {"last_name": 'Hawkins', "first_name": 'Paula',
             "book_count": 1, "recent_book": books[1]["title"],
-            "best_seller_date": '2016-03-12', "id":2},
+            "best_seller_date": '2016-03-12', "id":1},
            {"last_name": 'Lee', "first_name": 'Harper',
             "book_count": 1, "recent_book": books[2]["title"],
-            "best_seller_date": '2016-03-12', "id":3}
+            "best_seller_date": '2016-03-12', "id":2}
            ]
 total = {"issues": 0, "commits": 0, "tests": 0}
 # dynamic snippet to total issues and commits
