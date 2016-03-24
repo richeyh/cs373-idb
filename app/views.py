@@ -35,6 +35,14 @@ authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
             "book_count": 1, "recent_book": books[2]["title"],
             "best_seller_date": '2016-03-12', "id":3}
            ]
+total = {"issues": 0, "commits": 0, "tests": 0}
+# dynamic snippet to total issues and commits
+for name in members:
+    attributes = members[name]
+    total["issues"] = total["issues"] + attributes["issues"]
+    total["commits"] = total["commits"] + attributes["commits"]
+    total["tests"] = total["tests"] + attributes["tests"]
+members["total"] = total
 
 
 class IndexView(MethodView):
@@ -46,14 +54,6 @@ class IndexView(MethodView):
 class AboutView(MethodView):
 
     def get(self):
-        # dynamic snippet to total issues and commits
-        total = {"issues": 0, "commits": 0, "tests": 0}
-        for name in members:
-            attributes = members[name]
-            total["issues"] = total["issues"] + attributes["issues"]
-            total["commits"] = total["commits"] + attributes["commits"]
-            total["tests"] = total["tests"] + attributes["tests"]
-        members["total"] = total
         return render_template("about.html", members=members)
 
 
