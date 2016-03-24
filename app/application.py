@@ -1,7 +1,11 @@
+import os.path as op
+
 from flask import Flask
-from flask.ext.sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+from flask_admin.contrib.fileadmin import FileAdmin
+
+
 from extensions import DB
 from blueprints import blueprint
 from models import TeamMember
@@ -15,6 +19,10 @@ def generate_application(config=None):
     app.register_blueprint(blueprint)
     # admin registration below
     admin = Admin(app, name="IDB", template_mode='bootstrap3')
+    path1 = op.join(op.dirname(__file__), 'static')
+    path2 = op.join(op.dirname(__file__), 'templates')
+    admin.add_view(FileAdmin(path1, '/static/', name='Static Files'))
+    admin.add_view(FileAdmin(path2, '/templates/', name='Template Files'))
     admin.add_view(ModelView(TeamMember, DB.session))
     return app
 

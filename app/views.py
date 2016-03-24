@@ -68,11 +68,13 @@ class AuthorsView(MethodView):
     def get(self):
         return render_template("authors.html", authors=authors)
 
+
 class AuthorView(MethodView):
 
     def get(self, author_id):
         a = authors[author_id]
         return render_template("author.html", author=a)
+
 
 class BookView(MethodView):
 
