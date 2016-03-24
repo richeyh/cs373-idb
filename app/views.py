@@ -27,26 +27,13 @@ books = [{"title": 'All the Light We Cannot See',
 
 authors = [{"last_name": 'Doerr', "first_name": 'Anthony',
             "book_count": 1, "recent_book": books[0]["title"],
-<<<<<<< HEAD
-            "best_seller_date": '2016-03-12', "id":0, "Link": "https://www.facebook.com/anthonydoerr"},
+            "best_seller_date": '2016-03-12', "id":0, "Link": "https://www.facebook.com/anthonydoerr","book_id":0},
            {"last_name": 'Hawkins', "first_name": 'Paula',
             "book_count": 1, "recent_book": books[1]["title"],
-            "best_seller_date": '2016-03-12', "id":1, "Link": "https://www.facebook.com/PaulaHawkinsWriter"},
+            "best_seller_date": '2016-03-12', "id":1, "Link": "https://www.facebook.com/PaulaHawkinsWriter", "book_id":1},
            {"last_name": 'Lee', "first_name": 'Harper',
             "book_count": 1, "recent_book": books[2]["title"],
-            "best_seller_date": '2016-03-12', "id":2, "Link": "https://www.facebook.com/harperlee"}
-=======
-            "best_seller_date": '2016-03-12', "id":0,
-            "book_id":0},
-           {"last_name": 'Hawkins', "first_name": 'Paula',
-            "book_count": 1, "recent_book": books[1]["title"],
-            "best_seller_date": '2016-03-12', "id":1,
-            "book_id":1},
-           {"last_name": 'Lee', "first_name": 'Harper',
-            "book_count": 1, "recent_book": books[2]["title"],
-            "best_seller_date": '2016-03-12', "id":2,
-            "book_id":2}
->>>>>>> 62290bfe96a5b12650cf3d6c5c26f74c91a130ac
+            "best_seller_date": '2016-03-12', "id":2, "Link": "https://www.facebook.com/harperlee", "book_id":2}
            ]
 total = {"issues": 0, "commits": 0, "tests": 0}
 # dynamic snippet to total issues and commits
