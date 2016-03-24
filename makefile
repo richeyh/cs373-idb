@@ -5,7 +5,7 @@ FILES :=                         \
     .travis.yml                  \
     .gitignore                   \
 	makefile                     \
-    apiary.aqib                  \
+    apiary.apib                  \
     IDB1.log                     \
     models.html                  \
     models.py                    \
