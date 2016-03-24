@@ -31,7 +31,7 @@
 var happ = angular.module('myHeader', []);
 happ.controller('headerCtrl', function($scope){
 	$scope.array = {{author|safe}};
-	$scope.full_name = $scope.array.first_name + " " $scope.array.last_name;
+	$scope.full_name = $scope.array.first_name + " "+$scope.array.last_name;
 
 });
 
