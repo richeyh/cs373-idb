@@ -19,11 +19,12 @@
 </div>
 
 <div class="controller" ng-app="myApp" ng-controller="bookCtrl">
+{% raw %}
 	<p>Author: {{full_name}}</p>
 	<p>Publisher: {{array.publisher}}</p>
 	<p>Latest week on the Best Sellers List: {{array.best_seller_date}}</p>
 	<p>International Standard Book Number (ISBN): {{array.ISBN}}</p>
-
+{% endraw %}
 </div>
 {% endblock %}
 {% block javascript %}

@@ -19,9 +19,11 @@
 </div>
 
 <div class="controller" ng-app="myApp" ng-controller="authorCtrl">
+{% raw %}
 	<p>Number of books that have been on the Best Sellers List: {{array.book_count}}</p>
 	<p>Latest book on the Best Sellers List: {{array.recent_name}}</p>
 	<p>Latest week the book has been on the Best Sellers List: {{array.best_seller_date}}</p>
+{% endraw %}
 
 </div>
 {% endblock %}
