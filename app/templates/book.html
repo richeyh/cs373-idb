@@ -21,7 +21,7 @@
 
 <div align="center" class="controller" ng-app="myApp" ng-controller="bookCtrl">
     {% raw %}
-    <img src="{{array.Link}}"></img>
+    <img src="{{array.book_image}}"></img>
     {% endraw %}
     <h4>Author</h4> 
     <p><a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
