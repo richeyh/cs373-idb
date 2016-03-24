@@ -22,7 +22,7 @@
 {% raw %}
 	<p>Number of books that have been on the Best Sellers List: {{array.book_count}}</p>
 {% endraw %}
-	<p>Latest book on the Best Sellers List: <a href = "url_for('.Book',book_id= author.book_id)">{% raw %}{{array.recent_book}}{% endraw %}</a></p>
+	<p>Latest book on the Best Sellers List: <a href = "{{url_for('.Book',book_id= author.book_id)}}">{% raw %}{{array.recent_book}}{% endraw %}</a></p>
 {% raw %}
 	<p>Latest week the book has been on the Best Sellers List: {{array.best_seller_date}}</p>
 {% endraw %}
