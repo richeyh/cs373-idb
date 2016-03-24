@@ -1,4 +1,4 @@
-from extensions import DB
+from flask.ext.sqlalchemy import SQLAlchemy
 
 
 class Author(DB.Model):
