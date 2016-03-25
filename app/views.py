@@ -5,8 +5,8 @@ from flask import render_template
 members = {
     "Richard": {"issues": 6, "commits": 63, "tests": 0, "resp": "Back-end, Flask"},
     "Rachel": {"issues": 4, "commits": 17, "tests": 0, "resp": "Docker, Uml"},
-    "Ruzseth": {"issues": 9, "commits": 46, "tests": 0, "resp": "Documentation, Front-end"},
-    "Timothy": {"issues": 4, "commits": 50, "tests": 0, "resp": "Front-end, Angular"},
+    "Ruzseth": {"issues": 9, "commits": 48, "tests": 0, "resp": "Documentation, Front-end"},
+    "Timothy": {"issues": 4, "commits": 51, "tests": 0, "resp": "Front-end, Angular"},
     "Kyung": {"issues": 2, "commits": 5, "tests": 6, "resp": "Testing, Apiary"}
 }
 books = [{"title": 'All the Light We Cannot See',
