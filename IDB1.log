@@ -1,0 +1,1086 @@
+commit 8e534221aa73e8143e735577c4ccd082f3a2d013
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 19:27:09 2016 -0500
+
+    Finally got models.html
+
+commit 0d60d9202db72c9395e329106876a75b7008b26d
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:26:38 2016 -0500
+
+    book styling
+
+commit bc425f6b32aa8bdd5515c401d4545f78aa8f8f98
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 19:26:02 2016 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit 9edb89efeca39974489a3d5f50b95a50b64a74d8
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 19:25:00 2016 -0500
+
+    added req to travis
+
+commit 7f2922b00a0875c7cb5b17ab2a184e39a7ed2821
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:21:52 2016 -0500
+
+    desc. change
+
+commit c50d67301dbd7aeee668a89acf7b86e79c83a2e2
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:21:11 2016 -0500
+
+    changed extensions.py
+
+commit ff9489c7ed35eb7b6954812663a9845337fbc865
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:19:02 2016 -0500
+
+    changed makefile from pydoc3 to pydoc
+
+commit a2e32472605d3f25f32c0e5213145019179367ca
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:16:57 2016 -0500
+
+    trying something
+
+commit 596ca660c6aaf9734eada0d853f7e0a6842d0354
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:13:13 2016 -0500
+
+    col adjustments
+
+commit bab724b9c09bd4ccb03cc8d0815b7f575218b05e
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 19:05:49 2016 -0500
+
+    Changed responsibilities
+
+commit d4eaf6dfc7c48319bd3aa59aef816bc9be60d2fa
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:03:24 2016 -0500
+
+    offset
+
+commit 87f0f3f9c4b08b0638472cf0acc8b3a56f29637b
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:59:56 2016 -0500
+
+    minus pluses
+
+commit defaddc019b4094c98da7afbeaeafeebfbbcf9bd
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 18:58:19 2016 -0500
+
+    removed readme req from setup.py
+
+commit a32956af1004ea6ee127cc5ef4727cb150eb5cf0
+Merge: 49c57b6 96c9efe
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 18:53:04 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 49c57b6cb7868cec7b0bbc278dbb775576da24b0
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 18:52:52 2016 -0500
+
+    added setup.py to build project as python egg
+
+commit 96c9efed19530254428e7a61073d7f90358dad5d
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 18:51:51 2016 -0500
+
+    Update author.html
+
+commit 81074f75c8ea0fb748befaae1a57262ec8a1838a
+Merge: 17a8f17 0477ae7
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 18:45:38 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 17a8f17d84ba7e0c864e4d8ad7df80e97df5bacc
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 18:45:25 2016 -0500
+
+    tried importing flask
+
+commit 0477ae7319acba8b7b71de4955972692d555a92d
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:45:13 2016 -0500
+
+    columns fix
+
+commit b380d6cf7c301d66b80af5d6f171f73574423bb2
+Merge: 08243ff 6c4afed
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:37:18 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+    style changes
+
+commit 08243ffcf56dd01fe0fb0f35c746927077efcf2a
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:37:05 2016 -0500
+
+    took out border
+
+commit 6c4afed82e63373af6315489ba9789759fe8c465
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 18:36:13 2016 -0500
+
+    added headers to models
+
+commit d4be2bde05d80dd9d91439e626d4cbb980ef15eb
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 18:35:27 2016 -0500
+
+    changed make file
+
+commit 2c271371d781cff75255538d1f658463730fbdb5
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:32:24 2016 -0500
+
+    profile info update
+
+commit 477f95e4a88a564b413a6fb3af34e6f7cfdcdd09
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:22:09 2016 -0500
+
+    profile info css
+
+commit dc2d0b71c3ee18b6307a705182b73fcf5bf6ec26
+Author: yks3456 <ksy228@cs.utexas.edu>
+Date:   Thu Mar 24 18:20:32 2016 -0500
+
+    Update about.html
+
+commit f6a4d60b4ea3a67926db6d9dde88e1f0adbcd7ee
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 18:15:08 2016 -0500
+
+    fixed pictures for books.
+
+commit 20b0b0f9f9f6d6ff49129505b01959ecd707491c
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:09:28 2016 -0500
+
+    author page fix
+
+commit dfcd427cf256c8139c31bb8af5731592999d007a
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 18:08:10 2016 -0500
+
+    book profile restore
+
+commit e06927b20e061e6ca1a84a38467f49c4af67f758
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:59:41 2016 -0500
+
+    changed makefile
+
+commit 24a0261b04510b7596578ed6a539a226025f7e85
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:57:21 2016 -0500
+
+    changed pydoc3 to pydoc in makefile
+
+commit 93714a914823dda021ba749fddf7ad306153b778
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 17:52:57 2016 -0500
+
+    added module top header comment
+
+commit a3e62ac9f1e41dd03676d50243f58955a1a828c8
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 17:49:43 2016 -0500
+
+    updated docstring in models.py to be pydoc compliant
+
+commit e28ce0ebfb7ec2b24952951c433f412610ed6e2c
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 17:41:34 2016 -0500
+
+    added extensions file back
+
+commit 7731ad1d92278921b06928411c72049b42242a8d
+Merge: 8efeecc bca4338
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 17:39:41 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 8efeeccf65bdc2f7f185edfcf63285decfa323a1
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 17:39:12 2016 -0500
+
+    moved required files out a directory
+
+commit bca4338dbf3990db8a3018db812a5dffaa0dbd57
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:37:49 2016 -0500
+
+    added extension to models.py outside of app folder
+
+commit 5013f1c90bdefd322d0d89b492a75bab95ce43c2
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 17:35:02 2016 -0500
+
+    Updated about.html
+
+commit 16f2a034f783beca6f7bac1b6df792adfe19dac4
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:33:46 2016 -0500
+
+    changed .travis.yml
+
+commit 18da2a3576db49f9770344062f78ecb25a94dadf
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 17:33:20 2016 -0500
+
+    book profile styling
+
+commit c068087e8a15b13fdc81a9168606b32663d6adca
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 17:31:06 2016 -0500
+
+    add css for profiles
+
+commit c318323119e74d338d37659e3d00e91fc566022e
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:22:31 2016 -0500
+
+    change models
+
+commit 442a4ed95f17dbdae0d5208a40eb693200c96a22
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 17:12:32 2016 -0500
+
+    Fixed GitHub icon color
+
+commit 085b81975b54cb3aa16c6d5bdb39bf9eb506a30a
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:09:59 2016 -0500
+
+    took out some unnecessary stuff in footer
+
+commit 518a481db04b73091e42d3650965f1d05e56b00f
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:05:26 2016 -0500
+
+    added github icon
+
+commit a4d83a01b5ec721fd0f8fc563594520dc70be38d
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 17:02:40 2016 -0500
+
+    GitHub icon
+
+commit e5d3b3dd34ad5d1ee4ecec738c3c6dd40cd5a88d
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 17:02:07 2016 -0500
+
+    author page styling
+
+commit ec5752d9b31db6210c5bc12689b23bf7508003c5
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 17:01:08 2016 -0500
+
+    fixed favicon
+
+commit 542a53433d242e8a9510e2cc5a4610071a5a6778
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 16:57:27 2016 -0500
+
+    author style
+
+commit 3bef4d9dfac9d92abea4a0824e390da34d1618e2
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 16:53:22 2016 -0500
+
+    alignment and new design
+
+commit 2a567df030f42b11f8ba9d7444ab838deed6f143
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 16:48:05 2016 -0500
+
+    Add about me
+
+commit d743ff0bbd894da52dfe12f9e9dea6aef565f777
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 16:47:05 2016 -0500
+
+    center align
+
+commit 7d658276ff33866287db63d925e50029a121aefb
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 16:40:59 2016 -0500
+
+    deleted pictures. changed makefile. This is Ruzseth's commit
+
+commit 7b7488c8e82ef1b1e2686be7df14495fcb84836a
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 16:39:29 2016 -0500
+
+    New picture
+
+commit da522cd2c9cfb441ce02966473415c90da14db0b
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 16:32:14 2016 -0500
+
+    changed image on home page
+
+commit 4299373ed9511727e53061f591ceb896fceeebfa
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 16:29:43 2016 -0500
+
+    New NYC image from splash page
+
+commit e71941835996c5b3e7c26730cb455529fdf469d4
+Merge: adfd7ed 0152e24
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 16:18:14 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit adfd7ed8e4ee16b7ce00e535bf8213ef97f5ec0d
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 16:17:45 2016 -0500
+
+    fixed merge conflicts
+
+commit 0152e247eee28a624aae2687538f57249ef83890
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 16:12:42 2016 -0500
+
+    removed facebook plugin from book.html. whoops
+
+commit 1b8a6c8250f7d658f0ace86715893bd8fea98528
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 16:02:08 2016 -0500
+
+    moved facebookplugin stuff
+
+commit ad62b780f152542669a014deabda09a05beaf9f6
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:56:28 2016 -0500
+
+    typo in book.html. showing two author names (one linked and one not linked)
+
+commit a255a246d468c201ba55a444471008ff6324e02d
+Merge: f3c06ae 62290bf
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:54:56 2016 -0500
+
+    facebook plugin for book.html
+
+commit 62290bfe96a5b12650cf3d6c5c26f74c91a130ac
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 15:52:53 2016 -0500
+
+    Copied models.py and tests.py
+
+commit f3c06aec80654d2a44ee348b83114d4bfcaa0776
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:52:44 2016 -0500
+
+    added facebook embedding to authors and bookcovers for books
+
+commit d0cf4f78c6ab068ce0d42d0e0995195d6ab3692b
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 15:44:56 2016 -0500
+
+    mixed brackets on jinga template
+
+commit 63ad225462f82993769f1853e31355e387051dc7
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 15:43:57 2016 -0500
+
+    missing paren
+
+commit 0fefc26267da765109425c452024d4063b758cb5
+Merge: 5000af8 ff78d8f
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 15:42:17 2016 -0500
+
+    fixed merge conflicts
+
+commit 5000af8722387633521fcedbc500e763c01cda16
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 15:38:01 2016 -0500
+
+    added linkes from single book to single author and vice versa
+
+commit ff78d8fd80a8366e459cb711d36f980c5506e7ec
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:32:34 2016 -0500
+
+    added bookcovers to books
+
+commit fab0f8f3daaa2a31ae3e756be1d0c3ae66f3173f
+Merge: 5dd8e53 a3ac843
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 15:27:17 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 5dd8e53cba9f2dffd188fbb75ba2ae7e8c4d6249
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 15:27:01 2016 -0500
+
+    updated bio
+
+commit a3ac8437b12360091cd8dc071664d5242d0b3d0a
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:24:11 2016 -0500
+
+    added my bio
+
+commit 80f44ff3958efb52b12ad7cd9b8aeef93be40f41
+Merge: 11e94ed a93051b
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:17:38 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 11e94ed1110adba926b049dfa4b6bcf9021df8ba
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:17:29 2016 -0500
+
+    changed table style and fixed typo in books.html
+
+commit a93051b043ac43c3d59ac33b55e0b05eca381daa
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 15:15:35 2016 -0500
+
+    Update about.html
+
+commit 02170e3f8641eebd17863afc9dd2d6e951adad44
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 15:08:20 2016 -0500
+
+    took off publishers from home page. changed height of profile for about page
+
+commit 687c25e98548890ed7ddfd0b0e5b12b434ffbc8e
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 15:06:55 2016 -0500
+
+    Update about.html
+
+commit 9dd3bc12b9523472d3eb1e817dff9169b1d68b69
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 15:03:04 2016 -0500
+
+    Update about.html
+
+commit 3f5a69ebe3d8de487c469e9eec3922a048d556d5
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 14:58:14 2016 -0500
+
+    Update views.py
+
+commit aa432b2e163cdf466fd97c7ba8414aecaed544f6
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 14:54:07 2016 -0500
+
+    changed height back
+
+commit abba90d7af9adf23ffc5056911042d64ef9f998a
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 14:53:27 2016 -0500
+
+    increased max-height to 550px
+
+commit 6aca75fb298a9d686aad77d775fa1c7669586f67
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 14:50:06 2016 -0500
+
+    changed person profile height to 500 px
+
+commit 8e685fdaf598f984ae7cb202140c6e3e4e88e40b
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 14:49:36 2016 -0500
+
+    Update about.html
+
+commit 6748e48d83854f3b27eba8dd9c0ed6a1eabe186e
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 14:40:40 2016 -0500
+
+    Update about.html
+    
+    profile pic test
+
+commit 8deadc585650431ac36d493036758255594c14ab
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 14:40:04 2016 -0500
+
+    added top margin to about page picture things
+
+commit 096446e1126aca830b199855b83f96fac5f6355a
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 14:33:12 2016 -0500
+
+    trying something
+
+commit 851f9d85eddb42a13ebcf85d5c73b3458e322589
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 14:19:54 2016 -0500
+
+    fixed bug where some data was not showing up on the individual author and book pages
+
+commit 12fb14638769ecf6cb4ae60805ddab4e59abf57c
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:49:16 2016 -0500
+
+    added table heads
+
+commit 9204140f9d764450cce6be0b55330277567be569
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:46:59 2016 -0500
+
+    added links for books
+
+commit b692b7d340b3b5f8f9469c8d4bd8b76bd1ea0bd4
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:37:49 2016 -0500
+
+    added do extension to jinga
+
+commit ddc0fdcf1856785f982f9bd375ab64b6a6309ae4
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:35:30 2016 -0500
+
+    added links to authors
+
+commit 491959922c60d3e43b3b2cfb4e7152f49abe4fbf
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:18:47 2016 -0500
+
+    fixed author attribute
+
+commit 7368e8dd96da869ef5f2e37e9392917a4447e3b6
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:10:55 2016 -0500
+
+    small book.html and author.html fix
+
+commit 2496d011a0c2220382a246736166ab32a09880ce
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:01:41 2016 -0500
+
+    added missing raw tags to html
+
+commit 70d864ffa8a55bcded99c683f911893eacd2cedb
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 20:00:23 2016 -0500
+
+    adding casting to new views
+
+commit d30435a5f25589be60ec8240377082bd436c1009
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 19:57:57 2016 -0500
+
+    moved snippet to fix totalling issue
+
+commit afa6d6897ee040e4aaf088f1533c858f8a6a5a50
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 19:55:46 2016 -0500
+
+    clean up of fileadmin issue
+
+commit 33726420b27d9cb07d7a57ff333664ce21400e0a
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 19:45:39 2016 -0500
+
+    added file admin and pep8 compliance
+
+commit c9b830d8e62aad91df61f90a413b8396457a927c
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Wed Mar 23 16:11:54 2016 -0500
+
+    images for wiki added
+
+commit bf07127eb1d941d196a85cc082dfd3c1e825505c
+Author: Richard Huettel <richeyh@users.noreply.github.com>
+Date:   Wed Mar 23 15:34:32 2016 -0500
+
+    added missing imports
+
+commit edac926c28ef7e23b34a608195ac36959a6127af
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 15:28:57 2016 -0500
+
+    fixed names for authors in book table
+
+commit 6af8205eddb812d30dc3fcbc0e40066f0a4040c2
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 15:21:35 2016 -0500
+
+    added views for individual pages.
+
+commit a4afce34cfac710dcbb791821c3e85e57198e3be
+Merge: bb0f19f e9c36cc
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 15:07:31 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit bb0f19f9ca82b9d8611942a4bfd37f65c3774cdb
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 15:07:22 2016 -0500
+
+    added book.html for individual books. deleted hyphens in ISBN
+
+commit e9c36cce95118710f97191ce7c04f9bab9e6ddb4
+Author: Richard Huettel <richeyh@users.noreply.github.com>
+Date:   Wed Mar 23 15:04:10 2016 -0500
+
+    Update .travis.yml
+
+commit 5a249bef8b958ca1d46f8de89fd517fb1558bcbc
+Author: Richard Huettel <richeyh@users.noreply.github.com>
+Date:   Wed Mar 23 15:02:15 2016 -0500
+
+    updated travis to reflect layout changes
+
+commit c57964fc699188edc367147499873ed2690ceae1
+Author: Richard Huettel <richeyh@users.noreply.github.com>
+Date:   Wed Mar 23 14:58:49 2016 -0500
+
+    package was causing travis to fail
+
+commit 756bee0835f8e3a8f3e112819cc94ada45fd4950
+Merge: 23d3905 d010b7c
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:57:44 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 23d39055dfca8b6a812f379b988071c832e90051
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:57:34 2016 -0500
+
+    undid all changes. whoops
+
+commit d010b7cb85f4d7005d1dacd27b46c9d0f8e2e5af
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 14:53:57 2016 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit 57e8e7a00cc3a666c33d2b5cac551a8d0fe1b588
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:53:10 2016 -0500
+
+    added a blueprint for author.html
+
+commit 1a8344ca4bd58e895e456439f12550af17a9851e
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:46:54 2016 -0500
+
+    added links from table to author page
+
+commit f4abed85fe0cdffb504dc747eff867e29fd873fb
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:44:13 2016 -0500
+
+    added author.html.
+
+commit 82213f697e29fbbbf9bc451a19bcdfd4f8656e1b
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:42:48 2016 -0500
+
+    added specific author.html page. it is using static data for now (not coming from views.py). Will change once I see if this works.
+
+commit f9fd4e29f96d15ae1a371badb680297d996a8987
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:14:10 2016 -0500
+
+    fixed more links
+
+commit 9d698411b1df2800c078b186cd14098308e12083
+Merge: 6c8c74e 8d8101d
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:10:50 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 6c8c74e220889eefa3ee41df1df89e7da58be77b
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Wed Mar 23 14:10:38 2016 -0500
+
+    fixed the links for the home page. publisher still needs to be deleted
+
+commit 8d8101d53c8fc23417bb0f3861e32c7f7e0c4046
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Wed Mar 23 14:05:41 2016 -0500
+
+    removed IBDB_html
+
+commit 18fd21a7b2a973ccd2eb34882b14c0c873fb76f6
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Wed Mar 23 12:39:02 2016 -0500
+
+    Changed UML
+
+commit 99f7f698e7ca17afda33f66a080768fbfa14c859
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Wed Mar 23 12:09:33 2016 -0500
+
+    Updated makefile
+
+commit 895fb5f285943bd134dcca3f5a9e5812d8022dcd
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Wed Mar 23 08:28:48 2016 -0500
+
+    Rearraged files for Docker. Docker/Carina successful. Close #21
+
+commit 64d02e24a5a5c359a7cd9867e2b4ce588706f557
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 21:05:07 2016 -0500
+
+    updating angular for authors
+
+commit 180e897d3b9318ec066851935995154e0a5c21af
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 21:02:04 2016 -0500
+
+    updated authors to be in backend
+
+commit 6ca1d1562a14d8a9852a2631e3bf0e01cbdc8be1
+Merge: 6132341 28ea7ed
+Author: root <root@localhost.localdomain>
+Date:   Tue Mar 22 21:42:29 2016 -0400
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 613234119d957538e6d1ffcf5576ce6ffdfeded4
+Author: root <root@localhost.localdomain>
+Date:   Tue Mar 22 21:41:49 2016 -0400
+
+    fixed books.html to work with backend
+
+commit 28ea7ed984f13ad1427dca37b63f3ed6838127be
+Author: Kyung Yoo <ksy228@cs.utexas.edu>
+Date:   Tue Mar 22 20:39:08 2016 -0500
+
+    tests.py removed tests for TeamMember
+
+commit 56b9bc47757c479ea4c604c37ae2349a88899cae
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 20:32:12 2016 -0500
+
+    moved books to backend
+
+commit ca85033665e523b1d82970d819826133ecf0c4ed
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:46:17 2016 -0500
+
+    added missing link to base template
+
+commit e7c34511508fb386cc5082d4447d34bcb1a843a4
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:42:37 2016 -0500
+
+    added view for authors
+
+commit aa3c8b3b15f47809d91b3ade9bdf20c31d10e162
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:38:13 2016 -0500
+
+    added in the books page to flask
+
+commit 52c539b72640a7654e7f336200f52a96acd8b123
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:32:11 2016 -0500
+
+    fixed bug in views
+
+commit b2957bd5de1e825a9911ad1628f0317e841e2386
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:28:59 2016 -0500
+
+    updated about to total issues/commits/tests
+
+commit 9092eb2b377c679cb79122503d5b3356e8a150a1
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:23:22 2016 -0500
+
+    updated about page to use members dict
+
+commit 1ba49c156e2073f69d0cb5c97ffb3c86f9c594dd
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:13:31 2016 -0500
+
+    Added about view
+
+commit 6bcc5d96829d3b0ca64dbdfedf4a39a25c2b4c9e
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:09:09 2016 -0500
+
+    moved fonts directory
+
+commit 0e4d0d139a0e7e38b734f489417eb350dae724e2
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:05:05 2016 -0500
+
+    update to static links
+
+commit 53fb8a2dfb169bd72464cbb29a5a24bde40cb700
+Merge: b70d971 f117659
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 19:00:27 2016 -0500
+
+    updates
+
+commit b70d971588444b1a0f834cbca33d15041de2c5ca
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Tue Mar 22 18:57:17 2016 -0500
+
+    added config changes
+
+commit f1176595fdfb5e8571858212c1d56e8cb964c39b
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Tue Mar 22 17:37:17 2016 -0500
+
+    finished making sortable tables for authors and books
+
+commit ad207014e9b8617846eb47e22eb3e16e574b5735
+Author: Kyung Yoo <ksy228@cs.utexas.edu>
+Date:   Tue Mar 22 17:01:48 2016 -0500
+
+    fixed typo in fetch_data.py
+
+commit 637b1348362807349271ddfbd9a3642f9b690a99
+Author: Kyung Yoo <ksy228@cs.utexas.edu>
+Date:   Tue Mar 22 16:25:41 2016 -0500
+
+    tests.py added unit tests
+
+commit 6b94e915e66807f46c2a92d77a46bc653426fb4b
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Tue Mar 22 16:12:00 2016 -0500
+
+    Added docker-compose.yml
+
+commit 3cbe8353ae53adc4d58e1fb7e85b1f055ebce511
+Merge: d9f9728 2cd5f4c
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Tue Mar 22 16:08:35 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit d9f9728a7360916da787f5cd8baad770d2aa7999
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Tue Mar 22 16:07:47 2016 -0500
+
+    added app.py for docker
+
+commit 2cd5f4ca2d081be5365e12935864a410c5f000a7
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Tue Mar 22 16:03:32 2016 -0500
+
+    Updated Dockerfile
+
+commit 4251f68328cf47b39e4be9afe81182059cd120a4
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Tue Mar 22 15:52:51 2016 -0500
+
+    Added Dockerfile
+
+commit 76b485be4b46908a2612b186681b8a8d8b760bf0
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Tue Mar 22 15:51:51 2016 -0500
+
+    Update .travis.yml
+    
+    success and failure notifications for slack
+
+commit 64625606fda09a587c8c7715db243cf1c430b441
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Tue Mar 22 15:50:24 2016 -0500
+
+    Update .travis.yml
+    
+    added slack integration
+
+commit 832821f1ddadc84ed7e9fe32bd8efd3757609314
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Tue Mar 22 15:45:13 2016 -0500
+
+    added travis.yml and makefile
+
+commit 8eeecb95b6639ec62405fe7744f0ed9513ff01a9
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:52:53 2016 -0500
+
+    href and src fixes
+
+commit 19d079ed4f8c3a29762166e7f8c891a480e6dc03
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:35:43 2016 -0500
+
+    authors.html updated
+
+commit da2ad1bab9ed82bb29194182e027dffc0d036e62
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:33:26 2016 -0500
+
+    book.html updated
+
+commit 12802ec6205076147f294c862040f4dc55969746
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:31:00 2016 -0500
+
+    coming-soon html updated
+
+commit 66353cd599775990bb9cab13bd5f0494efb2961c
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:29:12 2016 -0500
+
+    added skeleton html pages
+
+commit 6015ec69f3b82350cd1b2a4cda83a79bb3b04540
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:26:40 2016 -0500
+
+    created about.html and added updates
+
+commit 095aa18feeaca6bdf302e47e36ddb0e9941d3e8d
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:23:21 2016 -0500
+
+    home.html updates
+
+commit b634489f79a664f0aa339463993286de8903fb8b
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:16:44 2016 -0500
+
+    nav bar and footer added to base
+
+commit 6b2ef8c45fd343fb38061eaed582b2516cbadc0c
+Merge: d3acf3c fc5b8b4
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 21:05:45 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+    prep to push static file changes
+
+commit fc5b8b490419583c54a3bd7ee6771d53fd0422f1
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Mon Mar 21 20:34:12 2016 -0500
+
+    added home page and basic config file
+
+commit 9ec4f624a17b58336c772145a08ec62bc0989f27
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Mon Mar 21 20:23:19 2016 -0500
+
+    added reqs file and fixed case issue with models
+
+commit c8ced78f26cf29bc94bba753e7b7e1cb03c13af4
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Mon Mar 21 20:17:41 2016 -0500
+
+    added run feature to application.py
+
+commit 90c2afbea43d31a31ae576e79d1f728247e9212a
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Mon Mar 21 20:01:58 2016 -0500
+
+    Updated models to reflect changes
+
+commit d3acf3cb85b89d301045103df26c0afad6a020ab
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 17:58:48 2016 -0500
+
+    static files added
+
+commit 8fc52e6a89d55f924e01411168ef480bf19e101d
+Author: Ruzseth Anne Dela Cruz <r.delacruz@utexas.edu>
+Date:   Mon Mar 21 17:54:49 2016 -0500
+
+    base header css and js updates
+
+commit d858e1bb12a7ade13392aa42c49872a65bf0a594
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Mon Mar 21 15:16:35 2016 -0500
+
+    finished making static tables for authors and books (formatting included)
+
+commit e4490355b262f91f97646ebc601f7e995356e8d3
+Merge: 9d4db40 18cd081
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Mon Mar 21 14:48:14 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 9d4db40e8eb75630574c26cb392381ee23304f75
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Mon Mar 21 14:47:53 2016 -0500
+
+    books.html Added table with 3 books
+
+commit 18cd081f38e308ce4579223e2c26d7f44a96e41f
+Author: Kyung Yoo <ksy228@cs.utexas.edu>
+Date:   Mon Mar 21 14:45:07 2016 -0500
+
+    started writing unit tests
+
+commit 0747ece6ac01dbc1ea597ce6770419fb7c50d884
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Mon Mar 21 13:59:26 2016 -0500
+
+    UML class diagram. Close #16
+
+commit 41c71b064b11a79771c030805396b43ae5c6cfae
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Mon Mar 21 13:53:01 2016 -0500
+
+    html files
+
+commit 3dded56cf3d5bea76a83690c1539a87cf88e8c5f
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Thu Mar 10 17:55:08 2016 -0600
+
+    added in base template and bootstrap css/js
+
+commit a6902937787b86d53166e26cf92a0b021c93039a
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Thu Mar 10 17:45:51 2016 -0600
+
+    added comments to models
+
+commit f20c5620934513954903f6d6bc2df499edec4626
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Thu Mar 10 17:35:24 2016 -0600
+
+    added more categories to models
+
+commit da9117b9fb3cd0cec50b7cd9dcb1d90210280db2
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Thu Mar 10 17:31:11 2016 -0600
+
+    updated models for extra fields
+
+commit 303981b7a5a8fe2790fedcaa06e79029b97d5d69
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Thu Mar 10 17:26:02 2016 -0600
+
+    updated models and tested api endpoints
+
+commit 8832217de931310a7a90ab5ffe972190525dfb29
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Tue Mar 8 16:59:19 2016 -0600
+
+    added a base template
+
+commit 8156b2c83f6431404019d91106f4287d8a7e921b
+Author: Richard Huettel <richeyh@cs.utexas.edu>
+Date:   Tue Mar 8 15:30:21 2016 -0600
+
+    first commit
