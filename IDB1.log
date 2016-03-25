@@ -1,3 +1,169 @@
+commit 15b524d1faba83e2c7c15b70a60292d2aae77167
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:41:01 2016 -0500
+
+    edited kyung's bio
+
+commit eb2620f7a740a4156d9fa990c391052812cb90c5
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 20:40:25 2016 -0500
+
+    table fix
+
+commit 997812893c7e8190c0e6bd8855958b0a87f1b522
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:34:49 2016 -0500
+
+    added issues and commits to members
+
+commit f7ee8bdf61df64418ea5bb997045ab7b983e9756
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 20:28:46 2016 -0500
+
+    table size
+
+commit 9c0921adaca7fd5e45b2ec7b0ac99d64720cf530
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 20:22:26 2016 -0500
+
+    align
+
+commit 4770cdfccde2cdc4cd2db0bc0c67cdf87341640c
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:18:22 2016 -0500
+
+    fixed author.html
+
+commit fb0d21b09352d22087b573a33b2b6c4aa93ce4f1
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:09:48 2016 -0500
+
+    deleted __init__.py
+
+commit edf46fcb434df015da2586cef3272487f04c1060
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:08:56 2016 -0500
+
+    deleted some files
+
+commit e9bb95cd40f21440a49610349c69a60fb5ff8a05
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 20:06:14 2016 -0500
+
+    updated raw tags
+
+commit ec1df70a387d8e98e8c59c1e6237b973497b62be
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 20:05:47 2016 -0500
+
+    table styles
+
+commit 6a1d3537bb3c58c929042bf808847b73182b7f4e
+Author: ruzseth <r.delacruz@utexas.edu>
+Date:   Thu Mar 24 19:59:03 2016 -0500
+
+    Update book.html
+
+commit 48ad443d36137d3bd01ab3c37ee17e0bb943f5a8
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:51:13 2016 -0500
+
+    mirrored files outside of app folder with files in app
+
+commit 5d6bba29a68cfac8fcb878f57e3956216f63013f
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:48:23 2016 -0500
+
+    restore design changes
+
+commit 590518470420f4ab87e857f4df12364878ac6d33
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:45:36 2016 -0500
+
+    Revert "deleted unnecessary files"
+    
+    This reverts commit 2d7e1cd510db7869d99feb5691f9adbc6d6fd81a.
+
+commit 95bfdd874015f0f4444e0aa1c3b42df0178fed0a
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:44:50 2016 -0500
+
+    Revert "Revert "mirrored the two models files""
+    
+    This reverts commit 7de2b8641b4f456ef3f38a7be84fdbe87cf44488.
+
+commit 7de2b8641b4f456ef3f38a7be84fdbe87cf44488
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:42:56 2016 -0500
+
+    Revert "mirrored the two models files"
+    
+    This reverts commit 72c1053fdbdba4fe9b090d4702c2e04a4cbafd8d.
+
+commit 1ab9a43822b16216dd1cd8c3745d337d94ad84fb
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:40:00 2016 -0500
+
+    spacers
+
+commit 3a63b0c83a7858db49ba3e4696f5e07331ae1599
+Merge: 2d7e1cd 72c1053
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:39:34 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 2d7e1cd510db7869d99feb5691f9adbc6d6fd81a
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 19:39:24 2016 -0500
+
+    deleted unnecessary files
+
+commit 72c1053fdbdba4fe9b090d4702c2e04a4cbafd8d
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 19:39:20 2016 -0500
+
+    mirrored the two models files
+
+commit 1c98c2efe6c880ebb6aec95705f275ed864a2d20
+Merge: 0d15f9f 71fa1ad
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 19:38:29 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+
+commit 0d15f9fbc999e762ca1505a597e275d1abac2b10
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Thu Mar 24 19:38:16 2016 -0500
+
+    updated my commits and issues
+
+commit 71fa1ada49f301b932fa68489de312c35ad595e5
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:37:09 2016 -0500
+
+    book fix
+
+commit b11b1b20af71dea99e6a92188b2ff26802476e02
+Merge: 390ffa7 26c7a56
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:31:31 2016 -0500
+
+    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
+    spacers
+
+commit 390ffa7e5acd6572c87d46428834f42dfdc96a22
+Author: rdcruz <rdcruz@cs.utexas.edu>
+Date:   Thu Mar 24 19:31:12 2016 -0500
+
+    spacers
+
+commit 26c7a56981d662135ccf542c773b2b361cbdf46f
+Author: root <root@localhost.localdomain>
+Date:   Thu Mar 24 20:30:52 2016 -0400
+
+    added log
+
 commit 8e534221aa73e8143e735577c4ccd082f3a2d013
 Author: Rachel Choi <rachelychoi@utexas.edu>
 Date:   Thu Mar 24 19:27:09 2016 -0500
