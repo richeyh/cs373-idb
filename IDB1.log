@@ -1,3 +1,29 @@
+commit 65cac7108381d525066caa2332f1918825aad52f
+Merge: 7a2daec 51c7eef
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 21:08:16 2016 -0500
+
+    Merge branch 'dev'
+
+commit 51c7eef9f739648bb53ae5f128919f9a7be14ded
+Author: Rachel Choi <rachelychoi@utexas.edu>
+Date:   Thu Mar 24 21:06:46 2016 -0500
+
+    Changed table style
+
+commit 7a2daec2be0d0a15c195ee13abbaf51d8ca3a5e9
+Merge: 54cebab 92ad8e0
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:45:05 2016 -0500
+
+    Merge branch 'dev'
+
+commit 92ad8e00b1678fcfe146362d62c549e11dd5e95b
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:44:52 2016 -0500
+
+    added new log file
+
 commit 15b524d1faba83e2c7c15b70a60292d2aae77167
 Author: Timothy Lo <tklo101@cs.utexas.edu>
 Date:   Thu Mar 24 20:41:01 2016 -0500
@@ -21,6 +47,19 @@ Author: rdcruz <rdcruz@cs.utexas.edu>
 Date:   Thu Mar 24 20:28:46 2016 -0500
 
     table size
+
+commit 54cebabd0d8fe38eca1864e075a6cac6f96a2ec5
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:27:11 2016 -0500
+
+    added apiary.apib to master
+
+commit 2757c20f233ebd5ffc485e2354500987b22a5ded
+Merge: 52fcf53 9c0921a
+Author: Timothy Lo <tklo101@cs.utexas.edu>
+Date:   Thu Mar 24 20:24:52 2016 -0500
+
+    merged with dev
 
 commit 9c0921adaca7fd5e45b2ec7b0ac99d64720cf530
 Author: rdcruz <rdcruz@cs.utexas.edu>
@@ -838,11 +877,29 @@ Date:   Wed Mar 23 14:53:57 2016 -0500
 
     Transferring API Description file from Apiary.io
 
+commit 52fcf53d3e074b60090fed4c9446e3c0eae535b3
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 14:53:15 2016 -0500
+
+    Transferring API Description file from Apiary.io
+
 commit 57e8e7a00cc3a666c33d2b5cac551a8d0fe1b588
 Author: Timothy Lo <tklo101@cs.utexas.edu>
 Date:   Wed Mar 23 14:53:10 2016 -0500
 
     added a blueprint for author.html
+
+commit 1e10a4c3a2756416861a27c0279c159a4a22d346
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 14:51:33 2016 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit a6e3f958057bfa06f4fdf38b6643d6197a2f4250
+Author: Richard Huettel <richeyhuettel@yahoo.com>
+Date:   Wed Mar 23 14:49:47 2016 -0500
+
+    Transferring API Description file from Apiary.io
 
 commit 1a8344ca4bd58e895e456439f12550af17a9851e
 Author: Timothy Lo <tklo101@cs.utexas.edu>
