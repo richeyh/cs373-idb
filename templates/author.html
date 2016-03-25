@@ -32,17 +32,17 @@
 <div class="controller" ng-app="myApp" ng-controller="authorCtrl">
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="col-sm-6">
+			<div align="center" class="col-lg-3 col-md-6 col-lg-offset-3">
 				{% raw %}
-					<h4>Number of books that have been on the Best Sellers List</h4>
+					<h4>NO. OF BOOKS ON BEST SELLERS LIST</h4>
 					<p>{{array.book_count}}</p>
 				{% endraw %}
-					<h4>Latest book on the Best Sellers List</h4>
+					<h4>LATEST BEST SELLER</h4>
 				{% raw %}
 					<p><a href = "{{url_for('.Book',book_id= author.book_id)}}">{{array.recent_book}}</a></p>
 				{% endraw %}
 				{% raw %}
-					<h4>Latest week the book has been on the Best Sellers List</h4>
+					<h4>LATEST WEEK ON THE LIST</h4>
 					<p>{{array.best_seller_date}}</p>
 			</div>
 			<div class="fb-page" data-href="{{array.Link}}" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="{{array.Link}}"><a href="{{array.Link}}">{{full_name}}</a></blockquote></div>
@@ -50,7 +50,9 @@
 			{% endraw %}
 		</div>
 	</div>
-</div>
+
+<div class="fh5co-spacer-lg"></div>	
+
 {% endblock %}
 
 

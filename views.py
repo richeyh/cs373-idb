@@ -3,7 +3,7 @@ from flask import render_template
 
 # temporary list for the no DB stage of this project
 members = {
-    "Richard": {"issues": 5, "commits": 5, "tests": 0, "resp": "Back-end, Flask"},
+    "Richard": {"issues": 5, "commits": 69, "tests": 0, "resp": "Back-end, Flask"},
     "Rachel": {"issues": 5, "commits": 5, "tests": 0, "resp": "Docker, Uml"},
     "Ruzseth": {"issues": 5, "commits": 5, "tests": 0, "resp": "Documentation, Front-end"},
     "Timothy": {"issues": 5, "commits": 5, "tests": 0, "resp": "Front-end, Angular"},
