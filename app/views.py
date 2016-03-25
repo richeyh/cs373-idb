@@ -3,11 +3,11 @@ from flask import render_template
 
 # temporary list for the no DB stage of this project
 members = {
-    "Richard": {"issues": 5, "commits": 69, "tests": 0, "resp": "Back-end, Flask"},
-    "Rachel": {"issues": 5, "commits": 5, "tests": 0, "resp": "Docker, Uml"},
-    "Ruzseth": {"issues": 5, "commits": 5, "tests": 0, "resp": "Documentation, Front-end"},
-    "Timothy": {"issues": 5, "commits": 5, "tests": 0, "resp": "Front-end, Angular"},
-    "Kyung": {"issues": 5, "commits": 5, "tests": 0, "resp": "Testing, Apiary"}
+    "Richard": {"issues": 6, "commits": 63, "tests": 0, "resp": "Back-end, Flask"},
+    "Rachel": {"issues": 4, "commits": 17, "tests": 0, "resp": "Docker, Uml"},
+    "Ruzseth": {"issues": 9, "commits": 46, "tests": 0, "resp": "Documentation, Front-end"},
+    "Timothy": {"issues": 4, "commits": 50, "tests": 0, "resp": "Front-end, Angular"},
+    "Kyung": {"issues": 2, "commits": 5, "tests": 6, "resp": "Testing, Apiary"}
 }
 books = [{"title": 'All the Light We Cannot See',
           "first_name": 'Anthony', "last_name": 'Doerr',
