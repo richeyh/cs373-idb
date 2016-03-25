@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Family Picture -->
+	<div class="fh5co-bg-section" style="background-image: url({{ url_for('static', filename='images/puppy.jpg') }}); background-attachment: fixed;">
+			<div class="fh5co-overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="fh5co-hero-wrap">
+							<div class="fh5co-hero-intro text-center">
+								<h1 class="fh5co-lead"><span class="quo">&ldquo;</span>Ohana means family. Family means nobody gets left behind.... or forgotten.<span class="quo">&rdquo;</span></h1>
+								<p class="author">&mdash; <cite>Lilo & Stitch</cite></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- End Family Picture -->
+
+	<div class="fh5co-spacer fh5co-spacer-lg"></div>
+
+	<!-- Members -->
+		<div class="container" id="fh5co-products">
+			<div class="row text-left">
+				<div class="col-md-8">
+					<h2 class="fh5co-section-lead">We are The BookSweepers</h2>
+					<h3 class="fh5co-section-sub-lead">Our team is more than a group forced together for the sake of necessity, we are a family. </h3>
+				</div>
+				<div class="fh5co-spacer fh5co-spacer-md"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="https://avatars.slack-edge.com/2016-03-24/29361835316_0f0037d71489b07f4f88_512.jpg" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Rachel Choi</h4>
+						<p>I'm a senior Computer Science student at the University of Texas at Austin.</p>
+						<ul>
+                            <li>Responsibilities: {{members["Rachel"]["resp"]}}</li>
+                            <li>Number of Commits: {{members["Rachel"]["commits"]}}</li>
+                            <li>Issues Closed: {{members["Rachel"]["issues"]}}</li>
+                            <li>Number of Unit Tests: {{members["Rachel"]["tests"]}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="https://avatars.slack-edge.com/2016-03-08/25146284438_1e0d4b37fb7efc66d697_512.jpg" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Ruzseth Anne Dela Cruz</h4>
+						<p>A junior CS major at UT Austin with an interest in web development.</p>
+						<ul>
+                            <li>Responsibilities: {{members["Ruzseth"]["resp"]}}</li>
+                            <li>Number of Commits: {{members["Ruzseth"]["commits"]}}</li>
+                            <li>Issues Closed: {{members["Ruzseth"]["issues"]}}</li>
+                            <li>Number of Unit Tests: {{members["Ruzseth"]["tests"]}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="visible-sm-block visible-xs-block clearfix"></div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="https://avatars.slack-edge.com/2016-03-08/25456673254_88d3556c1f851f2b0b2f_512.png" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Richard Huettel</h4>
+						<p>I'm from Rockport,Tx. I grew up on a farm. Avid hunter and Fisher.</p>
+						<p>My favorite book is: Rifles for Watie</p>
+						<ul>
+                            <li>Responsibilities: {{members["Richard"]["resp"]}}</li>
+                            <li>Number of Commits: {{members["Richard"]["commits"]}}</li>
+                            <li>Issues Closed: {{members["Richard"]["issues"]}}</li>
+                            <li>Number of Unit Tests: {{members["Richard"]["tests"]}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="https://avatars.slack-edge.com/2016-03-24/29378337649_e3c29ed046e2a7976556_512.jpg" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Timothy Lo</h4>
+						<p>I'm a Computer Science student and I graduate in Spring 2017.</p>
+						<ul>
+                            <li>Responsibilities: {{members["Timothy"]["resp"]}}</li>
+                            <li>Number of Commits: {{members["Timothy"]["commits"]}}</li>
+                            <li>Issues Closed: {{members["Timothy"]["issues"]}}</li>
+                            <li>Number of Unit Tests: {{members["Timothy"]["tests"]}}</li>
+                        </ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+					<div class="fh5co-product">
+						<img src="https://avatars.slack-edge.com/2016-03-24/29375727169_a8a15c0d95561c93058a_512.png" alt="FREEHTML5.co Free HTML5 Template Bootstrap" class="img-responsive img-rounded to-animate">
+						<h4>Kyung Yoo</h4>
+						<p>I'm a Computer Science student at University of Texas of Austin graduating in Summer 2016</p>
+						<ul>
+                            <li>Responsibilities: {{members["Kyung"]["resp"]}}</li>
+                            <li>Number of Commits: {{members["Kyung"]["commits"]}}</li>
+                            <li>Issues Closed: {{members["Kyung"]["issues"]}}</li>
+                            <li>Number of Unit Tests: {{members["Kyung"]["tests"]}}</li>
+                        </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- End Members -->
+
+	<!-- Tools -->
+	<div class="container">
+		<div class="row">
+	        <div class="col-md-4 col-sm-6">
+	            <h2>Team Stats</h2>
+	            <ul>
+	                <li>Total Commits: {{members["total"]["commits"]}}</li>
+	                <li>Total GitHub Issues: {{members["total"]["issues"]}}</li>
+	                <li>Total Unit Tests: {{members["total"]["tests"]}}</li>
+	                <li><a href="http://docs.#.apiary.io/#" target=”_blank”>Apiary API -under construction-</a></li>
+	                <li><a href="https://github.com/richeyh/cs373-idb/issues" target=”_blank”>GitHub Issue Tracker</a></li>
+	                <li><a href="https://github.com/richeyh/cs373-idb" target=”_blank”>GitHub Repo</a></li>
+	                <li><a href="https://github.com/richeyh/cs373-idb/wiki" target=”_blank”>GitHub Wiki</a></li>
+	            </ul>
+	        </div>
+
+	        <div class="col-md-4 col-sm-6">
+	            <h2>Data</h2>
+	            <ul>
+	                <li>Data Sources: <a href="http://developer.nytimes.com/docs/read/best_sellers_api">NYTimes Best Sellers API</a></li>
+	                <li>Data Scraping: <a href="https://github.com/richeyh/cs373-idb/wiki">GitHub Wiki / Data Scraping -under construction-</a></li></li>
+	            </ul>
+	        </div>
+
+	        <div class="col-md-4 col-sm-6 col-xs-12">
+	            <h2>Other Pages</h2>
+	            <ul>
+	                <li><a href="#">Run Unit Tests -under construction-</a></li>
+	            </ul>
+	        </div>
+
+	        <div class="col-lg-9 col-md-12 col-sm-6 ">
+	            <h2>Tools</h2>
+	            <ul>
+	                <li>API
+	                    <ul>
+	                        <li><a href="https://apiary.io/">Apiary</a></li>
+	                        <li><a href="http://developer.nytimes.com/docs/read/best_sellers_api">NYTimes Best Sellers API</a></li>
+	                    </ul>
+	                </li>
+	                <li>Collaboration
+	                    <ul>
+	                        <li><a href="https://slack.com/">Slack</a></li>
+	                        <li><a href="https://github.com/">Github</a></li>
+	                        <li><a href="https://trello.com/">Trello</a></li>
+	                    </ul>
+	                </li>
+	                <li>Database
+	                    <ul>
+	                        <li><a href="#"></a>-under construction-</li>
+	                    </ul>
+	                </li>
+
+	                <li>Front-end
+	                <br>
+	                    <ul>
+	                        <li><a href="http://getbootstrap.com/">Boostrap</a></li>
+	                        <li><a href="http://flask.pocoo.org/">Flask</a></li>
+	                    </ul>
+	                </li>
+	                <li>Data Modeling
+	                    <ul>
+	                        <li><a href="http://yuml.me/">yUML</a></li>
+	                    </ul>
+	                </li>
+	                <li>Server/Hosting
+	                    <ul>
+	                        <li><a href="https://nc.me/">Namecheap</a></li>
+	                        <li><a href="http://getcarina.com">Carina by Rackspace</a></li>
+	                    </ul>
+	                </li>
+	                <li>Testing
+	                    <ul>
+	                        <li><a href="https://coverage.readthedocs.org/en/coverage-4.0.2/">Coverage</a></li>
+	                    </ul>
+	                </li>
+	                <li>Extra<br>
+	                   <ul>
+	                   		<li>-under construction-</li>
+	                   	</ul>
+	                </li>
+	                <li>Media
+	                    <ul>
+							<li><a href="https://www.facebook.com/nytbooks/">Facebook</a></li>
+							<li><a href="https://twitter.com/nytimesbooks?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+							<li><a href="https://www.instagram.com/explore/tags/nytimesbooks/">Instagram</a></li>
+							<li><a href="https://www.youtube.com/user/TheNewYorkTimes">Youtube</a></li>
+						</ul>
+	                </li>
+	            </ul>
+	        </div>
+        </div>
+    </div>
+
+	<!-- End Tools -->
+
+	<div class="fh5co-spacer fh5co-spacer-lg"></div>
+{% endblock %}
