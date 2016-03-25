@@ -1,0 +1,90 @@
+FORMAT: 1A
+HOST: http://ibdb.me
+# IBDB API
+IBDB API is an API that allows users to get books and authors information.
+## Book Attributes:
+* `id(integer)`: The ID of the book, used to identify in the database.
+* `isbn(string)`: The International Standard Book Number of the book. This number is used to identify unique books such as the edition number and variation of the book.
+* `title(string)`: The title of the book.
+* `summary(text)`: The summary of the book. Most books have a summary on the back cover.
+* `link(string)`: A link to the book on Amazon.
+* `best_seller_date(date)`: The most recent week the book has been on the New York Times Bets Sellers List.
+* `best_seller_list(string)`: The specific list the book has been on.
+* `book_image(string)`: An image of the front cover of the book.
+* `author_id(integer)`: A foreign key ID to author that links the book and author of the book.
+* `publisher(string)`: The publisher who published the book.
+* `author(Author)`: The list of authors that has contributed to writing the book.
+## Author Attributes:
+* `id(integer)`: The ID of the author, used to identify in the database.
+* `first_name(string)`: The first name of the author.
+* `last_name(string)`: The last name of the author.
+* `book_count(integer)`: The number of books the author has had on the New York Times Best Sellers List.
+* `best_seller_date(date)`: The most recent week the author has been on the New York Times Best Sellers List.
+* `Books(Book)`: The list of books the author has had on the New York Times Best Sellers List.
+## Books [/books]
+### Get a list of all books [GET]
++ Response 200 (application/json)
+        [
+            {
+                "id": 1,
+                "isbn": "9780425256763",
+                "title": "FIRE TOUCHED",
+                "summary": "The shape-shifter Mercy Thompson and her Alpha werewolf mate, Adam, protect a stolen human child.",
+                "link": "http://www.amazon.com"
+                "best_seller_date": "2016-03-12",
+                "best_seller_list": "Combined Print and E-Book Fiction",
+                "book_image": "http:\/\/du.ec2.nytimes.com.s3.amazonaws.com\/prd\/books\/9780698180918.jpg",
+                "author_id": 1,
+                "publisher": "Ace",
+                "author": []
+            }
+        ]
+        
+## Single Book [/books/{book_id}]
++ Parameters
+    + book_id (number) - Unique id of the book requested
+    
+### Get a single book [GET]
++ Response 200 (application/json)
+        {
+            "id": 1,
+            "isbn": "9780425256763",
+            "title": "FIRE TOUCHED",
+            "summary": "The shape-shifter Mercy Thompson and her Alpha werewolf mate, Adam, protect a stolen human child.",
+            "link": "http://www.amazon.com"
+            "best_seller_date": "2016-03-12",
+            "best_seller_list": "Combined Print and E-Book Fiction",
+            "book_image": "http:\/\/du.ec2.nytimes.com.s3.amazonaws.com\/prd\/books\/9780698180918.jpg",
+            "author_id": 1,
+            "publisher": "Ace",
+            "author": []
+        }
+        
+        
+## Authors [/authors]
+### Get a list of authors [GET]
++ Response 200 (application/json)
+        [
+            {
+                "id": 1
+                "first_name": "Anthony"
+                "last_name": "Doerr"
+                "book_count": 1
+                "best_seller_date": "2016-03-12"
+                "Books": []
+            }
+        ]
+        
+## Single Author [/authors/{author_id}]
++ Parameters
+    + author_id (number) - Unique id of the author requested
+### Get a single author [GET]
++ Response 200 (application/json)
+        {
+            "id": 1
+            "first_name": "Anthony"
+            "last_name": "Doerr"
+            "book_count": 1
+            "best_seller_date": "2016-03-12"
+            "Books": []
+        }
