@@ -1,6 +1,7 @@
 # import requests
 from urllib.request import urlopen
 import json
+from models.py import Author, Book
 
 idbndb_url = "http://isbndb.com/api/v2/json/H2ZRJDOE"
 categories = ['science', 'computers']
@@ -97,24 +98,40 @@ for l in lists:
          count = 0
          if count == 10:
             break
-         b = {}
-         b["title"] = book["title"]
-         b["best_seller_list"] = result["results"]["list_name"]
-         b["weeks_on_list"] = book["weeks_on_list"]
-         b["ISBN"] = book["primary_isbn13"]
-         b["publisher"] = book["publisher"]
-         b["summary"] = book["description"]
-         b["author"] = book["author"]
-         b["book_image"] = book["book_image"]
+         
+         book_title = book["title"]
+         book_best_seller_list = result["results"]["list_name"]
+         book_best_seller_date = result["results"]["bestsellers_date"]
+         # b["weeks_on_list"] = book["weeks_on_list"]
+         book_isbn = book["primary_isbn13"]
+         book_publisher = book["publisher"]
+         book_summary = book["description"]
+         book_book_image = book["book_image"]
+         book_amazon_link = book["amazon_product_url"]
          # book_url = book["book_image"]
          # b["book_image"] = "".join(book_url.split('\\'))
-         b["amazon_link"] = book["amazon_product_url"]
          # amazon_url = book["amazon_product_url"]
          # b["amazon_link"] = "".join(amazon_url.split('\\'))
+
+         a = book["author"]
+         single_author = a.split(' and ')[0]
+         lastName = single_author.split(' ')[1]
+         firstName = single_author.split(' ')[0]
+         book_author = Author(first_name=firstName, last_name=lastName)
+
+         b = Book(isbn=book_isbn, 
+                  title=book_title, 
+                  summary=book_summary, 
+                  best_seller_date=book_best_seller_date,
+                  best_seller_list=book_best_seller_list,
+                  book_image=book_book_image,
+                  amazon_link=book_amazon_link,
+                  publisher=book_publisher)
+         b.author = book_author
          library.append(b)
          count+=1
    book_lists[l] = library
 
-print(book_lists)
+print(book_lists[0])
 
 # print(result["results"])
