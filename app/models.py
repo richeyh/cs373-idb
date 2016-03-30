@@ -43,6 +43,7 @@ class Book(DB.Model):
         best_seller_date    date it made best seller best_seller_list
         best_seller_list    the list or category it made the list for
         book_image          url to the image for the book
+        amazon_link         url to the Amazon product page for the book
         author_id           primary key to the books author for linking
         publisher           publisher who published the book
         author              author who wrote the book
@@ -55,6 +56,7 @@ class Book(DB.Model):
     best_seller_date = DB.Column(DB.Date())
     best_seller_list = DB.Column(DB.String(150))
     book_image = DB.Column(DB.String(150))
+    amazon_link = DB.Column(DB.String(150))
     author_id = DB.Column(DB.Integer, DB.ForeignKey(Author.id))
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
