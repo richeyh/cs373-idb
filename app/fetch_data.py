@@ -61,17 +61,16 @@ lists = ["hardcover-fiction",
          "manga"]
 
 
-"""
-result["results"]["list_name"] = Category of best sellers list 
-result["results"]["books"]["weeks_on_list"] = Weeks book has been on list
-result["results"]["books"]["primary_isbn13"] = ISBN of book
-result["results"]["books"]["publisher"] = Publisher of book
-result["results"]["books"]["description"] = Description of book
-result["results"]["books"]["title"] = Title of book
-result["results"]["books"]["author"] = Author of book
-result["results"]["books"]["book_image"] = Image of book
-result["results"]["books"]["amazon_product_url"] = Amazon page of book
-"""
+# result["results"]["list_name"] = Category of best sellers list 
+# result["results"]["books"]["weeks_on_list"] = Weeks book has been on list
+# result["results"]["books"]["primary_isbn13"] = ISBN of book
+# result["results"]["books"]["publisher"] = Publisher of book
+# result["results"]["books"]["description"] = Description of book
+# result["results"]["books"]["title"] = Title of book
+# result["results"]["books"]["author"] = Author of book
+# result["results"]["books"]["book_image"] = Image of book
+# result["results"]["books"]["amazon_product_url"] = Amazon page of book
+
 
 # r = requests.get("http://api.nytimes.com/svc/books/v2/lists/" +
 #                  lists[0] + ".json?api-key=" + times_keys["books"])
