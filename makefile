@@ -1,4 +1,5 @@
 IMAGE_NAME_APP := cs373idb_app
+IMAGE_NAME_DB := cs373idb_db
 IMAGE_NAME_LB := cs373idb_lb
 
 FILES :=                         \
@@ -68,6 +69,9 @@ docker-build:
 
 	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_APP} app
 	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_APP}
+
+	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_DB} db
+	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_DB}
 
 	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB} lb
 	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB}
