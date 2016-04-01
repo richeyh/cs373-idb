@@ -32,7 +32,8 @@ def aLink (html) :
 
 def aImg (html) :
 	soup = BeautifulSoup(html, 'html.parser')
-	return
+	img_a = soup.find(class_='ap-author-image').get('src')
+	return img_a
 
 def aBio (html) :
 	soup = BeautifulSoup(html, 'html.parser')
