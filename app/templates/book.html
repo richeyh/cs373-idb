@@ -24,11 +24,9 @@
 		<div class="controller" ng-app="myApp" ng-controller="bookCtrl">
 		    <div align="center" class="col-lg-4 col-md-6 col-lg-offset-2">
 			    {% raw %}
-			    <img src="{{array.book_image}}" width="266" height="400"></img>
-			    <!-- <object data="{{array.amazon_link}}" width="600" height="400"> <embed src="{{array.amazon_link}}" width="600" height="400"> </embed> Error: Embedded data could not be displayed. </object> -->
+			    <img src="{{array.book_image}}" alt="Book picture" width="266" height="400"></img>
 			    {% endraw %}
 			</div>
-		
 			<div align="center" class="col-lg-3 col-md-6">
 			    <h4>AUTHOR</h4> 
 			    <p><a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
@@ -39,6 +37,7 @@
 			    <p>{{array.best_seller_date}}</p>
 			    <h4>ISBN</h4> 
 			    <p>{{array.ISBN}}</p>
+			    <p><a href="{{array.amazon_link}}">Amazon</a>
 			    {% endraw %}
 			</div>
 		</div>
