@@ -2,6 +2,7 @@ from flask import Blueprint
 from views import IndexView, AboutView
 from views import BooksView, AuthorsView
 from views import BookView, AuthorView
+from views import BookAPI, AuthorAPI
 
 blueprint = Blueprint('idb', __name__, template_folder='templates')
 
