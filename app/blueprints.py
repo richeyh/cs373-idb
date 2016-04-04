@@ -13,3 +13,5 @@ blueprint.add_url_rule('/authors', view_func=AuthorsView.as_view('Authors'))
 blueprint.add_url_rule(
     '/author/<author_id>', view_func=AuthorView.as_view('Author'))
 blueprint.add_url_rule('/book/<book_id>', view_func=BookView.as_view('Book'))
+blueprint.add_url_rule('/api/books/', defaults={'book_id':None}, view_func=BookAPI.as_view('api'))
+blueprint.add_url_rule('/api/authors/', defaults={'author_id':None}, view_func=AuthorAPI.as_view('api'))

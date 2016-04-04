@@ -82,3 +82,19 @@ class BookView(MethodView):
     def get(self, book_id):
         b = books[int(book_id)]
         return render_template("book.html", book=b)
+
+class BookAPI(MethodView):
+
+    def get(self, book_id):
+        if book_id:
+            return json.dumps(books[int(book_id)])
+        else:
+            return json.dumps(books)
+
+class AuthorAPI(MethodView):
+
+    def get(self, author_id):
+        if author_id:
+            return json.dumps(authors[int(author_id)])
+        else:
+            return json.dumps(authors)
