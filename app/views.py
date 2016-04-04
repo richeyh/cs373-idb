@@ -1,5 +1,6 @@
 from flask.views import MethodView
 from flask import render_template
+import json
 
 # temporary list for the no DB stage of this project
 members = {
