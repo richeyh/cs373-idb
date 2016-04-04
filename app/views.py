@@ -1,5 +1,6 @@
 from flask.views import MethodView
 from flask import render_template
+from models.py import Book, Author
 import json
 
 # temporary list for the no DB stage of this project
@@ -88,14 +89,14 @@ class BookAPI(MethodView):
 
     def get(self, book_id):
         if book_id:
-            return json.dumps(books[int(book_id)])
+            return json.dumps(Book.query.get(book_id))
         else:
-            return json.dumps(books)
+            return json.dumps(Book.query.all())
 
 class AuthorAPI(MethodView):
 
     def get(self, author_id):
         if author_id:
-            return json.dumps(authors[int(author_id)])
+            return json.dumps(Author.query.get(author_id))
         else:
-            return json.dumps(authors)
+            return json.dumps(Author.query.all())
