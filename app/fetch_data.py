@@ -2,6 +2,9 @@
 from urllib.request import urlopen
 import json
 from models.py import Author, Book
+from application import generate_application
+app = generate_application()
+from extensions import DB
 
 # idbndb_url = "http://isbndb.com/api/v2/json/H2ZRJDOE"
 # categories = ['science', 'computers']
@@ -12,7 +15,7 @@ best_seller_url = "http://api.nytimes.com/svc/books/v3/"
 
 lists = ["combined-print-and-e-book-fiction",
          "combined-print-and-e-book-nonfiction",
-         "hardcover-fiction", 
+         "hardcover-fiction",
          "hardcover-nonfiction",
          "trade-fiction-paperback",
          "mass-market-paperback",
@@ -65,7 +68,7 @@ lists = ["combined-print-and-e-book-fiction",
          "travel"]
 
 
-# result["results"]["list_name"] = Category of best sellers list 
+# result["results"]["list_name"] = Category of best sellers list
 # result["results"]["books"]["weeks_on_list"] = Weeks book has been on list
 # result["results"]["books"]["primary_isbn13"] = ISBN of book
 # result["results"]["books"]["publisher"] = Publisher of book
@@ -74,68 +77,70 @@ lists = ["combined-print-and-e-book-fiction",
 # result["results"]["books"]["author"] = Author of book
 # result["results"]["books"]["book_image"] = Image of book
 # result["results"]["books"]["amazon_product_url"] = Amazon page of book
-   
+
 for category in lists:
-   r = urlopen("http://api.nytimes.com/svc/books/v3/lists/" +
-                 category + ".json?api-key=" + times_keys["books"])
-   rInfo = r.info()
-   rRaw = r.read().decode(rInfo.get_content_charset('utf8'))
-   result = json.loads(rRaw)
+    r = urlopen("http://api.nytimes.com/svc/books/v3/lists/" +
+                category + ".json?api-key=" + times_keys["books"])
+    rInfo = r.info()
+    rRaw = r.read().decode(rInfo.get_content_charset('utf8'))
+    result = json.loads(rRaw)
 
-   # Make a dictionary of the list categories
-   book_lists = {}
+    # Make a dictionary of the list categories
+    book_lists = {}
 
-   # Make a list of book objects
-   list_of_book_objects = []
-   books = result["results"]["books"]
-   for book in books:
+    # Make a list of book objects
+    list_of_book_objects = []
+    books = result["results"]["books"]
+    for book in books:
 
-         #Empty list
-         del list_of_book_objects[:]
+        # Empty list
+        del list_of_book_objects[:]
 
-         # Book title
-         book_title = book["title"]
+        # Book title
+        book_title = book["title"]
 
-         #Best Seller List Name
-         book_best_seller_list = result["results"]["list_name"]
+        # Best Seller List Name
+        book_best_seller_list = result["results"]["list_name"]
 
-         #Best Seller List date
-         book_best_seller_date = result["results"]["bestsellers_date"]
+        # Best Seller List date
+        book_best_seller_date = result["results"]["bestsellers_date"]
 
-         #ISBN
-         book_isbn = book["primary_isbn13"]
+        # ISBN
+        book_isbn = book["primary_isbn13"]
 
-         #Publisher
-         book_publisher = book["publisher"]
+        # Publisher
+        book_publisher = book["publisher"]
 
-         #Summary
-         book_summary = book["description"]
+        # Summary
+        book_summary = book["description"]
 
-         #Image
-         book_book_image = book["book_image"]
+        # Image
+        book_book_image = book["book_image"]
 
-         #Amazon link
-         book_amazon_link = book["amazon_product_url"]
+        # Amazon link
+        book_amazon_link = book["amazon_product_url"]
 
-         #Author object
-         a = book["author"]
-         single_author = a.split(' and ')[0]
-         lastName = single_author.split(' ')[1]
-         firstName = single_author.split(' ')[0]
-         book_author = Author(first_name=firstName, last_name=lastName)
-
-         b = Book(isbn=book_isbn, 
-                  title=book_title, 
-                  summary=book_summary, 
-                  best_seller_date=book_best_seller_date,
-                  best_seller_list=book_best_seller_list,
-                  book_image=book_book_image,
-                  amazon_link=book_amazon_link,
-                  publisher=book_publisher)
-         b.author = book_author
-         list_of_book_objects.append(b)
-   #Add book objects in a specific best seller list to the general dictionary of book lists
-   book_lists[category] = list_of_book_objects
-
-print(book_lists[0])
+        # Author object
+        a = book["author"]
+        single_author = a.split(' and ')[0]
+        lastName = single_author.split(' ')[1]
+        firstName = single_author.split(' ')[0]
+        book_author = Author(first_name=firstName, last_name=lastName)
+        DB.session.add(book_author)
+        DB.session.commit()
+        b = Book(isbn=book_isbn,
+                 title=book_title,
+                 summary=book_summary,
+                 best_seller_date=book_best_seller_date,
+                 best_seller_list=book_best_seller_list,
+                 book_image=book_book_image,
+                 amazon_link=book_amazon_link,
+                 publisher=book_publisher)
+        b.author = book_author
+        DB.session.add(b)
+        DB.session.commit()
+        list_of_book_objects.append(b)
+    # Add book objects in a specific best seller list to the general
+    # dictionary of book lists
+    book_lists[category] = list_of_book_objects
 

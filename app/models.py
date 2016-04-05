@@ -71,10 +71,12 @@ class Book(DB.Model):
     best_seller_date = DB.Column(DB.Date())
     best_seller_list = DB.Column(DB.String(150))
     book_image = DB.Column(DB.String(150))
-    amazon_link = DB.Column(DB.String(150))
+    amazon_link = DB.Column(DB.String(256))
     author_id = DB.Column(DB.Integer, DB.ForeignKey(Author.id))
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
+    image_link = DB.Column(DB.String(256))
+    description = DB.Column(DB.String(256))
 
     def to_dict(self, query_instance=None):
         """
