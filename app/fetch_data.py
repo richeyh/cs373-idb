@@ -1,7 +1,7 @@
 # import requests
 from urllib.request import urlopen
 import json
-from models.py import Author, Book
+from models import Author, Book
 from application import generate_application
 app = generate_application()
 from extensions import DB
@@ -143,4 +143,3 @@ for category in lists:
     # Add book objects in a specific best seller list to the general
     # dictionary of book lists
     book_lists[category] = list_of_book_objects
-
