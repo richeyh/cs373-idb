@@ -6,6 +6,8 @@ from extensions import DB
 """
 An Author Model
 """
+
+
 class Author(DB.Model):
     """
     An author of a book.
@@ -28,9 +30,22 @@ class Author(DB.Model):
     Books = DB.relationship("Book")
     link = DB.Column(DB.String(256))
 
+    def to_dict(self, query_instance=None):
+        """
+            Method to convert sqlalchmey object to python dict
+            Stolen from https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html
+        """
+        if hasattr(self, '__table__'):
+            return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
+        else:
+            cols = query_instance.column_descriptions
+            return {cols[i]['name']: self[i] for i in range(len(cols))}
+
 """
 A Book Model
 """
+
+
 class Book(DB.Model):
     """
     A Book object to hold information.
@@ -61,9 +76,22 @@ class Book(DB.Model):
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
 
+    def to_dict(self, query_instance=None):
+        """
+            Method to convert sqlalchmey object to python dict
+            Stolen from https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html
+        """
+        if hasattr(self, '__table__'):
+            return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
+        else:
+            cols = query_instance.column_descriptions
+            return {cols[i]['name']: self[i] for i in range(len(cols))}
+
 """
 A TeamMember model
 """
+
+
 class TeamMember(DB.Model):
     """
     A TeamMember object for use latter to track changing statistics.
