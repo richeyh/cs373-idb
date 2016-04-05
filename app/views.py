@@ -1,6 +1,6 @@
 from flask.views import MethodView
 from flask import render_template
-from models.py import Book, Author
+from models import Book, Author
 import json
 
 # temporary list for the no DB stage of this project
