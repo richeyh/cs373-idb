@@ -11,3 +11,4 @@ SQLALCHEMY_DATABASE_URI = \
 # set this to false in production
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 DEBUG = True
+SECRET_KEY="random string of stuff book SWEEEPIMMG ASDFADFqkwehjrklhq	l;falsekl	jewri;	`po"
