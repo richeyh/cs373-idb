@@ -1,4 +1,4 @@
-{% extends "base.html" 
+{% extends "base.html" %}
 
 {% block content %}
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -85,6 +85,7 @@
 	</table>
 </div>
 {% endblock %}
+
 {% block javascript %}
 var app = angular.module('myApp', []);
 app.controller('authorsCtrl', function($scope){

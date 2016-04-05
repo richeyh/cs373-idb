@@ -8,7 +8,7 @@ from flask_admin.contrib.fileadmin import FileAdmin
 
 from extensions import DB
 from blueprints import blueprint
-from models import TeamMember
+from models import TeamMember, Author, Book
 
 
 def generate_application(config=None):
@@ -23,6 +23,8 @@ def generate_application(config=None):
     path1 = op.join(op.dirname(__file__), 'static')
     admin.add_view(FileAdmin(path1, '/static/', name='Static Files'))
     admin.add_view(ModelView(TeamMember, DB.session))
+    admin.add_view(ModelView(Author, DB.session))
+    admin.add_view(ModelView(Book, DB.session))
     return app
 
 
