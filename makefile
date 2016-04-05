@@ -1,6 +1,7 @@
 IMAGE_NAME_APP := cs373idb_app
 IMAGE_NAME_DB := cs373idb_db
 IMAGE_NAME_LB := cs373idb_lb
+DOCKER_HUB_USERNAME := rychoi
 
 FILES :=                         \
     .travis.yml                  \
@@ -65,25 +66,28 @@ docker-build:
 	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
 	@echo "Building the images..."
 	docker login
-	export DOCKER_HUB_USERNAME=rychoi
 
 	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_APP} app
 	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_APP}
 
-	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB} lb
-	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB}
-
-docker-build-db:
-	@if [ -z "$$CONTINUE" ]; then \
-		read -r -p "Have you sourced the docker.env file for our Carina cluster? (y/n): " CONTINUE; \
-	fi ; \
-	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
-	@echo "Building the images..."
-	docker login
-	export DOCKER_HUB_USERNAME=rychoi
-
 	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_DB} db
 	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_DB}
 
+	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB} lb
+	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB}
+
+docker-init-db:
+	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make start
+
 docker-push:
-	 docker-compose --file docker-compose-prod.yml up -d
+	docker-compose --file docker-compose-prod.yml up -d
+
+docker-proxy:
+	docker run -it --rm \
+	--name temp-proxy \
+	--net cs373idb_backend \
+	--publish 3306:3306 \
+	--env PROTOCOL=TCP \
+	--env UPSTREAM=ibdb_db \
+	--env UPSTREAM_PORT=3306 \
+	carinamarina/nginx-proxy
