@@ -39,7 +39,7 @@ class BooksView(MethodView):
         books = []
         for book in Book.query.all():
             books.append(books.to_dict())
-            return render_template("books.html", books=books)
+        return render_template("books.html", books=books)
 
 
 class AuthorsView(MethodView):
@@ -48,7 +48,7 @@ class AuthorsView(MethodView):
         authors = []
         for author in Author.query.all():
             authors.append(author.to_dict())
-            return render_template("authors.html", authors=authors)
+        return render_template("authors.html", authors=authors)
 
 
 class AuthorView(MethodView):
