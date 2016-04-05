@@ -21,7 +21,7 @@ IBDB API is an API that allows users to get books and authors information.
 * `book_count(integer)`: The number of books the author has had on the New York Times Best Sellers List.
 * `best_seller_date(date)`: The most recent week the author has been on the New York Times Best Sellers List.
 * `Books(Book)`: The list of books the author has had on the New York Times Best Sellers List.
-## Books [/books]
+## Books [/api/books]
 ### Get a list of all books [GET]
 + Response 200 (application/json)
         [
@@ -40,7 +40,7 @@ IBDB API is an API that allows users to get books and authors information.
             }
         ]
         
-## Single Book [/books/{book_id}]
+## Single Book [/api/books/{book_id}]
 + Parameters
     + book_id (number) - Unique id of the book requested
     
@@ -61,7 +61,7 @@ IBDB API is an API that allows users to get books and authors information.
         }
         
         
-## Authors [/authors]
+## Authors [/api/authors]
 ### Get a list of authors [GET]
 + Response 200 (application/json)
         [
@@ -75,7 +75,7 @@ IBDB API is an API that allows users to get books and authors information.
             }
         ]
         
-## Single Author [/authors/{author_id}]
+## Single Author [/api/authors/{author_id}]
 + Parameters
     + author_id (number) - Unique id of the author requested
 ### Get a single author [GET]
