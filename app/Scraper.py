@@ -62,7 +62,7 @@ def scrape(url, type):
         print(aBio(html))
 
 
-def Book_Scrape(book_obj):
+def bookScrape(book_obj):
     url = book_obj.amazon_link
     mech = Browser()
     page = mech.open(url)

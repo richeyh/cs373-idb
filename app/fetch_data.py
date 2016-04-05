@@ -2,6 +2,7 @@
 from urllib.request import urlopen
 import json
 from models import Author, Book
+from Scraper import bookScrape
 from application import generate_application
 app = generate_application()
 from extensions import DB
@@ -126,8 +127,9 @@ for category in lists:
         lastName = single_author.split(' ')[1]
         firstName = single_author.split(' ')[0]
         book_author = Author(first_name=firstName, last_name=lastName)
-        DB.session.add(book_author)
-        DB.session.commit()
+        with app.app_context():
+            DB.session.add(book_author)
+            DB.session.commit()
         b = Book(isbn=book_isbn,
                  title=book_title,
                  summary=book_summary,
@@ -137,8 +139,11 @@ for category in lists:
                  amazon_link=book_amazon_link,
                  publisher=book_publisher)
         b.author = book_author
-        DB.session.add(b)
-        DB.session.commit()
+        with app.app_context():
+            DB.session.add(b)
+            DB.session.commit()
+            bookScrape(b)
+
         list_of_book_objects.append(b)
     # Add book objects in a specific best seller list to the general
     # dictionary of book lists
