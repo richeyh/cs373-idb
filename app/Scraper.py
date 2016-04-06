@@ -55,6 +55,7 @@ def bookScrape(book_obj):
     book_obj.image_link = bkImg(html)
     book_obj.description = bkDesc(html)
     author_link = aLink(html)
+    print("*" * 80)
     if author_link:
         print("%" * 80)
         page = mech.get(author_link)
