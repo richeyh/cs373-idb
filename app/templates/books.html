@@ -25,13 +25,6 @@
 		</div>
 	</form>
 	<table class="table col-lg-8 table-hover" align="center">
-		<!-- <col width="200">
-		<col width="100">
-		<col width="100">
-		<col width="150">
-		<col width="100">
-		<col width="150">
-		<col width="150"> -->
 		<thead class="thead-inverse">
 			<tr>
 				<th>
@@ -82,7 +75,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchBook">
+			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchBook | itemsPerPage:10">
 			{% raw %}
 				<td>{{x.title}}</td>
 				<td>{{x.first_name}}</td>
@@ -96,10 +89,12 @@
 			</tr>
 		</tbody>
 	</table>
+	<dir-pagination-controls max-size="10" direction-links="true" boundary-links="true"></dir-pagination-controls>
 </div>
+
 {% endblock %}
 {% block javascript %}
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', [angularUtils.directives.dirPagination]);
 app.controller('booksCtrl', function($scope){
 	$scope.sortType = 'title';
 	$scope.sortReverse = false;
