@@ -1,5 +1,6 @@
 from flask.views import MethodView
 from flask import render_template
+from flask import Response
 from models import Book, Author
 import json
 import os
@@ -91,4 +92,4 @@ class RunTests(MethodView):
 
     def get(self):
         os.system("python3 tests.py > tests.tmp")
-        return open('tests.tmp', 'r').read()
+        return Response(open('tests.tmp', 'r').read(), mimetype='text/plain')
