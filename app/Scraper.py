@@ -21,7 +21,9 @@ def bkImg(soup):
 
 
 def bkDesc(soup):
-    desc = soup.find_all('noscript')[1].div.prettify()
+    script_list = soup.find_all('noscript')
+    print(script_list)
+    desc = script_list[1].div.prettify()
     return desc
 
 
@@ -47,9 +49,13 @@ def bookScrape(book_obj):
     mech = mechanicalsoup.Browser()
     page = mech.get(url)
     html = page.soup
+    print("*"*80)
+    print("*"*80)
     book_obj.image_link = bkImg(html)
     book_obj.description = bkDesc(html)
     author_link = aLink(html)
+    print("*"*80)
+    print("*"*80)
     page = mech.get(author_link)
     html = page.soup
     author = book_obj.author
