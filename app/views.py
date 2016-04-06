@@ -88,6 +88,7 @@ class AuthorAPI(MethodView):
         else:
             return json.dumps(Author.query.all())
 
+
 class RunTests(MethodView):
 
     def get(self):
