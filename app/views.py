@@ -55,6 +55,7 @@ class AuthorView(MethodView):
 
     def get(self, author_id):
         a = Author.query.get(author_id)
+        a = a.to_dict()
         return render_template("author.html", author=a)
 
 
@@ -62,6 +63,7 @@ class BookView(MethodView):
 
     def get(self, book_id):
         b = Book.query.get(book_id)
+        b = b.to_dict()
         return render_template("book.html", book=b)
 
 
