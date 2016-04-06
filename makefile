@@ -76,9 +76,6 @@ docker-build:
 	docker build -t ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB} lb
 	docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME_LB}
 
-docker-init-db:
-	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make start
-
 docker-push:
 	docker-compose --file docker-compose-prod.yml up -d
 
