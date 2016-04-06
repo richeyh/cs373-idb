@@ -32,12 +32,12 @@ class TestModels (TestCase):
 
 	def test_model_author_2(self):
 		testauthor = Author.query.filter_by(first_name='Anthony', last_name='Doerr')
-		self.assertEqual(testauthor[0].first_name='Anthony')
-		self.assertEqual(testauthor[0].last_name='Doerr')
+		self.assertEqual(testauthor[0].first_name, 'Anthony')
+		self.assertEqual(testauthor[0].last_name, 'Doerr')
 
 	def test_model_author_3(self):
 		testauthor = Author.query.filter_by(first_name='Paula', last_name='Hawkins')
-		self.assertEqual(testauthor[0].books[0].title='THE GIRL ON THE TRAIN')
+		self.assertEqual(testauthor[0].books[0].title, 'THE GIRL ON THE TRAIN')
 
 	# ----
 	# Book
