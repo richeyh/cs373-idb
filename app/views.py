@@ -38,7 +38,7 @@ class BooksView(MethodView):
     def get(self):
         books = []
         for book in Book.query.all():
-            books.append(books.to_dict())
+            books.append(book.to_dict())
         return render_template("books.html", books=books)
 
 
