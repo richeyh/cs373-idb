@@ -4,8 +4,7 @@ from bs4 import BeautifulSoup
 from extensions import DB
 
 
-def bkImg(html):
-    soup = BeautifulSoup(html, 'html.parser')
+def bkImg(soup):
     img_bk = soup.find_all('img', class_='frontImage')
 
     # grabbing specific link with this tag
@@ -20,27 +19,23 @@ def bkImg(html):
     return result
 
 
-def bkDesc(html):
-    soup = BeautifulSoup(html, 'html.parser')
+def bkDesc(soup):
     desc = soup.find_all('noscript')[1].div.prettify()
     return desc
 
 
-def aLink(html):
-    soup = BeautifulSoup(html, 'html.parser')
+def aLink(soup):
     frag = soup.find(class_="a-link-normal contributorNameID").get('href')
     link = 'http://www.amazon.com' + frag
     return link
 
 
-def aImg(html):
-    soup = BeautifulSoup(html, 'html.parser')
+def aImg(soup):
     img_a = soup.find(class_='ap-author-image').get('src')
     return img_a
 
 
-def aBio(html):
-    soup = BeautifulSoup(html, 'html.parser')
+def aBio(soup):
     bio = soup.find(
         class_='a-expander-content a-expander-partial-collapse-content').span.string
     return bio
@@ -50,7 +45,7 @@ def bookScrape(book_obj):
     url = book_obj.amazon_link
     mech = mechanicalsoup.Browser()
     page = mech.get(url)
-    html = page.read()
+    html = page.soup
     book_obj.image_link = bkImg(html)
     book_obj.description = bkDesc(html)
     author_link = aLink(html)
