@@ -3,7 +3,8 @@ test:
 	coverage3 report -m
 
 start: 
-	python3 manage.py DB init
-	python3 manage.py DB upgrade
-	python3 manage.py DB migrate
+	python3 manage.py db init
+	python3 manage.py db upgrade
+	python3 manage.py db migrate
+	python3 fetch_data.py
 
