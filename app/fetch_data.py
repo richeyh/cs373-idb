@@ -125,7 +125,10 @@ for category in lists:
         # Author object
         a = book["author"]
         single_author = a.split(' and ')[0]
-        lastName = single_author.split(' ')[1]
+        if len(single_author.split(' ')) >= 2:
+            lastName = single_author.split(' ')[1]
+        else:
+            lastName = "None"
         firstName = single_author.split(' ')[0]
         book_author = Author(first_name=firstName, last_name=lastName)
         with app.app_context():
