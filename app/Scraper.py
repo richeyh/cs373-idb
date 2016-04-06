@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from mechanize import Browser
+import mechanicalsoup
 from bs4 import BeautifulSoup
 from extensions import DB
 
@@ -46,31 +46,15 @@ def aBio(html):
     return bio
 
 
-def scrape(url, type):
-
-    mech = Browser()
-    page = mech.open(url)
-    html = page.read()
-
-    if type == 0:  # book html page
-        print(bkImg(html))
-        print(bkDesc(html))
-        print(aLink(html))
-
-    if type == 1:  # author html page
-        print(aImg(html))
-        print(aBio(html))
-
-
 def bookScrape(book_obj):
     url = book_obj.amazon_link
-    mech = Browser()
-    page = mech.open(url)
+    mech = mechanicalsoup.Browser()
+    page = mech.get(url)
     html = page.read()
     book_obj.image_link = bkImg(html)
     book_obj.description = bkDesc(html)
     author_link = aLink(html)
-    page = mech.open(author_link)
+    page = mech.get(author_link)
     html = page.read()
     author = book_obj.author
     author.link = aImg(html)
