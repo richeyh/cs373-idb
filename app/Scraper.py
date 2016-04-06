@@ -50,7 +50,7 @@ def bookScrape(book_obj):
     book_obj.description = bkDesc(html)
     author_link = aLink(html)
     page = mech.get(author_link)
-    html = page.read()
+    html = page.soup
     author = book_obj.author
     author.link = aImg(html)
     author.bio = aBio(html)
