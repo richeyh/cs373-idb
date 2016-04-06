@@ -93,8 +93,10 @@ for category in lists:
     try:
         books = result["results"]["books"]
     except Exception as e:
-        print(e)
+        print("*"*80)
         print(result)
+        print(category)
+        print("*"*80)
         books = []
     for book in books:
 
