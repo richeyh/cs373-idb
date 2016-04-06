@@ -91,4 +91,4 @@ class RunTests(MethodView):
 
     def get(self):
         os.system("python3 tests.py > tests.tmp")
-        return open('tests.tmp', 'r').read
+        return open('tests.tmp', 'r').read()
