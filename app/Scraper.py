@@ -66,6 +66,11 @@ def bookScrape(book_obj):
         author.bio = aBio(html)
         DB.session.add(author)
         val = 1
+    else:
+        print("x" * 80)
+        print(url)
+        print("x" * 80)
+
     DB.session.add(book_obj)
     DB.session.commit()
     return val
