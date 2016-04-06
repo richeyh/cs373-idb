@@ -7,10 +7,10 @@ IBDB API is an API that allows users to get books and authors information.
 * `isbn(string)`: The International Standard Book Number of the book. This number is used to identify unique books such as the edition number and variation of the book.
 * `title(string)`: The title of the book.
 * `summary(text)`: The summary of the book. Most books have a summary on the back cover.
-* `link(string)`: A link to the book on Amazon.
 * `best_seller_date(date)`: The most recent week the book has been on the New York Times Bets Sellers List.
 * `best_seller_list(string)`: The specific list the book has been on.
 * `book_image(string)`: An image of the front cover of the book.
+* `amazon_link(string)`: A link to the book on Amazon.
 * `author_id(integer)`: A foreign key ID to author that links the book and author of the book.
 * `publisher(string)`: The publisher who published the book.
 * `author(Author)`: The list of authors that has contributed to writing the book.
@@ -21,7 +21,8 @@ IBDB API is an API that allows users to get books and authors information.
 * `book_count(integer)`: The number of books the author has had on the New York Times Best Sellers List.
 * `best_seller_date(date)`: The most recent week the author has been on the New York Times Best Sellers List.
 * `Books(Book)`: The list of books the author has had on the New York Times Best Sellers List.
-## Books [/api/books]
+* `link(string)`: A link to the authors Facebook page.
+## Books [/books]
 ### Get a list of all books [GET]
 + Response 200 (application/json)
         [
@@ -30,20 +31,18 @@ IBDB API is an API that allows users to get books and authors information.
                 "isbn": "9780425256763",
                 "title": "FIRE TOUCHED",
                 "summary": "The shape-shifter Mercy Thompson and her Alpha werewolf mate, Adam, protect a stolen human child.",
-                "link": "http://www.amazon.com"
                 "best_seller_date": "2016-03-12",
                 "best_seller_list": "Combined Print and E-Book Fiction",
                 "book_image": "http:\/\/du.ec2.nytimes.com.s3.amazonaws.com\/prd\/books\/9780698180918.jpg",
+                "amazon_link": "http://www.amazon.com",
                 "author_id": 1,
                 "publisher": "Ace",
                 "author": []
             }
         ]
-        
-## Single Book [/api/books/{book_id}]
+## Single Book [/books/{book_id}]
 + Parameters
     + book_id (number) - Unique id of the book requested
-    
 ### Get a single book [GET]
 + Response 200 (application/json)
         {
@@ -51,17 +50,15 @@ IBDB API is an API that allows users to get books and authors information.
             "isbn": "9780425256763",
             "title": "FIRE TOUCHED",
             "summary": "The shape-shifter Mercy Thompson and her Alpha werewolf mate, Adam, protect a stolen human child.",
-            "link": "http://www.amazon.com"
             "best_seller_date": "2016-03-12",
             "best_seller_list": "Combined Print and E-Book Fiction",
             "book_image": "http:\/\/du.ec2.nytimes.com.s3.amazonaws.com\/prd\/books\/9780698180918.jpg",
+            "amazon_link": "http://www.amazon.com",
             "author_id": 1,
             "publisher": "Ace",
             "author": []
         }
-        
-        
-## Authors [/api/authors]
+## Authors [/authors]
 ### Get a list of authors [GET]
 + Response 200 (application/json)
         [
@@ -72,10 +69,11 @@ IBDB API is an API that allows users to get books and authors information.
                 "book_count": 1
                 "best_seller_date": "2016-03-12"
                 "Books": []
+                "link": "www.facebook.com"
             }
         ]
-        
-## Single Author [/api/authors/{author_id}]
+ 
+## Single Author [/authors/{author_id}]
 + Parameters
     + author_id (number) - Unique id of the author requested
 ### Get a single author [GET]
@@ -87,4 +85,5 @@ IBDB API is an API that allows users to get books and authors information.
             "book_count": 1
             "best_seller_date": "2016-03-12"
             "Books": []
+            "link": "www.facebook.com"
         }
