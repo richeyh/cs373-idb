@@ -78,7 +78,8 @@ lists = ["combined-print-and-e-book-fiction",
 # result["results"]["books"]["author"] = Author of book
 # result["results"]["books"]["book_image"] = Image of book
 # result["results"]["books"]["amazon_product_url"] = Amazon page of book
-
+misses = 0
+total = 0
 for category in lists:
     r = urlopen("http://api.nytimes.com/svc/books/v3/lists/" +
                 category + ".json?api-key=" + times_keys["books"])
@@ -142,9 +143,13 @@ for category in lists:
         with app.app_context():
             DB.session.add(b)
             DB.session.commit()
-            bookScrape(b)
-
+            misses += bookScrape(b)
+            total += 1
         list_of_book_objects.append(b)
     # Add book objects in a specific best seller list to the general
     # dictionary of book lists
+    if total > 1000:
+        break
     book_lists[category] = list_of_book_objects
+print(total)
+print(misses)

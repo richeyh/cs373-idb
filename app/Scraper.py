@@ -56,6 +56,7 @@ def bookScrape(book_obj):
     book_obj.description = bkDesc(html)
     author_link = aLink(html)
     print("*" * 80)
+    val = 0
     if author_link:
         print("%" * 80)
         page = mech.get(author_link)
@@ -64,5 +65,7 @@ def bookScrape(book_obj):
         author.link = aImg(html)
         author.bio = aBio(html)
         DB.session.add(author)
+        val = 1
     DB.session.add(book_obj)
     DB.session.commit()
+    return val
