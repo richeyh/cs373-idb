@@ -16,15 +16,17 @@ class Author(DB.Model):
         id                  primary key in the database
         first_name          the first name of the author
         last_name           the last name of the author
+        bio                 bio of the author
         book_count          # of books in the database by the author
         best_seller_date    last date of best seller by author
         Books               all books the author wrote
-        Link                Link to the authors facebook page
+        link                link to the author's image
     """
     __tablename__ = "author"
     id = DB.Column(DB.Integer, primary_key=True)
     first_name = DB.Column(DB.String(150))
     last_name = DB.Column(DB.String(150))
+    bio = DB.Column(DB.Text())
     book_count = DB.Column(DB.Integer)
     best_seller_date = DB.Column(DB.Date())
     Books = DB.relationship("Book")
@@ -75,7 +77,6 @@ class Book(DB.Model):
     author_id = DB.Column(DB.Integer, DB.ForeignKey(Author.id))
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
-    image_link = DB.Column(DB.String(256))
     description = DB.Column(DB.Text())
 
     def to_dict(self, query_instance=None):
