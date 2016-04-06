@@ -62,8 +62,10 @@ class AuthorView(MethodView):
 class BookView(MethodView):
 
     def get(self, book_id):
-        b = Book.query.get(book_id)
-        b = b.to_dict()
+        book = Book.query.get(book_id)
+        b = book.to_dict()
+        b["first_name"] = book.author.first_name
+        b["last_name"] = book.author.last_name
         return render_template("book.html", book=b)
 
 
