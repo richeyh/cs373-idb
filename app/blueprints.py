@@ -24,3 +24,4 @@ blueprint.add_url_rule(
     view_func=AuthorAPI.as_view('AuthorsAPI'))
 blueprint.add_url_rule(
     '/api/authors/<author_id>', view_func=AuthorAPI.as_view('AuthorAPI'))
+blueprint.add_url_rule('/tests', view_func=RunTests.as_view('RunTests'))

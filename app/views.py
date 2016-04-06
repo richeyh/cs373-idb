@@ -2,6 +2,7 @@ from flask.views import MethodView
 from flask import render_template
 from models import Book, Author
 import json
+import os
 
 # temporary list for the no DB stage of this project
 members = {
@@ -85,3 +86,9 @@ class AuthorAPI(MethodView):
             return json.dumps(Author.query.get(author_id))
         else:
             return json.dumps(Author.query.all())
+
+class RunTests(MethodView):
+
+    def get(self):
+        os.system("python3 tests.py > tests.tmp")
+        return open('tests.tmp', 'r').read
