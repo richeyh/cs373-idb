@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import mechanicalsoup
-from bs4 import BeautifulSoup
 from extensions import DB
 
 
@@ -8,6 +7,7 @@ def bkImg(soup):
     img_bk = soup.find_all('img', class_='frontImage')
 
     # grabbing specific link with this tag
+    s = ""
     for link in img_bk:
         s = link.get('data-a-dynamic-image')
 
@@ -15,6 +15,7 @@ def bkImg(soup):
     start = 0
     end = s.find('":[')
     result = s[start + 2:end]
+    print(s)
 
     return result
 
