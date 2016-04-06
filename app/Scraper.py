@@ -15,8 +15,6 @@ def bkImg(soup):
     start = 0
     end = s.find('":[')
     result = s[start + 2:end]
-    print(s)
-
     return result
 
 
@@ -54,14 +52,11 @@ def bookScrape(book_obj):
     mech = mechanicalsoup.Browser()
     page = mech.get(url)
     html = page.soup
-    print("*" * 80)
-    print("*" * 80)
     book_obj.image_link = bkImg(html)
     book_obj.description = bkDesc(html)
     author_link = aLink(html)
-    print("*" * 80)
-    print("*" * 80)
     if author_link:
+        print("%" * 80)
         page = mech.get(author_link)
         html = page.soup
         author = book_obj.author
