@@ -61,11 +61,12 @@ def bookScrape(book_obj):
     author_link = aLink(html)
     print("*" * 80)
     print("*" * 80)
-    page = mech.get(author_link)
-    html = page.soup
-    author = book_obj.author
-    author.link = aImg(html)
-    author.bio = aBio(html)
-    DB.session.add(author)
+    if author_link:
+        page = mech.get(author_link)
+        html = page.soup
+        author = book_obj.author
+        author.link = aImg(html)
+        author.bio = aBio(html)
+        DB.session.add(author)
     DB.session.add(book_obj)
     DB.session.commit()
