@@ -82,7 +82,7 @@
 {% endblock %}
 
 {% block javascript %}
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
 app.controller('authorsCtrl', function($scope){
 	$scope.sortType = 'lastName';
 	$scope.sortReverse = false;

@@ -94,7 +94,7 @@
 
 {% endblock %}
 {% block javascript %}
-var app = angular.module('myApp', [angularUtils.directives.dirPagination]);
+var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
 app.controller('booksCtrl', function($scope){
 	$scope.sortType = 'title';
 	$scope.sortReverse = false;
