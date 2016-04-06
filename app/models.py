@@ -76,7 +76,7 @@ class Book(DB.Model):
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
     image_link = DB.Column(DB.String(256))
-    description = DB.Column(DB.String(256))
+    description = DB.Column(DB.Text())
 
     def to_dict(self, query_instance=None):
         """
