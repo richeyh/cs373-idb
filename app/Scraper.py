@@ -30,8 +30,11 @@ def bkDesc(soup):
 
 
 def aLink(soup):
-    frag = soup.find(class_="a-link-normal contributorNameID").get('href')
-    link = 'http://www.amazon.com' + frag
+    frag = soup.find(class_="a-link-normal contributorNameID")
+    if frag:
+        link = 'http://www.amazon.com' + frag.get('href')
+    else:
+        link = None
     return link
 
 
