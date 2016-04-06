@@ -51,6 +51,9 @@ def bookScrape(book_obj):
     url = book_obj.amazon_link
     mech = mechanicalsoup.Browser()
     page = mech.get(url)
+    # retry block to keep hitting the page until appropriate reponse
+    while page.status_code == 503:
+        page = mech.get(url)
     html = page.soup
     book_obj.image_link = bkImg(html)
     book_obj.description = bkDesc(html)
