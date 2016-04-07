@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import mechanicalsoup
+import time
 from extensions import DB
 
 
@@ -52,7 +53,10 @@ def bookScrape(book_obj):
     mech = mechanicalsoup.Browser()
     page = mech.get(url)
     # retry block to keep hitting the page until appropriate reponse
-    while page.status_code == 503:
+    retries = 0
+    while page.status_code == 503 and retries < 5:
+        time.sleep(2)
+        retries += 1
         page = mech.get(url)
     html = page.soup
     book_obj.image_link = bkImg(html)
