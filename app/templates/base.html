@@ -150,6 +150,11 @@
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 	<script type="text/javascript">
+		$(".nav a").on("click", function()){
+			$(".nav").find(".active").removeClass("active");
+			$(this).parent().addClass("active");
+		}
+		
 			{% block javascript %}
 			{% endblock %}
 	</script>
