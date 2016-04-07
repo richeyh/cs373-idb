@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="{{ url_for('static', filename='js/dirPagination.js') }}"></script>
 
 <aside class="fh5co-page-heading">
@@ -81,6 +82,8 @@
 {% endblock %}
 
 {% block javascript %}
+var a = angular.element( document.querySelector( '.authors' ) );
+	a.addClass('active');
 
 var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
 app.controller('authorsCtrl', function($scope){
