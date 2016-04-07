@@ -41,8 +41,9 @@ class BooksView(MethodView):
         books = []
         for book in Book.query.all():
             b = book.to_dict()
-            b["first_name"] = book.author.first_name
-            b["last_name"] = book.author.last_name
+            if book.author:
+                b["first_name"] = book.author.first_name
+                b["last_name"] = book.author.last_name
             books.append(b)
         return render_template("books.html", books=books)
 
