@@ -50,8 +50,11 @@ def aImg(soup):
 
 
 def aBio(soup):
-    bio = soup.find(
-        class_='a-expander-content a-expander-partial-collapse-content').span.string
+    try:
+        bio = soup.find(
+            class_='a-expander-content a-expander-partial-collapse-content').span.string
+    except Exception:
+        bio = "No Bio Found"
     return bio
 
 
