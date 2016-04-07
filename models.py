@@ -6,6 +6,8 @@ from extensions import DB
 """
 An Author Model
 """
+
+
 class Author(DB.Model):
     """
     An author of a book.
@@ -14,23 +16,38 @@ class Author(DB.Model):
         id                  primary key in the database
         first_name          the first name of the author
         last_name           the last name of the author
+        bio                 bio of the author
         book_count          # of books in the database by the author
         best_seller_date    last date of best seller by author
         Books               all books the author wrote
-        Link                Link to the authors facebook page
+        link                link to the author's image
     """
     __tablename__ = "author"
     id = DB.Column(DB.Integer, primary_key=True)
     first_name = DB.Column(DB.String(150))
     last_name = DB.Column(DB.String(150))
+    bio = DB.Column(DB.Text())
     book_count = DB.Column(DB.Integer)
     best_seller_date = DB.Column(DB.Date())
     Books = DB.relationship("Book")
     link = DB.Column(DB.String(256))
 
+    def to_dict(self, query_instance=None):
+        """
+            Method to convert sqlalchmey object to python dict
+            Stolen from https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html
+        """
+        if hasattr(self, '__table__'):
+            return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
+        else:
+            cols = query_instance.column_descriptions
+            return {cols[i]['name']: self[i] for i in range(len(cols))}
+
 """
 A Book Model
 """
+
+
 class Book(DB.Model):
     """
     A Book object to hold information.
@@ -41,11 +58,13 @@ class Book(DB.Model):
         title               title of the book
         summary             summary of the book by new york times
         best_seller_date    date it made best seller best_seller_list
-        best_seller_list    the list or category it made the list for
+        best_seller_list    the lists or categorys it made the list for
         book_image          url to the image for the book
+        amazon_link         url to the Amazon product page for the book
         author_id           primary key to the books author for linking
         publisher           publisher who published the book
         author              author who wrote the book
+        description         the description of the book from Amazon
     """
     __tablename__ = "book"
     id = DB.Column(DB.Integer, primary_key=True)
@@ -53,15 +72,30 @@ class Book(DB.Model):
     title = DB.Column(DB.String(150))
     summary = DB.Column(DB.Text())
     best_seller_date = DB.Column(DB.Date())
-    best_seller_list = DB.Column(DB.String(150))
+    best_seller_list = DB.Column(DB.Text())
     book_image = DB.Column(DB.String(150))
+    amazon_link = DB.Column(DB.String(256))
     author_id = DB.Column(DB.Integer, DB.ForeignKey(Author.id))
     publisher = DB.Column(DB.String(150))
     author = DB.relationship(Author)
+    description = DB.Column(DB.Text())
+
+    def to_dict(self, query_instance=None):
+        """
+            Method to convert sqlalchmey object to python dict
+            Stolen from https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html
+        """
+        if hasattr(self, '__table__'):
+            return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
+        else:
+            cols = query_instance.column_descriptions
+            return {cols[i]['name']: self[i] for i in range(len(cols))}
 
 """
 A TeamMember model
 """
+
+
 class TeamMember(DB.Model):
     """
     A TeamMember object for use latter to track changing statistics.
