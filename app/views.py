@@ -83,19 +83,24 @@ class BookAPI(MethodView):
 
     def get(self, book_id):
         if book_id:
-            return json.dumps(Book.query.get(book_id))
+            return json.dumps(Book.query.get(book_id).to_dict())
         else:
-            return json.dumps(Book.query.all())
+            books = []
+            for book in Book.query.all():
+                books.append(book.to_dict())
+            return json.dumps(books)
 
 
 class AuthorAPI(MethodView):
 
     def get(self, author_id):
         if author_id:
-            return json.dumps(Author.query.get(author_id))
+            return json.dumps(Author.query.get(author_id).to_dict())
         else:
-            return json.dumps(Author.query.all())
-
+            authors = []
+            for author in Author.query.all():
+                authors.append(author.to_dict())
+            return json.dumps(authors)
 
 class RunTests(MethodView):
 
