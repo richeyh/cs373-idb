@@ -6,12 +6,12 @@ DOCKER_HUB_USERNAME := rychoi
 FILES :=                         \
     .travis.yml                  \
     .gitignore                   \
-	makefile                     \
+	  makefile                     \
     apiary.apib                  \
-    IDB1.log                     \
+    IDB2.log                     \
     models.html                  \
-    models.py                    \
-    tests.py                     \
+    app/models.py                    \
+    app/tests.py                     \
     UML.pdf
 
 check:

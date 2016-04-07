@@ -14,6 +14,7 @@ IBDB API is an API that allows users to get books and authors information.
 * `author_id(integer)`: A foreign key ID to author that links the book and author of the book.
 * `publisher(string)`: The publisher who published the book.
 * `author(Author)`: The list of authors that has contributed to writing the book.
+* `description(String)`: The description of the book from amazon.
 ## Author Attributes:
 * `id(integer)`: The ID of the author, used to identify in the database.
 * `first_name(string)`: The first name of the author.
@@ -22,6 +23,7 @@ IBDB API is an API that allows users to get books and authors information.
 * `best_seller_date(date)`: The most recent week the author has been on the New York Times Best Sellers List.
 * `Books(Book)`: The list of books the author has had on the New York Times Best Sellers List.
 * `link(string)`: A link to the authors Facebook page.
+* `bio(String)`: The biography of the author from amazon.
 ## Books [/books]
 ### Get a list of all books [GET]
 + Response 200 (application/json)
@@ -37,7 +39,8 @@ IBDB API is an API that allows users to get books and authors information.
                 "amazon_link": "http://www.amazon.com",
                 "author_id": 1,
                 "publisher": "Ace",
-                "author": []
+                "author": [],
+                "description": "this is one great book yo."
             }
         ]
 ## Single Book [/books/{book_id}]
@@ -56,20 +59,22 @@ IBDB API is an API that allows users to get books and authors information.
             "amazon_link": "http://www.amazon.com",
             "author_id": 1,
             "publisher": "Ace",
-            "author": []
+            "author": [],
+            "description": "this is one great book yo."
         }
 ## Authors [/authors]
 ### Get a list of authors [GET]
 + Response 200 (application/json)
         [
             {
-                "id": 1
-                "first_name": "Anthony"
-                "last_name": "Doerr"
-                "book_count": 1
-                "best_seller_date": "2016-03-12"
-                "Books": []
-                "link": "www.facebook.com"
+                "id": 1,
+                "first_name": "Anthony",
+                "last_name": "Doerr",
+                "book_count": 1,
+                "best_seller_date": "2016-03-12",
+                "Books": [],
+                "link": "www.facebook.com",
+                "bio": "he had a long and fun life"
             }
         ]
  
@@ -79,11 +84,12 @@ IBDB API is an API that allows users to get books and authors information.
 ### Get a single author [GET]
 + Response 200 (application/json)
         {
-            "id": 1
-            "first_name": "Anthony"
-            "last_name": "Doerr"
-            "book_count": 1
-            "best_seller_date": "2016-03-12"
-            "Books": []
-            "link": "www.facebook.com"
+            "id": 1,
+            "first_name": "Anthony",
+            "last_name": "Doerr",
+            "book_count": 1,
+            "best_seller_date": "2016-03-12",
+            "Books": [],
+            "link": "www.facebook.com",
+            "bio": "he had a long and fun life"
         }
