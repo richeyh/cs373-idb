@@ -37,10 +37,10 @@
 			    <p>{{array.best_seller_date}}</p>
 			    <h4>ISBN</h4>
 			    <p>{{array.isbn}}</p>
-			    <h4>SUMMARY</h4>
-			    <p>{{array.summary}}</p>
 			    <h4>DESCRIPTION</h4>
-			    <p>{{array.description|safe}}</p>
+			    <p>{{array.summary}}</p>
+			    <h4>SUMMARY</h4>
+			    <p>{{(array.description)|safe}}</p>
 			    <p><a href="{{array.amazon_link}}">Amazon</a>
 			    {% endraw %}
 			</div>
