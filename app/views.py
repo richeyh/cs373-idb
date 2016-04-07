@@ -55,7 +55,7 @@ class AuthorsView(MethodView):
         for author in Author.query.all():
             a = author.to_dict()
             a["recent_book"]=author.Books[-1].title
-            authors.append(author.to_dict())
+            authors.append(a)
         return render_template("authors.html", authors=authors)
 
 
