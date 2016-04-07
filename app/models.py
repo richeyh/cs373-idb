@@ -64,6 +64,7 @@ class Book(DB.Model):
         author_id           primary key to the books author for linking
         publisher           publisher who published the book
         author              author who wrote the book
+        description         the description of the book from Amazon
     """
     __tablename__ = "book"
     id = DB.Column(DB.Integer, primary_key=True)
