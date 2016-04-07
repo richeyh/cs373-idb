@@ -159,8 +159,14 @@ for category in lists:
                      publisher=book_publisher)
             b.author = book_author
         with app.app_context():
-            DB.session.add(b)
-            DB.session.commit()
+            try:
+                DB.session.add(b)
+                DB.session.commit()
+            except Exception:
+                print("Handling weird book summary")
+                DB.session.delete(b)
+                DB.session.delete(book_author)
+                DB.session.commit()
         list_of_book_objects.append(b)
     # Add book objects in a specific best seller list to the general
     # dictionary of book lists
