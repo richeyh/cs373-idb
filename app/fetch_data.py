@@ -150,7 +150,7 @@ def run_api():
             a = book["author"]
             single_author = a.split(' and ')[0]
             if len(single_author.split(' ')) >= 2:
-                lastName = single_author.split(' ')[1]
+                lastName = single_author.split(' ')[-1]
             else:
                 lastName = "None"
             firstName = single_author.split(' ')[0]
