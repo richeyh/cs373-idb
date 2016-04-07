@@ -7,11 +7,11 @@ import os
 
 # temporary list for the no DB stage of this project
 members = {
-    "Richard": {"issues": 6, "commits": 63, "tests": 0, "resp": "Back-end, Flask"},
-    "Rachel": {"issues": 4, "commits": 17, "tests": 0, "resp": "Docker, Uml"},
-    "Ruzseth": {"issues": 9, "commits": 48, "tests": 0, "resp": "Documentation, Front-end, Scraping"},
-    "Timothy": {"issues": 4, "commits": 51, "tests": 0, "resp": "Front-end, Angular, API requests"},
-    "Kyung": {"issues": 2, "commits": 5, "tests": 12, "resp": "Testing, Apiary"}
+    "Richard": {"issues": 17, "commits": 134, "tests": 0, "resp": "Back-end, Flask"},
+    "Rachel": {"issues": 5, "commits": 32, "tests": 0, "resp": "Docker, Uml"},
+    "Ruzseth": {"issues": 9, "commits": 50, "tests": 0, "resp": "Documentation, Front-end, Scraping"},
+    "Timothy": {"issues": 7, "commits": 65, "tests": 0, "resp": "Front-end, Angular, API requests"},
+    "Kyung": {"issues": 2, "commits": 18, "tests": 12, "resp": "Testing, Apiary"}
 }
 total = {"issues": 0, "commits": 0, "tests": 0}
 # dynamic snippet to total issues and commits
