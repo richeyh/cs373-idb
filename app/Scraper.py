@@ -38,7 +38,11 @@ def aLink(soup):
 
 
 def aImg(soup):
-    img_a = soup.find(class_='ap-author-image').get('src')
+    img_a = soup.find(class_='ap-author-image')
+    if img_a:
+        img_a = img_a.get('src')
+    else:
+        img_a = None
     return img_a
 
 
@@ -67,6 +71,13 @@ def bookScrape(book_obj):
     val = 0
     if author_link:
         page = mech.get(author_link)
+        retries = 0
+            while page.status_code == 503 and retries < 5:
+                time.sleep(2)
+                retries += 1
+                page = mech.get(url)
+        if retries == 5:
+            return 0
         html = page.soup
         try:
             author = book_obj.author
