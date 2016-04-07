@@ -164,6 +164,7 @@ for category in lists:
                 DB.session.commit()
             except Exception:
                 print("Handling weird book summary")
+                DB.session.rollback()
                 DB.session.delete(book_author)
                 DB.session.commit()
         list_of_book_objects.append(b)
