@@ -73,7 +73,12 @@ def bookScrape(book_obj):
         author.bio = aBio(html)
         DB.session.add(author)
         val = 1
-
-    DB.session.add(book_obj)
-    DB.session.commit()
+    try:
+        DB.session.add(book_obj)
+        DB.session.commit()
+    except Exception:
+        DB.session.rollback()
+        book_obj.description = "None"
+        DB.session.add(book_obj)
+        DB.session.commit()
     return val
