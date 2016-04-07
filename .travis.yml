@@ -32,7 +32,7 @@ script:
     - ls -al
     - make models.html
     - ls -al
-    - make IDB1.log
+    - make IDB2.log
     - ls -al
     - make check
 
