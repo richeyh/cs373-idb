@@ -68,7 +68,11 @@ def bookScrape(book_obj):
     if author_link:
         page = mech.get(author_link)
         html = page.soup
-        author = book_obj.author
+        try:
+            author = book_obj.author
+        except Exception:
+            book_obj.description = "None"
+            author = book_obj.author
         author.link = aImg(html)
         author.bio = aBio(html)
         DB.session.add(author)
