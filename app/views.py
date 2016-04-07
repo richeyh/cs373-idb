@@ -65,6 +65,7 @@ class AuthorView(MethodView):
         author = Author.query.get(author_id)
         a = author.to_dict()
         a["recent_book"]=author.Books[-1].title
+        a["book_id"]=author.Books[-1].id
         return render_template("author.html", author=a)
 
 
