@@ -72,7 +72,7 @@ class Book(DB.Model):
     title = DB.Column(DB.String(150))
     summary = DB.Column(DB.Text())
     best_seller_date = DB.Column(DB.Date())
-    best_seller_list = DB.Column(DB.String(150))
+    best_seller_list = DB.Column(DB.Text())
     book_image = DB.Column(DB.String(150))
     amazon_link = DB.Column(DB.String(256))
     author_id = DB.Column(DB.Integer, DB.ForeignKey(Author.id))

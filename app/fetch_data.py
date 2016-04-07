@@ -135,19 +135,28 @@ for category in lists:
         else:
             lastName = "None"
         firstName = single_author.split(' ')[0]
-        book_author = Author(first_name=firstName, last_name=lastName)
-        with app.app_context():
-            DB.session.add(book_author)
-            DB.session.commit()
-        b = Book(isbn=book_isbn,
-                 title=book_title,
-                 summary=book_summary,
-                 best_seller_date=book_best_seller_date,
-                 best_seller_list=book_best_seller_list,
-                 book_image=book_book_image,
-                 amazon_link=book_amazon_link,
-                 publisher=book_publisher)
-        b.author = book_author
+        author = Author.query.filter_by(first_name==firstName).filter_by(last_name==lastName).all()[0]
+        if author:
+            book_author = author
+        else:
+            book_author = Author(first_name=firstName, last_name=lastName)
+            with app.app_context():
+                DB.session.add(book_author)
+                DB.session.commit()
+        q_book = Book.query.filter_by(isbn==book_isbn).all()[0]
+        if q_book:
+            b = q_book
+            b.best_seller_list = b.best_seller_list+", "+book_best_seller_list
+        else:
+            b = Book(isbn=book_isbn,
+                     title=book_title,
+                     summary=book_summary,
+                     best_seller_date=book_best_seller_date,
+                     best_seller_list=book_best_seller_list,
+                     book_image=book_book_image,
+                     amazon_link=book_amazon_link,
+                     publisher=book_publisher)
+            b.author = book_author
         with app.app_context():
             DB.session.add(b)
             DB.session.commit()
