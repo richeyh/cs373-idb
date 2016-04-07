@@ -82,6 +82,9 @@
 {% endblock %}
 
 {% block javascript %}
+var a = angular.element( document.querySelector( '.authors' ) );
+	a.addClass('active');
+
 var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
 app.controller('authorsCtrl', function($scope){
 	$scope.sortType = 'lastName';

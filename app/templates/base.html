@@ -81,10 +81,10 @@
 				</div>
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="{{ url_for('.Home')}}"><span>Home <span class="border"></span></span></a></li>
-						<li><a href="{{ url_for('.About')}}"><span>Meet the Team <span class="border"></span></span></a></li>
-						<li><a href="{{ url_for('.Books')}}"><span>Books <span class="border"></span></span></a></li>
-						<li><a href="{{ url_for('.Authors')}}"><span>Authors <span class="border"></span></span></a></li>
+						<li id="home"><a href="{{ url_for('.Home')}}"><span>Home <span class="border"></span></span></a></li>
+						<li id="about"><a href="{{ url_for('.About')}}"><span>Meet the Team <span class="border"></span></span></a></li>
+						<li id="books"><a href="{{ url_for('.Books')}}"><span>Books <span class="border"></span></span></a></li>
+						<li id="authors"><a href="{{ url_for('.Authors')}}"><span>Authors <span class="border"></span></span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -150,11 +150,6 @@
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 	<script type="text/javascript">
-		$(".nav a").on("click", function()){
-			$(".nav").find(".active").removeClass("active");
-			$(this).parent().addClass("active");
-		}
-		
 			{% block javascript %}
 			{% endblock %}
 	</script>
