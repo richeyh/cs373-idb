@@ -20,10 +20,13 @@ def bkImg(soup):
 
 
 def bkDesc(soup):
-    script_list = soup.find_all('noscript')
-    if len(script_list) >= 2:
-        desc = script_list[1].div.prettify()
-    else:
+    try:
+        script_list = soup.find_all('noscript')
+        if len(script_list) >= 2:
+            desc = script_list[1].div.prettify()
+        else:
+            desc = "sorry no description found"
+    Exception:
         desc = "sorry no description found"
     return desc
 
