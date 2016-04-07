@@ -26,7 +26,7 @@ def bkDesc(soup):
             desc = script_list[1].div.prettify()
         else:
             desc = "sorry no description found"
-    Exception:
+    except Exception:
         desc = "sorry no description found"
     return desc
 
