@@ -9,8 +9,8 @@ import os
 members = {
     "Richard": {"issues": 6, "commits": 63, "tests": 0, "resp": "Back-end, Flask"},
     "Rachel": {"issues": 4, "commits": 17, "tests": 0, "resp": "Docker, Uml"},
-    "Ruzseth": {"issues": 9, "commits": 48, "tests": 0, "resp": "Documentation, Front-end"},
-    "Timothy": {"issues": 4, "commits": 51, "tests": 0, "resp": "Front-end, Angular"},
+    "Ruzseth": {"issues": 9, "commits": 48, "tests": 0, "resp": "Documentation, Front-end, Scraping"},
+    "Timothy": {"issues": 4, "commits": 51, "tests": 0, "resp": "Front-end, Angular, API requests"},
     "Kyung": {"issues": 2, "commits": 5, "tests": 6, "resp": "Testing, Apiary"}
 }
 total = {"issues": 0, "commits": 0, "tests": 0}
