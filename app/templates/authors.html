@@ -30,34 +30,34 @@
 		<thead>
 			<tr>
 				<th>
-					<a href='#' ng-click="sortType = 'lastName'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'last_name'; sortReverse = !sortReverse">
 					Last Name
-					<span ng-show="sortType == 'lastName' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'lastName' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'last_name' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'last_name' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'firstName'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'first_name'; sortReverse = !sortReverse">
 						First Name
-					<span ng-show="sortType == 'firstName' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'firstName' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'first_name' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'first_name' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'count'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'book_count'; sortReverse = !sortReverse">
 					Book count
-					<span ng-show="sortType == 'count' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'count' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'book_count' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'book_count' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'recent'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'recent_book'; sortReverse = !sortReverse">
 					Most Recent Book in List
-					<span ng-show="sortType == 'recent' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'recent' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'recent_book' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'recent_book' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'date'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'best_seller_date'; sortReverse = !sortReverse">
 					Best Seller Date
-					<span ng-show="sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'date' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'best_seller_date' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'best_seller_date' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
 					Link
@@ -87,7 +87,7 @@ var a = angular.element( document.querySelector( '.authors' ) );
 
 var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
 app.controller('authorsCtrl', function($scope){
-	$scope.sortType = 'lastName';
+	$scope.sortType = 'last_name';
 	$scope.sortReverse = false;
 	$scope.searchAuthor = '';
 
