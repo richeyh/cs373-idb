@@ -135,18 +135,18 @@ for category in lists:
             lastName = "None"
         firstName = single_author.split(' ')[0]
         with app.app_context():
-            author = Author.query.filter_by(first_name=firstName).filter_by(last_name=lastName).all()[0]
-        if author:
-            book_author = author
+            author = Author.query.filter_by(first_name=firstName).filter_by(last_name=lastName).all()
+        if len(author) > 0:
+            book_author = author[0]
         else:
             book_author = Author(first_name=firstName, last_name=lastName)
             with app.app_context():
                 DB.session.add(book_author)
                 DB.session.commit()
         with app.app_context():
-            q_book = Book.query.filter_by(isbn=book_isbn).all()[0]
-        if q_book:
-            b = q_book
+            q_book = Book.query.filter_by(isbn=book_isbn).all()
+        if len(q_book) > 0:
+            b = q_book[0]
             b.best_seller_list = b.best_seller_list+", "+book_best_seller_list
         else:
             b = Book(isbn=book_isbn,
