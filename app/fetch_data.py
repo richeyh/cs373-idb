@@ -3,8 +3,7 @@ from urllib.request import urlopen
 import json
 from models import Author, Book
 from Scraper import bookScrape
-from application import generate_application
-app = generate_application()
+from app import app
 from extensions import DB
 
 # idbndb_url = "http://isbndb.com/api/v2/json/H2ZRJDOE"
@@ -135,7 +134,8 @@ for category in lists:
         else:
             lastName = "None"
         firstName = single_author.split(' ')[0]
-        author = Author.query.filter_by(first_name==firstName).filter_by(last_name==lastName).all()[0]
+        with app.app_context():
+            author = Author.query.filter_by(first_name==firstName).filter_by(last_name==lastName).all()[0]
         if author:
             book_author = author
         else:
@@ -143,7 +143,8 @@ for category in lists:
             with app.app_context():
                 DB.session.add(book_author)
                 DB.session.commit()
-        q_book = Book.query.filter_by(isbn==book_isbn).all()[0]
+        with app.app_context():
+            q_book = Book.query.filter_by(isbn==book_isbn).all()[0]
         if q_book:
             b = q_book
             b.best_seller_list = b.best_seller_list+", "+book_best_seller_list

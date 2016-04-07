@@ -58,7 +58,7 @@ class Book(DB.Model):
         title               title of the book
         summary             summary of the book by new york times
         best_seller_date    date it made best seller best_seller_list
-        best_seller_list    the list or category it made the list for
+        best_seller_list    the lists or categorys it made the list for
         book_image          url to the image for the book
         amazon_link         url to the Amazon product page for the book
         author_id           primary key to the books author for linking
