@@ -71,6 +71,7 @@ def bookScrape(book_obj):
         try:
             author = book_obj.author
         except Exception:
+            DB.session.rollback()
             book_obj.description = "None"
             author = book_obj.author
         author.link = aImg(html)
