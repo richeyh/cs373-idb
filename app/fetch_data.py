@@ -94,11 +94,15 @@ def get_book_counts():
 def run_api():
     """function to hit new york times api and return all books and authors"""
     for category in lists:
-        r = urlopen("http://api.nytimes.com/svc/books/v3/lists/" +
-                    category + ".json?api-key=" + times_keys["books"])
-        rInfo = r.info()
-        rRaw = r.read().decode(rInfo.get_content_charset('utf8'))
-        result = json.loads(rRaw)
+        try:
+            r = urlopen("http://api.nytimes.com/svc/books/v3/lists/" +
+                        category + ".json?api-key=" + times_keys["books"])
+            rInfo = r.info()
+            rRaw = r.read().decode(rInfo.get_content_charset('utf8'))
+            result = json.loads(rRaw)
+        except Exception as e:
+            print(category+" has given us an error")
+            break
 
         # Make a dictionary of the list categories
         book_lists = {}
