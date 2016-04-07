@@ -28,15 +28,15 @@
 			    {% endraw %}
 			</div>
 			<div align="center" class="col-lg-3 col-md-6">
-			    <h4>AUTHOR</h4> 
+			    <h4>AUTHOR</h4>
 			    <p><a href = "{{url_for('.Author',author_id = book.author_id)}}">{% raw %}{{full_name}}{% endraw %}</a></p>
 			    {% raw %}
 			    <h4>PUBLISHER</h4>
 			    <p>{{array.publisher}}</p>
 			    <h4>LATEST WEEK ON BEST SELLERS LIST</h4>
 			    <p>{{array.best_seller_date}}</p>
-			    <h4>ISBN</h4> 
-			    <p>{{array.ISBN}}</p>
+			    <h4>ISBN</h4>
+			    <p>{{array.isbn}}</p>
 			    <h4>SUMMARY</h4>
 			    <p>{{array.summary}}</p>
 			    <h4>DESCRIPTION</h4>
@@ -48,7 +48,7 @@
 	</div>
 </div>
 
-<div class="fh5co-spacer-lg"></div>	
+<div class="fh5co-spacer-lg"></div>
 {% endblock %}
 
 {% block javascript %}
