@@ -58,6 +58,8 @@ def bookScrape(book_obj):
         time.sleep(2)
         retries += 1
         page = mech.get(url)
+    if retries == 5:
+        return 0
     html = page.soup
     book_obj.image_link = bkImg(html)
     book_obj.description = bkDesc(html)
