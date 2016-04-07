@@ -40,7 +40,10 @@ class BooksView(MethodView):
     def get(self):
         books = []
         for book in Book.query.all():
-            books.append(book.to_dict())
+            b = book.to_dict()
+            b["first_name"] = book.author.first_name
+            b["last_name"] = book.author.last_name
+            books.append(b)
         return render_template("books.html", books=books)
 
 
@@ -49,6 +52,8 @@ class AuthorsView(MethodView):
     def get(self):
         authors = []
         for author in Author.query.all():
+            a = author.to_dict()
+            a["recent_book"]=author.Books[-1].title
             authors.append(author.to_dict())
         return render_template("authors.html", authors=authors)
 
