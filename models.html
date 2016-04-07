@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>models</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/rachelchoi/Desktop/cs373/Project3/cs373-idb/models.py">/Users/rachelchoi/Desktop/cs373/Project3/cs373-idb/models.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/rachelchoi/Desktop/untitled%20folder/models.py">/Users/rachelchoi/Desktop/untitled folder/models.py</a></font></td></tr></table>
     <p><tt>The&nbsp;module&nbsp;for&nbsp;all&nbsp;SQLAlchemy&nbsp;database&nbsp;models</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -40,10 +40,11 @@ Attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primary&nbsp;key&nbsp;in&nbsp;the&nbsp;database<br>
 &nbsp;&nbsp;&nbsp;&nbsp;first_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;first&nbsp;name&nbsp;of&nbsp;the&nbsp;author<br>
 &nbsp;&nbsp;&nbsp;&nbsp;last_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;last&nbsp;name&nbsp;of&nbsp;the&nbsp;author<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bio&nbsp;of&nbsp;the&nbsp;author<br>
 &nbsp;&nbsp;&nbsp;&nbsp;book_count&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;of&nbsp;books&nbsp;in&nbsp;the&nbsp;database&nbsp;by&nbsp;the&nbsp;author<br>
 &nbsp;&nbsp;&nbsp;&nbsp;best_seller_date&nbsp;&nbsp;&nbsp;&nbsp;last&nbsp;date&nbsp;of&nbsp;best&nbsp;seller&nbsp;by&nbsp;author<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Books&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all&nbsp;books&nbsp;the&nbsp;author&nbsp;wrote<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link&nbsp;to&nbsp;the&nbsp;authors&nbsp;facebook&nbsp;page<br>&nbsp;</tt></td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link&nbsp;to&nbsp;the&nbsp;author's&nbsp;image<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%"><dl><dt>Method resolution order:</dt>
 <dd><a href="models.html#Author">Author</a></dd>
@@ -62,11 +63,16 @@ Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
 attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
 for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</tt></dd></dl>
 
+<dl><dt><a name="Author-to_dict"><strong>to_dict</strong></a>(self, query_instance=None)</dt><dd><tt>Method&nbsp;to&nbsp;convert&nbsp;sqlalchmey&nbsp;object&nbsp;to&nbsp;python&nbsp;dict<br>
+Stolen&nbsp;from&nbsp;https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html</tt></dd></dl>
+
 <hr>
 Data descriptors defined here:<br>
 <dl><dt><strong>Books</strong></dt>
 </dl>
 <dl><dt><strong>best_seller_date</strong></dt>
+</dl>
+<dl><dt><strong>bio</strong></dt>
 </dl>
 <dl><dt><strong>book_count</strong></dt>
 </dl>
@@ -80,7 +86,7 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103d8de48; Author&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103e7db00; Author&gt;</dl>
 
 <dl><dt><strong>__table__</strong> = Table('author', MetaData(bind=None), Column('id'...String(length=256), table=&lt;author&gt;), schema=None)</dl>
 
@@ -127,11 +133,13 @@ Attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;of&nbsp;the&nbsp;book<br>
 &nbsp;&nbsp;&nbsp;&nbsp;summary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;summary&nbsp;of&nbsp;the&nbsp;book&nbsp;by&nbsp;new&nbsp;york&nbsp;times<br>
 &nbsp;&nbsp;&nbsp;&nbsp;best_seller_date&nbsp;&nbsp;&nbsp;&nbsp;date&nbsp;it&nbsp;made&nbsp;best&nbsp;seller&nbsp;best_seller_list<br>
-&nbsp;&nbsp;&nbsp;&nbsp;best_seller_list&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;list&nbsp;or&nbsp;category&nbsp;it&nbsp;made&nbsp;the&nbsp;list&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;best_seller_list&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;lists&nbsp;or&nbsp;categorys&nbsp;it&nbsp;made&nbsp;the&nbsp;list&nbsp;for<br>
 &nbsp;&nbsp;&nbsp;&nbsp;book_image&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;to&nbsp;the&nbsp;image&nbsp;for&nbsp;the&nbsp;book<br>
+&nbsp;&nbsp;&nbsp;&nbsp;amazon_link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;to&nbsp;the&nbsp;Amazon&nbsp;product&nbsp;page&nbsp;for&nbsp;the&nbsp;book<br>
 &nbsp;&nbsp;&nbsp;&nbsp;author_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primary&nbsp;key&nbsp;to&nbsp;the&nbsp;books&nbsp;author&nbsp;for&nbsp;linking<br>
 &nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;who&nbsp;published&nbsp;the&nbsp;book<br>
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;who&nbsp;wrote&nbsp;the&nbsp;book<br>&nbsp;</tt></td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;who&nbsp;wrote&nbsp;the&nbsp;book<br>
+&nbsp;&nbsp;&nbsp;&nbsp;description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;description&nbsp;of&nbsp;the&nbsp;book&nbsp;from&nbsp;Amazon<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%"><dl><dt>Method resolution order:</dt>
 <dd><a href="models.html#Book">Book</a></dd>
@@ -150,8 +158,13 @@ Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
 attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
 for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</tt></dd></dl>
 
+<dl><dt><a name="Book-to_dict"><strong>to_dict</strong></a>(self, query_instance=None)</dt><dd><tt>Method&nbsp;to&nbsp;convert&nbsp;sqlalchmey&nbsp;object&nbsp;to&nbsp;python&nbsp;dict<br>
+Stolen&nbsp;from&nbsp;https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html</tt></dd></dl>
+
 <hr>
 Data descriptors defined here:<br>
+<dl><dt><strong>amazon_link</strong></dt>
+</dl>
 <dl><dt><strong>author</strong></dt>
 </dl>
 <dl><dt><strong>author_id</strong></dt>
@@ -161,6 +174,8 @@ Data descriptors defined here:<br>
 <dl><dt><strong>best_seller_list</strong></dt>
 </dl>
 <dl><dt><strong>book_image</strong></dt>
+</dl>
+<dl><dt><strong>description</strong></dt>
 </dl>
 <dl><dt><strong>id</strong></dt>
 </dl>
@@ -174,9 +189,9 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103dad550; Book&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103ea5320; Book&gt;</dl>
 
-<dl><dt><strong>__table__</strong> = Table('book', MetaData(bind=None), Column('id', ..., String(length=150), table=&lt;book&gt;), schema=None)</dl>
+<dl><dt><strong>__table__</strong> = Table('book', MetaData(bind=None), Column('id', ...description', Text(), table=&lt;book&gt;), schema=None)</dl>
 
 <dl><dt><strong>__tablename__</strong> = 'book'</dl>
 
@@ -262,7 +277,7 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103dadb00; TeamMember&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103ea5908; TeamMember&gt;</dl>
 
 <dl><dt><strong>__table__</strong> = Table('team_member', MetaData(bind=None), Column...s', Integer(), table=&lt;team_member&gt;), schema=None)</dl>
 

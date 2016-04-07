@@ -1,16 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="fb-root"></div>
-<script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
@@ -33,20 +23,27 @@
     <div class="controller" ng-app="myApp" ng-controller="authorCtrl">
         <div class="container-fluid">
             <div class="row-fluid">
-                <div align="center" class="col-lg-3 col-md-6 col-lg-offset-3">
+                <div align="center" class="col-lg-4 col-md-6 col-lg-offset-2">
+                    {% raw %}
+                    <img src="{{array.link}}" alt="Author picture" width="266" height="400"></img>
+                    {% endraw %}
+                </div>
+                <div align="center" class="col-lg-3 col-md-6">
                    {% raw %}
                      <h4>NO. OF BOOKS ON BEST SELLERS LIST</h4>
                      <p>{{array.book_count}}</p>
                    {% endraw %}
                     <h4>LATEST BEST SELLER</h4>
                    
-                     <p><a href = "{{url_for('.Book',book_id= author.book_id)}}">{% raw %}{{array.recent_book}}{% endraw %}</a></p>
+                     <p><a href = "{{url_for('.Book',book_id= author['book_id'])}}">{% raw %}{{array.recent_book}}{% endraw %}</a></p>
                    
                    {% raw %}
                      <h4>LATEST WEEK ON THE LIST</h4>
                      <p>{{array.best_seller_date}}</p>
+
+                     <h4>Biography</h4>
+                     <p>{{array.bio}}</p>
                 </div>
-                <div class="fb-page" data-href="{{array.Link}}" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="{{array.Link}}"><a href="{{array.Link}}">{{full_name}}</a></blockquote></div></div>
                     {% endraw %}
             </div>
         </div>
@@ -58,6 +55,9 @@
 
 
 {% block javascript %}
+var a = angular.element( document.querySelector( '.authors' ) );
+    a.addClass('active');
+
 var happ = angular.module('myHeader', []);
 happ.controller('headerCtrl', function($scope){
 	$scope.array = {{author|safe}};

@@ -2,6 +2,8 @@
 
 {% block content %}
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="{{ url_for('static', filename='js/dirPagination.js') }}"></script>
+
 <aside class="fh5co-page-heading">
 	<div class="container">
 		<div class="row">
@@ -23,13 +25,6 @@
 		</div>
 	</form>
 	<table class="table col-lg-8 table-hover" align="center">
-		<!-- <col width="200">
-		<col width="100">
-		<col width="100">
-		<col width="150">
-		<col width="100">
-		<col width="150">
-		<col width="150"> -->
 		<thead class="thead-inverse">
 			<tr>
 				<th>
@@ -39,16 +34,16 @@
 					<span ng-show="sortType == 'title' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'firstName'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'first_name'; sortReverse = !sortReverse">
 					First Name
-					<span ng-show="sortType == 'firstName' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'firstName' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'first_name' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'first_name' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'lastName'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'last_name'; sortReverse = !sortReverse">
 					Last Name
-					<span ng-show="sortType == 'lastName' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'lastName' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'last_name' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'last_name' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
 					<a href='#' ng-click="sortType = 'publisher'; sortReverse = !sortReverse">
@@ -57,22 +52,22 @@
 					<span ng-show="sortType == 'publisher' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'list'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'best_seller_list'; sortReverse = !sortReverse">
 					Best Seller List
-					<span ng-show="sortType == 'list' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'list' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'best_seller_list' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'best_seller_list' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'date'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'best_seller_date'; sortReverse = !sortReverse">
 					Best Seller Date
-					<span ng-show="sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'date' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'best_seller_date' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'best_seller_date' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
-					<a href='#' ng-click="sortType = 'ISBN'; sortReverse = !sortReverse">
+					<a href='#' ng-click="sortType = 'isbn'; sortReverse = !sortReverse">
 					ISBN
-					<span ng-show="sortType == 'ISBN' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'ISBN' && sortReverse" class="fa fa-caret-up"></span>
+					<span ng-show="sortType == 'isbn' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'isbn' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
 					Link
@@ -80,7 +75,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="x in array | orderBy:sortType:sortReverse | filter:searchBook">
+			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchBook | itemsPerPage:10">
 			{% raw %}
 				<td>{{x.title}}</td>
 				<td>{{x.first_name}}</td>
@@ -88,16 +83,21 @@
 				<td>{{x.publisher}}</td>
 				<td>{{x.best_seller_list}}</td>
 				<td>{{x.best_seller_date}}</td>
-				<td>{{x.ISBN}}</td>
+				<td>{{x.isbn}}</td>
 				<td><a href="{{x.link}}">Link</a></td>
 			{% endraw %}
 			</tr>
 		</tbody>
 	</table>
+	<dir-pagination-controls max-size="10" direction-links="true" boundary-links="true"></dir-pagination-controls>
 </div>
+
 {% endblock %}
 {% block javascript %}
-var app = angular.module('myApp', []);
+var a = angular.element( document.querySelector( '.books' ) );
+	a.addClass('active');
+
+var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
 app.controller('booksCtrl', function($scope){
 	$scope.sortType = 'title';
 	$scope.sortReverse = false;

@@ -128,9 +128,9 @@
 
 	        <div class="col-md-4 col-sm-6 col-xs-12">
 	            <h2>Other Pages</h2>
-<!-- 	            <ul>
-	                <li><a href="#">Run Unit Tests -under construction-</a></li>
-	            </ul> -->
+ 	            <ul>
+	                <li><a href="{{ url_for('.RunTests')}}">Run Unit Tests</a></li>
+	            </ul>
 	        </div>
 
 	        <div class="col-lg-9 col-md-12 col-sm-6 ">
@@ -189,4 +189,9 @@
 	<!-- End Tools -->
 
 	<div class="fh5co-spacer fh5co-spacer-lg"></div>
+{% endblock %}
+
+{% block javascript %}
+var a = angular.element( document.querySelector( '.about' ) );
+	a.addClass('active');
 {% endblock %}
