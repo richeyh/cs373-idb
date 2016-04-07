@@ -42,6 +42,28 @@ class TestModels (TestCase):
             self.assertEqual(
                 testauthor[0].Books[0].title, 'THE GIRL ON THE TRAIN')
 
+    # ----------------
+    # Author.to_dict()
+    # ----------------
+
+    def test_author_to_dict_1(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Anthony', last_name='Doerr')
+            dictauthor = testauthor.to_dict()
+            self.assertEqual(testauthor.first_name, dictauthor['first_name'])
+
+    def test_author_to_dict_2(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Paula', last_name='Hawkins')
+            dictauthor = testauthor.to_dict()
+            self.assertEqual(testauthor.last_name, dictauthor['last_name'])
+
+    def test_author_to_dict_3(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Harper', last_name='Lee', bio='hi')
+            dictauthor = testauthor.to_dict()
+            self.assertEqual(testauthor.bio, dictauthor['bio'])
+
     # ----
     # Book
     # ----
@@ -62,6 +84,28 @@ class TestModels (TestCase):
             testbook = Book.query.filter_by(
                 title='THE GIRL ON THE TRAIN').all()
             self.assertEqual(testbook[0].author.first_name, 'Paula')
+
+    # --------------
+    # Book.to_dict()
+    # --------------
+
+    def test_book_to_dict_1(self):
+        with app.app_context():
+            testbook = Book(id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
+            dictbook = testbook.to_dict()
+            self.assertEqual(testbook.title, dictbook['title'])
+
+    def test_book_to_dict_2(self):
+        with app.app_context():
+            testbook = Book(id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
+            dictbook = testbook.to_dict()
+            self.assertEqual(testbook.isbn, dictbook['isbn'])
+
+    def test_book_to_dict_3(self):
+        with app.app_context():
+            testbook = Book(id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
+            dictbook = testbook.to_dict()
+            self.assertEqual(testbook.summary, dictbook['summary'])
 
 # ----
 # Main
