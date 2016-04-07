@@ -76,7 +76,7 @@ def run_scraper():
         for book in Book.query.all():
             hits += bookScrape(book)
             total += 1
-            if total == 10:
+            if total %= 10:
                 print("10 more scrapes completed")
     print("succesfully loaded in "+str(total)+" books")
     print("succesfully loaded in "+str(hits)+" authors")
