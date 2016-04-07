@@ -91,6 +91,24 @@ def get_book_counts():
             DB.session.commit()
     print("Book counts finished")
 
+
+def get_best_seller_dates():
+    print("Fetching best seller dates")
+    with app.app_context():
+        for author in Author.query.all():
+            date = None
+            for book in author.Books:
+                if date is None:
+                    date = book.best_seller_date
+                else:
+                    if date < book.best_seller_date:
+                        date = book.best_seller_date
+            author.best_seller_date = date
+            DB.session.add(author)
+            DB.session.commit()
+    print("Best seller dates finished")
+
+
 def run_api():
     """function to hit new york times api and return all books and authors"""
     for category in lists:
@@ -195,6 +213,7 @@ def run_api():
 if __name__ == "__main__":
     run_api()
     get_book_counts()
+    get_best_seller_dates()
     run_scraper()
 
 
