@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
 	<aside class="fh5co-page-heading">
@@ -55,8 +54,6 @@
 
 
 {% block javascript %}
-var a = angular.element( document.querySelector( '.authors' ) );
-    a.addClass('active');
 
 var happ = angular.module('myHeader', []);
 happ.controller('headerCtrl', function($scope){

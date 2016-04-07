@@ -79,12 +79,20 @@
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 				<a class="navbar-brand" href="{{ url_for('.Home')}}">IBDB.ME</a>
 				</div>
-				<div id="fh5co-navbar" class="navbar-collapse collapse">
+				<div id="fh5co-navbar" class="navbar-collapse collapse" ng-app="myNavBar" ng-controller="navBarCtrl">
 					<ul class="nav navbar-nav navbar-right">
-						<li id="home"><a href="{{ url_for('.Home')}}"><span>Home <span class="border"></span></span></a></li>
-						<li id="about"><a href="{{ url_for('.About')}}"><span>Meet the Team <span class="border"></span></span></a></li>
-						<li id="books"><a href="{{ url_for('.Books')}}"><span>Books <span class="border"></span></span></a></li>
-						<li id="authors"><a href="{{ url_for('.Authors')}}"><span>Authors <span class="border"></span></span></a></li>
+						<li ng-class="{active: tab==0}">
+							<a ng-click="tab=0" href="{{ url_for('.Home')}}"><span>Home <span class="border"></span></span></a>
+						</li>
+						<li ng-class="{active: tab==1}">
+							<a ng-click="tab=1" href="{{ url_for('.About')}}"><span>Meet the Team <span class="border"></span></span></a>
+						</li>
+						<li ng-class="{active: tab==2}">
+							<a ng-click="tab=2" href="{{ url_for('.Books')}}"><span>Books <span class="border"></span></span></a>
+						</li>
+						<li ng-class"{active: tab==3}">
+							<a ng-click="tab=3" href="{{ url_for('.Authors')}}"><span>Authors <span class="border"></span></span></a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -149,9 +157,13 @@
 	<!-- Main JS -->
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 	<script type="text/javascript">
-			{% block javascript %}
-			{% endblock %}
+		var app = angular.module('myNavBar', []);
+		app.controller('navBarCtrl', function($scope){
+			$scope.tab = 0;
+		});
 	</script>
 </body>
 
