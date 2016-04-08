@@ -111,6 +111,8 @@ class RunTests(MethodView):
                              stderr=subprocess.PIPE,
                              stdin=subprocess.PIPE)
         out, error = p.communicate()
+        out = str(out)
+        error = str(error)
         out = out.replace('\n', "<br>")
         error = error.replace('\n', "<br>")
         return render_template("test.html", out=out, error=error)
