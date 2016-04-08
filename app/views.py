@@ -3,7 +3,7 @@ from flask import render_template
 from flask import Response
 from models import Book, Author
 import json
-import os
+import subprocess
 
 # temporary list for the no DB stage of this project
 members = {
@@ -54,7 +54,7 @@ class AuthorsView(MethodView):
         authors = []
         for author in Author.query.all():
             a = author.to_dict()
-            a["recent_book"]=author.Books[-1].title
+            a["recent_book"] = author.Books[-1].title
             authors.append(a)
         return render_template("authors.html", authors=authors)
 
@@ -64,8 +64,8 @@ class AuthorView(MethodView):
     def get(self, author_id):
         author = Author.query.get(author_id)
         a = author.to_dict()
-        a["recent_book"]=author.Books[-1].title
-        a["book_id"]=author.Books[-1].id
+        a["recent_book"] = author.Books[-1].title
+        a["book_id"] = author.Books[-1].id
         return render_template("author.html", author=a)
 
 
@@ -102,8 +102,13 @@ class AuthorAPI(MethodView):
                 authors.append(author.to_dict())
             return json.dumps(authors)
 
+
 class RunTests(MethodView):
 
     def get(self):
-        os.system("python3 tests.py > tests.tmp")
-        return Response(open('tests.tmp', 'r').read(), mimetype='text/plain')
+        p = subprocess.Popen(["python3", "tests.py"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE)
+        out, err = p.communicate()
+        return Response(out+"\n"+err, mimetype='text/plain')
