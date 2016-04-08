@@ -112,6 +112,8 @@ class RunTests(MethodView):
                              stdin=subprocess.PIPE)
         out, error = p.communicate()
         new_out = ""
+        out = out.decode("utf-8")
+        error = error.decode("utf-8")
         new_error = ""
         for entry in str(out).split('\n'):
             new_out = new_out + "<br>" + entry
