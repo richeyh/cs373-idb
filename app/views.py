@@ -111,4 +111,4 @@ class RunTests(MethodView):
             stderr=subprocess.PIPE,
             stdin=subprocess.PIPE)
         out, err = p.communicate()
-        return Response(out+"\n"+err, mimetype='text/plain')
+        return Response(str(out)+"\n"+str(err), mimetype='text/plain')
