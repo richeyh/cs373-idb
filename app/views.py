@@ -113,6 +113,6 @@ class RunTests(MethodView):
         out, error = p.communicate()
         out = str(out)
         error = str(error)
-        out = out.replace('\n', "<br>")
-        error = error.replace('\n', "<br>")
+        out = out.replace('\n', "<br>", 9999)
+        error = error.replace('\n', "<br>", 9999)
         return render_template("test.html", out=out, error=error)
