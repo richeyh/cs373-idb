@@ -107,8 +107,8 @@ class RunTests(MethodView):
 
     def get(self):
         p = subprocess.Popen(["python3", "tests.py"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            stdin=subprocess.PIPE)
-        out, err = p.communicate()
-        return Response(str(out)+"\n"+str(err), mimetype='text/plain')
+                             stdout=subprocess.PIPE,
+                             stderr=subprocess.PIPE,
+                             stdin=subprocess.PIPE)
+        out, error = p.communicate()
+        return render_template("test.html", out=out, error=error)
