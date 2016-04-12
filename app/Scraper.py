@@ -93,7 +93,6 @@ def bookScrape(book_obj):
             author = book_obj.author
         author.link = aImg(html)
         author.bio = aBio(html)
-        print("AUTHOR BIO: " + author.bio)
         DB.session.add(author)
         val = 1
     try:
