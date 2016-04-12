@@ -25,7 +25,7 @@
             <div class="row-fluid">
                 <div align="center" class="col-lg-4 col-md-6 col-lg-offset-2">
                     {% raw %}
-                    <img src="{{array.link}}" alt="Author picture" width="266" height="400"></img>
+                    <img src="{{array.link}}" alt="Author picture"></img>
                     {% endraw %}
                 </div>
                 <div align="center" class="col-lg-3 col-md-6">
@@ -55,7 +55,7 @@
 
 
 {% block javascript %}
-var a = angular.element( document.querySelector( '.authors' ) );
+var a = angular.element( document.querySelector( '#authors' ) );
     a.addClass('active');
 
 var happ = angular.module('myHeader', []);

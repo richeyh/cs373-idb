@@ -24,7 +24,7 @@
 		<div class="controller" ng-app="myApp" ng-controller="bookCtrl">
 		    <div align="center" class="col-lg-4 col-md-6 col-lg-offset-2">
 			    {% raw %}
-			    <img src="{{array.book_image}}" alt="Book picture" width="266" height="400"></img>
+			    <img src="{{array.book_image}}" alt="Book picture"></img>
 			    {% endraw %}
 			</div>
 			<div align="center" class="col-lg-3 col-md-6">
@@ -52,7 +52,7 @@
 {% endblock %}
 
 {% block javascript %}
-var a = angular.element( document.querySelector( '.books' ) );
+var a = angular.element( document.querySelector( '#books' ) );
 	a.addClass('active');
 
 var happ = angular.module('myHeader', []);

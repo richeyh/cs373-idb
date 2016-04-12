@@ -94,7 +94,7 @@
 
 {% endblock %}
 {% block javascript %}
-var a = angular.element( document.querySelector( '.books' ) );
+var a = angular.element( document.querySelector( '#books' ) );
 	a.addClass('active');
 
 var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
