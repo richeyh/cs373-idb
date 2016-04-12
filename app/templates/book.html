@@ -42,7 +42,7 @@
 			    <h4>DESCRIPTION</h4>
 			    <p>{{array.summary}}</p>
 			    <h4>SUMMARY</h4>
-			    <p read-more limit="100">{% endraw %}{{book['description']|safe}}{% raw %}</p>
+			    <p read-more content="{{book['description']|safe}}" limit="100"></p>
 			    <p><a href="{{array.amazon_link}}">Amazon</a>
 			    {% endraw %}
 			</div>
