@@ -3,6 +3,8 @@
 {% block content %}
 
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="{{ url_for('static', filename='js/readmore.js') }}"></script>
+
 <div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
 	<aside class="fh5co-page-heading">
 		<div class="container">
@@ -40,7 +42,7 @@
 			    <h4>DESCRIPTION</h4>
 			    <p>{{array.summary}}</p>
 			    <h4>SUMMARY</h4>
-			    <p>{% endraw %}{{book['description']|safe}}{% raw %}</p>
+			    <p read-more ng-model="content" words="true" length="100">{% endraw %}{{book['description']|safe}}{% raw %}</p>
 			    <p><a href="{{array.amazon_link}}">Amazon</a>
 			    {% endraw %}
 			</div>
@@ -60,7 +62,7 @@ happ.controller('headerCtrl', function($scope){
 	$scope.array = {{book|safe}};
 });
 
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ["readMore"]);
 app.controller('bookCtrl', function($scope){
 	$scope.array = {{book|safe}};
 	$scope.full_name =$scope.array.first_name + " " + $scope.array.last_name;
