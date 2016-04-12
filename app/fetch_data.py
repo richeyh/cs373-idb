@@ -13,17 +13,12 @@ times_keys = {"books": "f431b40e10777623a234404cda616c35:12:74671670",
               "popular": "b90ce9925426c6515a4d912e1f3d5851:10:74671670"}
 best_seller_url = "http://api.nytimes.com/svc/books/v3/"
 
-lists = ["combined-print-and-e-book-fiction",
-         "combined-print-and-e-book-nonfiction",
-         "hardcover-fiction",
+lists = ["hardcover-fiction",
          "hardcover-nonfiction",
+         "paperback-nonfiction",
          "trade-fiction-paperback",
          "mass-market-paperback",
-         "paperback-nonfiction",
-         "e-book-fiction",
-         "e-book-nonfiction",
          "hardcover-advice",
-         "paperback-advice",
          "advice-how-to-and-miscellaneous",
          "picture-books",
          "chapter-books",
@@ -31,17 +26,11 @@ lists = ["combined-print-and-e-book-fiction",
          "young-adult",
          "paperback-books",
          "childrens-middle-grade-hardcover",
-         "childrens-middle-grade-paperback",
-         "childrens-middle-grade-e-book",
          "young-adult-hardcover",
-         "young-adult-paperback",
-         "young-adult-e-book",
          "series-books",
          "hardcover-graphic-books",
          "paperback-graphic-books",
          "manga",
-         "combined-print-fiction",
-         "combined-print-nonfiction",
          "animals",
          "business-books",
          "celebrities",
@@ -54,11 +43,9 @@ lists = ["combined-print-and-e-book-fiction",
          "fashion-manners-and-customs",
          "food-and-fitness",
          "games-and-activities",
-         "hardcover-business-books",
          "health",
          "humor",
          "indigenous-americans",
-         "paperback-business-books",
          "hardcover-political-books",
          "race-and-civil-rights",
          "relationships",
@@ -76,7 +63,7 @@ def run_scraper():
         for book in Book.query.all():
             hits += bookScrape(book)
             total += 1
-            if total%10 == 0: 
+            if total%10 == 0:
                 print(str(total)+" scrapes completed")
     print("succesfully loaded in "+str(total)+" books")
     print("succesfully loaded in "+str(hits)+" authors")
@@ -215,6 +202,3 @@ if __name__ == "__main__":
     get_book_counts()
     get_best_seller_dates()
     run_scraper()
-
-
-
