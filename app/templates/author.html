@@ -2,7 +2,7 @@
 
 {% block content %}
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="{{ url_for('static', filename='js/readmore.js') }}"></script>
+<script src="{{ url_for('static', filename='js/angular-readmore.js') }}"></script>
 
 <div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
 	<aside class="fh5co-page-heading">
@@ -43,7 +43,7 @@
                      <p>{{array.best_seller_date}}</p>
 
                      <h4>Biography</h4>
-                     <p read-more ng-model="content" words="true" length="100">{{array.bio}}</p>
+                     <p read-more limit="100">{{array.bio}}</p>
                 </div>
                     {% endraw %}
             </div>
