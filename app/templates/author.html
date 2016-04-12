@@ -2,7 +2,6 @@
 
 {% block content %}
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="{{ url_for('static', filename='js/angular-readmore.js') }}"></script>
 
 <div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
 	<aside class="fh5co-page-heading">
@@ -43,7 +42,7 @@
                      <p>{{array.best_seller_date}}</p>
 
                      <h4>Biography</h4>
-                     <p read-more content="{{array.bio}}" limit="100"></p>
+                     <p>{{array.bio}}</p>
                 </div>
                     {% endraw %}
             </div>
@@ -66,7 +65,7 @@ happ.controller('headerCtrl', function($scope){
 
 });
 
-var app = angular.module('myApp', ["readMore"]);
+var app = angular.module('myApp', []);
 app.controller('authorCtrl', function($scope){
 	$scope.array = {{author|safe}};
 	$scope.full_name = $scope.array.first_name + " " + $scope.array.last_name;
