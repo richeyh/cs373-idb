@@ -59,6 +59,18 @@ models.html: models.py
 IDB2.log:
 	git log > IDB2.log
 
+db-init:
+	docker-compose run --rm --no-deps app make init
+
+db-upgrade:
+	docker-compose run --rm --no-deps app make upgrade
+
+db-migrate:
+	docker-compose run --rm --no-deps app make migrate
+
+fetch:
+	docker-compose run --rm --no-deps app make fetch
+
 docker-build:
 	@if [ -z "$$CONTINUE" ]; then \
 		read -r -p "Have you sourced the docker.env file for our Carina cluster? (y/n): " CONTINUE; \

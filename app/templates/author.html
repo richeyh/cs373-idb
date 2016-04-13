@@ -34,15 +34,15 @@
                      <p>{{array.book_count}}</p>
                    {% endraw %}
                     <h4>LATEST BEST SELLER</h4>
-                   
+
                      <p><a href = "{{url_for('.Book',book_id= author['book_id'])}}">{% raw %}{{array.recent_book}}{% endraw %}</a></p>
-                   
+
                    {% raw %}
                      <h4>LATEST WEEK ON THE LIST</h4>
                      <p>{{array.best_seller_date}}</p>
 
                      <h4>Biography</h4>
-                     <p>{{array.bio}}</p>
+                     <p>{% endraw %}{{author['bio']|safe}}{% raw %}</p>
                 </div>
                     {% endraw %}
             </div>

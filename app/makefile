@@ -8,6 +8,12 @@ init:
 	python3 manage.py db migrate
 	python3 manage.py db upgrade
 
+upgrade:
+	python3 manage.py db upgrade
+
+migrate:
+	python3 manage.py db migrate
+
 fetch:
 	python3 fetch_data.py
 
