@@ -62,10 +62,8 @@ IDB2.log:
 db-init:
 	docker-compose run --rm --no-deps app make init
 
-db-upgrade:
+db-update:
 	docker-compose run --rm --no-deps app make upgrade
-
-db-migrate:
 	docker-compose run --rm --no-deps app make migrate
 
 fetch:
@@ -91,12 +89,22 @@ docker-build:
 docker-push:
 	docker-compose --file docker-compose-prod.yml up -d
 
+docker-db:
+	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make init
+
+docker-db-update:
+	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make upgrade
+	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make migrate
+
+docker-db-fetch:
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make fetch
+
 docker-proxy:
 	docker run -it --rm \
 	--name temp-proxy \
 	--net cs373idb_backend \
 	--publish 3306:3306 \
 	--env PROTOCOL=TCP \
-	--env UPSTREAM=ibdb_db \
+	--env UPSTREAM=cs373idb_db \
 	--env UPSTREAM_PORT=3306 \
 	carinamarina/nginx-proxy

@@ -43,8 +43,8 @@ class Author(DB.Model):
             cols = query_instance.column_descriptions
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
-    def get_html(self, search_term):
-        
+    # def get_html(self, search_term):
+
 
 """
 A Book Model

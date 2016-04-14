@@ -28,6 +28,9 @@
 		<thead class="thead-inverse">
 			<tr>
 				<th>
+					COVER
+				</th>
+				<th>
 					<a href='#' ng-click="sortType = 'title'; sortReverse = !sortReverse">
 					Title
 					<span ng-show="sortType == 'title' && !sortReverse" class="fa fa-caret-down"></span>
@@ -77,6 +80,7 @@
 		<tbody>
 			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchBook | itemsPerPage:10">
 			{% raw %}
+			  <td><img src="{{x.book_image}}" alt="{{x.title}}" height="80" width="50"></td>
 				<td>{{x.title}}</td>
 				<td>{{x.first_name}}</td>
 				<td>{{x.last_name}}</td>
