@@ -30,16 +30,16 @@
 		<thead>
 			<tr>
 				<th>
-					<a href='#' ng-click="sortType = 'last_name'; sortReverse = !sortReverse">
-					Last Name
-					<span ng-show="sortType == 'last_name' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'last_name' && sortReverse" class="fa fa-caret-up"></span>
-				</th>
-				<th>
 					<a href='#' ng-click="sortType = 'first_name'; sortReverse = !sortReverse">
 						First Name
 					<span ng-show="sortType == 'first_name' && !sortReverse" class="fa fa-caret-down"></span>
 					<span ng-show="sortType == 'first_name' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'last_name'; sortReverse = !sortReverse">
+					Last Name
+					<span ng-show="sortType == 'last_name' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'last_name' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
 					<a href='#' ng-click="sortType = 'book_count'; sortReverse = !sortReverse">
@@ -67,8 +67,8 @@
 		<tbody>
 			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchAuthor | itemsPerPage:10">
 				{% raw %}
-				<td>{{x.last_name}}</td>
 				<td>{{x.first_name}}</td>
+				<td>{{x.last_name}}</td>
 				<td>{{x.book_count}}</td>
 				<td>{{x.recent_book}}</td>
 				<td>{{x.best_seller_date}}</td>
