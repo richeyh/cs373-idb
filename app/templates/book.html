@@ -39,8 +39,10 @@
 			    <p>{{array.isbn}}</p>
 			    <h4>DESCRIPTION</h4>
 			    <p>{{array.summary}}</p>
-			    <h4>SUMMARY</h4>
-			    <p>{% endraw %}{{book['description']|safe}}{% raw %}</p>
+			    <button type="button" class="btn btn-outline" data-toggle="collapse" data-target="#summary"><h4>SUMMARY</h4></button>
+			    <div id="summary" class="collapse">
+			    	<p>{% endraw %}{{book['description']|safe}}{% raw %}</p>
+			    </div>
 			    <p><a href="{{array.amazon_link}}">Amazon</a>
 			    {% endraw %}
 			</div>
