@@ -43,7 +43,17 @@ class Author(DB.Model):
             cols = query_instance.column_descriptions
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
-    # def get_html(self, search_term):
+    def get_html(self, search_term):
+        result_string = ""
+        search = search_term.split(" ")
+        if hasattr(self, '__table__'):
+            for c in self.__table__.columns:
+                # result_string += "<td>"
+                attribute = str(getattr(self, c.name))
+                for s in search:
+                    attribute.replace(s, '<b>' + s + '</b>')
+                    result_string += attribute + " "
+        return result_string
 
 
 """
@@ -93,6 +103,18 @@ class Book(DB.Model):
         else:
             cols = query_instance.column_descriptions
             return {cols[i]['name']: self[i] for i in range(len(cols))}
+
+    def get_html(self, search_term):
+        result_string = ""
+        search = search_term.split(" ")
+        if hasattr(self, '__table__'):
+            for c in self.__table__.columns:
+                # result_string += "<td>"
+                attribute = str(getattr(self, c.name))
+                for s in search:
+                    attribute.replace(s, '<b>' + s + '</b>')
+                    result_string += attribute + " "
+        return result_string
 
 """
 A TeamMember model
