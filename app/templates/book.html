@@ -39,7 +39,7 @@
 			    <p>{{array.isbn}}</p>
 			    <h4>DESCRIPTION</h4>
 			    <p>{{array.summary}}</p>
-			    <button type="button" class="btn btn-outline" data-toggle="collapse" data-target="#summary"><h4>SUMMARY</h4></button>
+			    <button type="button" class="btn" data-toggle="collapse" data-target="#summary"><h4>SUMMARY</h4><i class="icon-arrow-down"></i></button>
 			    <div id="summary" class="collapse">
 			    	<p>{% endraw %}{{book['description']|safe}}{% raw %}</p>
 			    </div>
