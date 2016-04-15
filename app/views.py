@@ -1,6 +1,5 @@
 from flask.views import MethodView
 from flask import render_template
-from flask import Response
 from models import Book, Author
 import json
 import subprocess
@@ -64,9 +63,7 @@ class AuthorView(MethodView):
     def get(self, author_id):
         author = Author.query.get(author_id)
         a = author.to_dict()
-        a["recent_book"] = author.Books[-1].title
-        a["book_id"] = author.Books[-1].id
-        return render_template("author.html", author=a)
+        return render_template("author.html", author=a, books=author.Books)
 
 
 class BookView(MethodView):
