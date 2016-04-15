@@ -47,14 +47,16 @@ class Author(DB.Model):
 
     def get_html(self, search_term):
         result_string = ""
-        search = search_term.split(" ")
+        search = search_term.lower().split(" ")
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
-                # result_string += "<td>"
-                attribute = str(getattr(self, c.name))
-                for s in search:
-                    attribute.replace(s, '<button>' + s + '</button>')
-                    result_string += attribute + " "
+                if(c.name == "id" or c.name == "bio" or c.name == "book_count" or c.name == "best_seller_date" or c.name == "Books"  or c.name == "link"):
+                    attribute = str(getattr(self, c.name))
+                else:
+                    attribute = str(getattr(self, c.name)).lower()
+                    for s in search:
+                        attribute.replace(s, '<button>' + s + '</button>')
+                result_string += attribute + " "
         return result_string
 
 
@@ -111,14 +113,16 @@ class Book(DB.Model):
 
     def get_html(self, search_term):
         result_string = ""
-        search = search_term.split(" ")
+        search = search_term.lower().split(" ")
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
-                # result_string += "<td>"
-                attribute = str(getattr(self, c.name))
-                for s in search:
-                    attribute.replace(s, '<button>' + s + '</button>')
-                    result_string += attribute + " "
+                if(c.name == "summary" or c.name == "best_seller_date" or c.name == "book_image" or c.name == "amazon_link"  or c.name == "author_id" or c.name == "author" or c.name == "description"):
+                    attribute = str(getattr(self, c.name))
+                else:
+                    attribute = str(getattr(self, c.name)).lower()
+                    for s in search:
+                        attribute.replace(s, '<button>' + s + '</button>')
+                result_string += attribute + " "
         return result_string
 
 """
