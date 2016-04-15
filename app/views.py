@@ -117,3 +117,13 @@ class RunTests(MethodView):
         for entry in str(error).split('\n'):
             new_error = new_error + "<br>" + entry
         return render_template("test.html", out=new_out, error=new_error)
+
+
+class Search(MethodView):
+
+    def get(self, search_string):
+        search_result = []
+        authors = Author.query.whoosh_search(search_string).all()
+        books = Book.query.whoosh_search(search_string).all()
+        search_result = authors + books
+        return render_template("search.html", result=search_result, search=search_string)

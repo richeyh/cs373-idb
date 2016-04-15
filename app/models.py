@@ -2,6 +2,7 @@
 The module for all SQLAlchemy database models
 """
 from extensions import DB
+import flask.ext.whooshalchemy as whooshalchemy
 
 """
 An Author Model
@@ -23,6 +24,8 @@ class Author(DB.Model):
         link                link to the author's image
     """
     __tablename__ = "author"
+    __searchable__ = ['first_name', 'last_name', 'bio',
+                      'book_count', 'best_seller_date', 'link']
     id = DB.Column(DB.Integer, primary_key=True)
     first_name = DB.Column(DB.String(150))
     last_name = DB.Column(DB.String(150))
@@ -80,6 +83,9 @@ class Book(DB.Model):
         description         the description of the book from Amazon
     """
     __tablename__ = "book"
+    __searchable__ = ['isbn', 'title', 'summary', 'best_seller_date',
+                      'best_seller_list', 'book_image', 'amazon_link',
+                      'publisher', 'description']
     id = DB.Column(DB.Integer, primary_key=True)
     isbn = DB.Column(DB.String(150))
     title = DB.Column(DB.String(150))
