@@ -1,0 +1,10 @@
+<table>
+    <thead>
+        <td> search results </td>
+    </thead>
+    <tbody>
+{% for entry in result %}
+   <tr> <td>{{entry.get_html(search) | safe}}</td> </tr>
+{% endfor %}
+    </tbody>
+</table>

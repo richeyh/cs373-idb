@@ -126,4 +126,7 @@ class Search(MethodView):
         authors = Author.query.whoosh_search(search_string).all()
         books = Book.query.whoosh_search(search_string).all()
         search_result = authors + books
+        print(search_string)
+        print(len(authors))
+        print(len(books))
         return render_template("search.html", result=search_result, search=search_string)

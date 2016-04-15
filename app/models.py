@@ -53,7 +53,7 @@ class Author(DB.Model):
                 # result_string += "<td>"
                 attribute = str(getattr(self, c.name))
                 for s in search:
-                    attribute.replace(s, '<b>' + s + '</b>')
+                    attribute.replace(s, '<button>' + s + '</button>')
                     result_string += attribute + " "
         return result_string
 
@@ -117,7 +117,7 @@ class Book(DB.Model):
                 # result_string += "<td>"
                 attribute = str(getattr(self, c.name))
                 for s in search:
-                    attribute.replace(s, '<b>' + s + '</b>')
+                    attribute.replace(s, '<button>' + s + '</button>')
                     result_string += attribute + " "
         return result_string
 
