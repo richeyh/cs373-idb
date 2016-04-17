@@ -86,7 +86,11 @@
 						<li id="books"><a href="{{ url_for('.Books')}}"><span>Books <span class="border"></span></span></a></li>
 						<li id="authors"><a href="{{ url_for('.Authors')}}"><span>Authors <span class="border"></span></span></a></li>
 					</ul>
-				</div>
+					<form id="search" class="navbar-form navbar-left">
+				        <input id="search-field" type="text" class="form-control" placeholder="Search">
+			        	<button type="submit" class="btn" style="margin-bottom: 0px">Submit</button>
+		      		</form>
+				</div>	
 			</div>
 		</nav>
 	</header>
@@ -94,6 +98,19 @@
 	<div class="col-md-12">
 		{% block content%}
 		{% endblock %}
+	</div>
+
+
+
+	<div id="resultModal" class="modal fade" tabindex="999">
+		<div class="modal-dialog">
+		    <div class="modal-content">
+		    	<div id="result"></div>
+		    </div>
+		    <div class="modal-footer">
+        		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      		</div>
+		</div>
 	</div>
 
 	<footer id="fh5co-footer">
@@ -150,6 +167,19 @@
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+    			$( "#search" ).submit(function( event ) {
+    				event.preventDefault();
+    				var search_string = $('#search-field').val();
+    				$("#resultModal").modal('show');
+    				$.ajax({url: "/search/"+search_string, success: function(result){
+        				$("#result").html(result);
+    				}}); 
+    			});
+    			$(".clickable-row").click(function() {
+        			window.document.location = $(this).data("href");
+    			});
+		});
 			{% block javascript %}
 			{% endblock %}
 	</script>

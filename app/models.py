@@ -46,7 +46,7 @@ class Author(DB.Model):
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
     def get_html(self, search_term):
-        result_string = ""
+        result_string = "<button> START </button>"
         search = search_term.lower().split(" ")
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
@@ -57,7 +57,11 @@ class Author(DB.Model):
                     for s in search:
                         attribute.replace(s, '<button>' + s + '</button>')
                 result_string += attribute + " "
+        result_string += "<button> End </button>"
         return result_string
+
+    def get_link(self):
+        return "/author/"+str(self.id)
 
 
 """
@@ -112,7 +116,7 @@ class Book(DB.Model):
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
     def get_html(self, search_term):
-        result_string = ""
+        result_string = "<button> START </button>"
         search = search_term.lower().split(" ")
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
@@ -123,7 +127,11 @@ class Book(DB.Model):
                     for s in search:
                         attribute.replace(s, '<button>' + s + '</button>')
                 result_string += attribute + " "
+        result_string += "<button> End </button>"
         return result_string
+
+    def get_link(self):
+        return "/book/"+str(self.id)
 
 """
 A TeamMember model

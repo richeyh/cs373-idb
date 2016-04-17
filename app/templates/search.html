@@ -4,7 +4,7 @@
     </thead>
     <tbody>
 {% for entry in result %}
-   <tr> <td>{{entry.get_html(search) | safe}}</td> </tr>
+    <tr class="clickable-row" data-href="{{entry.get_link()}}"><td>{{entry.get_html(search)|safe }}</td></tr> 
 {% endfor %}
     </tbody>
 </table>
