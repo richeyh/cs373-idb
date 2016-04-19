@@ -123,17 +123,28 @@ class RunTests(MethodView):
 class Search(MethodView):
 
     def get(self, search_string):
-        print("*"*80)
-        print(search_string)
-        print("*"*80)
         search_result = []
-        authors = Author.query.whoosh_search(search_string).all()
-        books = Book.query.whoosh_search(search_string).all()
-        search_result = authors + books
-        print(search_string)
-        print(len(authors))
-        print(len(books))
+        if "AND" in search_string:
+            search_string = search_string.split("AND")
+            print(search_string)
+        elif "OR" in search_string:
+            search_string = search_string.split("OR")
+            if len(search_string) != 2:
+                return "error occured OR expects two terms"
+            authors_one = Author.query.whoosh_search(search_string[0]).all()
+            authors_two = Author.query.whoosh_search(search_string[1]).all()
+            # snippet to merge two lists
+            authors = [x for y in zip(authors_one, authors_two) for x in y]
+            books_one = Book.query.whoosh_search(search_string[0]).all()
+            books_two = Book.query.whoosh_search(search_string[1]).all()
+            books = [x for y in zip(books_one, books_two) for x in y]
+            search_string = search_string[0]+" OR "+search_string[1]
+        else:
+            authors = Author.query.whoosh_search(search_string).all()
+            books = Book.query.whoosh_search(search_string).all()
+        search_result = [x for y in zip(authors, books) for x in y]
         return render_template("search.html", result=search_result, search=search_string)
+
 
 class CocktailIngredients(MethodView):
 
@@ -145,4 +156,3 @@ class CocktailIngredients(MethodView):
             ingredients[i]['numberOfCocktails'] = r['numberOfCocktails']
             print(i)
         return json.dumps(ingredients)
-
