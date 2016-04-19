@@ -21,7 +21,7 @@
     <![endif]-->
 </head>
 <body>
-    <table class="table col-lg-8 table-hover" align="center">
+    <table class="table col-lg-8 table-hover"  style="background-color:#fff" align="center">
         <thead>
             <tr style="background-color:#fff">
             <th> book/author name </th>
@@ -30,7 +30,7 @@
         </thead>
         <tbody>
     {% for entry in result %}
-        <tr class="clickable-row" data-href="{{entry.get_link()}}">{{entry.get_html(search)|safe }}</tr> 
+        <tr class="clickable-row"  style="background-color:#fff" data-href="{{entry.get_link()}}">{{entry.get_html(search)|safe }}</tr> 
     {% endfor %}
         </tbody>
     </table>
