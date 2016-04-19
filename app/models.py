@@ -52,7 +52,7 @@ class Author(DB.Model):
         result_string = ""
         search_term = search_term.lower()
         attributes = {
-            "id", "bio", "book_count", "best_seller_date", "Books", "link"}
+            "id", "book_count", "best_seller_date", "Books", "link"}
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
                 if(c.name in attributes):
@@ -123,8 +123,8 @@ class Book(DB.Model):
     def get_html(self, search_term):
         result_string = ""
         search_term = search_term.lower()
-        attributes = {"summary", "best_seller_date", "book_image",
-                      "amazon_link", "author_id", "author", "description"}
+        attributes = {"best_seller_date", "book_image",
+                      "amazon_link", "author_id", "author"}
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
                 if(c.name in attributes):
