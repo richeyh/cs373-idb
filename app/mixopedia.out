@@ -1,0 +1,1062 @@
+[
+    {
+        "id": 1,
+        "numberOfCocktails": 7,
+        "name": "Creme de Cacao"
+    },
+    {
+        "id": 2,
+        "numberOfCocktails": 77,
+        "name": "Vodka"
+    },
+    {
+        "id": 3,
+        "numberOfCocktails": 5,
+        "name": "Dark rum"
+    },
+    {
+        "id": 4,
+        "numberOfCocktails": 11,
+        "name": "Light rum"
+    },
+    {
+        "id": 5,
+        "numberOfCocktails": 47,
+        "name": "Orange juice"
+    },
+    {
+        "id": 6,
+        "numberOfCocktails": 5,
+        "name": "Absolut Citron"
+    },
+    {
+        "id": 7,
+        "numberOfCocktails": 2,
+        "name": "Orange Curacao"
+    },
+    {
+        "id": 8,
+        "numberOfCocktails": 5,
+        "name": "Strawberry liqueur"
+    },
+    {
+        "id": 9,
+        "numberOfCocktails": 13,
+        "name": "Peach schnapps"
+    },
+    {
+        "id": 10,
+        "numberOfCocktails": 19,
+        "name": "Cranberry juice"
+    },
+    {
+        "id": 11,
+        "numberOfCocktails": 11,
+        "name": "Amaretto"
+    },
+    {
+        "id": 12,
+        "numberOfCocktails": 11,
+        "name": "Lemon"
+    },
+    {
+        "id": 13,
+        "numberOfCocktails": 33,
+        "name": "Ice"
+    },
+    {
+        "id": 14,
+        "numberOfCocktails": 4,
+        "name": "Maraschino cherry"
+    },
+    {
+        "id": 15,
+        "numberOfCocktails": 3,
+        "name": "White Creme de Menthe"
+    },
+    {
+        "id": 16,
+        "numberOfCocktails": 8,
+        "name": "Southern Comfort"
+    },
+    {
+        "id": 17,
+        "numberOfCocktails": 1,
+        "name": "Hot chocolate"
+    },
+    {
+        "id": 18,
+        "numberOfCocktails": 5,
+        "name": "Sweet and sour"
+    },
+    {
+        "id": 19,
+        "numberOfCocktails": 14,
+        "name": "Sprite"
+    },
+    {
+        "id": 20,
+        "numberOfCocktails": 10,
+        "name": "Soda water"
+    },
+    {
+        "id": 21,
+        "numberOfCocktails": 19,
+        "name": "Triple sec"
+    },
+    {
+        "id": 22,
+        "numberOfCocktails": 4,
+        "name": "Ginger ale"
+    },
+    {
+        "id": 23,
+        "numberOfCocktails": 24,
+        "name": "Grenadine"
+    },
+    {
+        "id": 24,
+        "numberOfCocktails": 22,
+        "name": "Pineapple juice"
+    },
+    {
+        "id": 25,
+        "numberOfCocktails": 1,
+        "name": "Sparkling white wine"
+    },
+    {
+        "id": 26,
+        "numberOfCocktails": 15,
+        "name": "Cointreau"
+    },
+    {
+        "id": 27,
+        "numberOfCocktails": 8,
+        "name": "Sugar"
+    },
+    {
+        "id": 28,
+        "numberOfCocktails": 38,
+        "name": "Gin"
+    },
+    {
+        "id": 29,
+        "numberOfCocktails": 13,
+        "name": "Cream"
+    },
+    {
+        "id": 30,
+        "numberOfCocktails": 6,
+        "name": "Lemonade"
+    },
+    {
+        "id": 31,
+        "numberOfCocktails": 1,
+        "name": "Amer Picon"
+    },
+    {
+        "id": 32,
+        "numberOfCocktails": 5,
+        "name": "Brandy"
+    },
+    {
+        "id": 33,
+        "numberOfCocktails": 1,
+        "name": "Pernod"
+    },
+    {
+        "id": 34,
+        "numberOfCocktails": 1,
+        "name": "Wormwood"
+    },
+    {
+        "id": 35,
+        "numberOfCocktails": 3,
+        "name": "Water"
+    },
+    {
+        "id": 36,
+        "numberOfCocktails": 1,
+        "name": "Apple juice"
+    },
+    {
+        "id": 37,
+        "numberOfCocktails": 1,
+        "name": "Carrot"
+    },
+    {
+        "id": 38,
+        "numberOfCocktails": 1,
+        "name": "Sour Apple Pucker"
+    },
+    {
+        "id": 39,
+        "numberOfCocktails": 1,
+        "name": "Citrus vodka"
+    },
+    {
+        "id": 40,
+        "numberOfCocktails": 2,
+        "name": "Jack Daniels"
+    },
+    {
+        "id": 41,
+        "numberOfCocktails": 19,
+        "name": "Midori melon liqueur"
+    },
+    {
+        "id": 42,
+        "numberOfCocktails": 7,
+        "name": "Sour mix"
+    },
+    {
+        "id": 43,
+        "numberOfCocktails": 8,
+        "name": "Bailey's irish cream"
+    },
+    {
+        "id": 44,
+        "numberOfCocktails": 15,
+        "name": "Blue Curacao"
+    },
+    {
+        "id": 45,
+        "numberOfCocktails": 6,
+        "name": "7-Up"
+    },
+    {
+        "id": 46,
+        "numberOfCocktails": 6,
+        "name": "Absolut Vodka"
+    },
+    {
+        "id": 47,
+        "numberOfCocktails": 1,
+        "name": "Iced tea"
+    },
+    {
+        "id": 48,
+        "numberOfCocktails": 14,
+        "name": "Tequila"
+    },
+    {
+        "id": 49,
+        "numberOfCocktails": 9,
+        "name": "Rose's sweetened lime juice"
+    },
+    {
+        "id": 50,
+        "numberOfCocktails": 20,
+        "name": "Malibu rum"
+    },
+    {
+        "id": 51,
+        "numberOfCocktails": 1,
+        "name": "Gold tequila"
+    },
+    {
+        "id": 52,
+        "numberOfCocktails": 2,
+        "name": "Cream of coconut"
+    },
+    {
+        "id": 53,
+        "numberOfCocktails": 2,
+        "name": "Pineapple"
+    },
+    {
+        "id": 54,
+        "numberOfCocktails": 1,
+        "name": "Lime juice cordial"
+    },
+    {
+        "id": 55,
+        "numberOfCocktails": 3,
+        "name": "Tia maria"
+    },
+    {
+        "id": 56,
+        "numberOfCocktails": 3,
+        "name": "Grand Marnier"
+    },
+    {
+        "id": 57,
+        "numberOfCocktails": 4,
+        "name": "Pisang Ambon"
+    },
+    {
+        "id": 58,
+        "numberOfCocktails": 21,
+        "name": "Lemon juice"
+    },
+    {
+        "id": 59,
+        "numberOfCocktails": 6,
+        "name": "White rum"
+    },
+    {
+        "id": 60,
+        "numberOfCocktails": 1,
+        "name": "Black rum"
+    },
+    {
+        "id": 61,
+        "numberOfCocktails": 4,
+        "name": "Creme de Banane"
+    },
+    {
+        "id": 62,
+        "numberOfCocktails": 2,
+        "name": "Passoa"
+    },
+    {
+        "id": 63,
+        "numberOfCocktails": 2,
+        "name": "Coconut liqueur"
+    },
+    {
+        "id": 64,
+        "numberOfCocktails": 3,
+        "name": "Pi\u00f1a Colada"
+    },
+    {
+        "id": 65,
+        "numberOfCocktails": 8,
+        "name": "Lime"
+    },
+    {
+        "id": 66,
+        "numberOfCocktails": 7,
+        "name": "Coca-Cola"
+    },
+    {
+        "id": 67,
+        "numberOfCocktails": 7,
+        "name": "151 proof rum"
+    },
+    {
+        "id": 68,
+        "numberOfCocktails": 3,
+        "name": "Everclear"
+    },
+    {
+        "id": 69,
+        "numberOfCocktails": 2,
+        "name": "Whiskey"
+    },
+    {
+        "id": 70,
+        "numberOfCocktails": 1,
+        "name": "Parfait d'Amour"
+    },
+    {
+        "id": 71,
+        "numberOfCocktails": 1,
+        "name": "Schnapps"
+    },
+    {
+        "id": 72,
+        "numberOfCocktails": 1,
+        "name": "Black Sambuca"
+    },
+    {
+        "id": 73,
+        "numberOfCocktails": 1,
+        "name": "Berries"
+    },
+    {
+        "id": 74,
+        "numberOfCocktails": 8,
+        "name": "Milk"
+    },
+    {
+        "id": 75,
+        "numberOfCocktails": 4,
+        "name": "Honey"
+    },
+    {
+        "id": 76,
+        "numberOfCocktails": 2,
+        "name": "Coconut cream"
+    },
+    {
+        "id": 77,
+        "numberOfCocktails": 6,
+        "name": "Sugar syrup"
+    },
+    {
+        "id": 78,
+        "numberOfCocktails": 1,
+        "name": "Fruit juice"
+    },
+    {
+        "id": 79,
+        "numberOfCocktails": 4,
+        "name": "Sloe gin"
+    },
+    {
+        "id": 80,
+        "numberOfCocktails": 3,
+        "name": "Cherry"
+    },
+    {
+        "id": 81,
+        "numberOfCocktails": 1,
+        "name": "Lemon gin"
+    },
+    {
+        "id": 82,
+        "numberOfCocktails": 1,
+        "name": "Gatorade"
+    },
+    {
+        "id": 83,
+        "numberOfCocktails": 15,
+        "name": "Lime juice"
+    },
+    {
+        "id": 84,
+        "numberOfCocktails": 1,
+        "name": "Blueberries"
+    },
+    {
+        "id": 85,
+        "numberOfCocktails": 1,
+        "name": "Blackberries"
+    },
+    {
+        "id": 86,
+        "numberOfCocktails": 11,
+        "name": "Kahlua"
+    },
+    {
+        "id": 87,
+        "numberOfCocktails": 3,
+        "name": "Irish whiskey"
+    },
+    {
+        "id": 88,
+        "numberOfCocktails": 8,
+        "name": "Chambord raspberry liqueur"
+    },
+    {
+        "id": 89,
+        "numberOfCocktails": 3,
+        "name": "Aquavit"
+    },
+    {
+        "id": 90,
+        "numberOfCocktails": 1,
+        "name": "Coffee liqueur"
+    },
+    {
+        "id": 91,
+        "numberOfCocktails": 2,
+        "name": "Scotch"
+    },
+    {
+        "id": 92,
+        "numberOfCocktails": 4,
+        "name": "Grapefruit juice"
+    },
+    {
+        "id": 93,
+        "numberOfCocktails": 1,
+        "name": "Tang"
+    },
+    {
+        "id": 94,
+        "numberOfCocktails": 4,
+        "name": "Club soda"
+    },
+    {
+        "id": 95,
+        "numberOfCocktails": 1,
+        "name": "Blueberry schnapps"
+    },
+    {
+        "id": 96,
+        "numberOfCocktails": 6,
+        "name": "Spiced rum"
+    },
+    {
+        "id": 97,
+        "numberOfCocktails": 4,
+        "name": "Tonic water"
+    },
+    {
+        "id": 98,
+        "numberOfCocktails": 1,
+        "name": "Passion fruit juice"
+    },
+    {
+        "id": 99,
+        "numberOfCocktails": 7,
+        "name": "Bourbon"
+    },
+    {
+        "id": 100,
+        "numberOfCocktails": 3,
+        "name": "Vanilla ice-cream"
+    },
+    {
+        "id": 101,
+        "numberOfCocktails": 1,
+        "name": "Beef bouillon"
+    },
+    {
+        "id": 102,
+        "numberOfCocktails": 2,
+        "name": "Salt"
+    },
+    {
+        "id": 103,
+        "numberOfCocktails": 1,
+        "name": "Black pepper"
+    },
+    {
+        "id": 104,
+        "numberOfCocktails": 2,
+        "name": "Irish cream"
+    },
+    {
+        "id": 105,
+        "numberOfCocktails": 1,
+        "name": "Jim Beam"
+    },
+    {
+        "id": 106,
+        "numberOfCocktails": 6,
+        "name": "Mountain Dew"
+    },
+    {
+        "id": 107,
+        "numberOfCocktails": 2,
+        "name": "Clamato juice"
+    },
+    {
+        "id": 108,
+        "numberOfCocktails": 3,
+        "name": "Tabasco sauce"
+    },
+    {
+        "id": 109,
+        "numberOfCocktails": 2,
+        "name": "Worcestershire sauce"
+    },
+    {
+        "id": 110,
+        "numberOfCocktails": 2,
+        "name": "Vermouth"
+    },
+    {
+        "id": 111,
+        "numberOfCocktails": 2,
+        "name": "Dr. Pepper"
+    },
+    {
+        "id": 112,
+        "numberOfCocktails": 6,
+        "name": "Rum"
+    },
+    {
+        "id": 113,
+        "numberOfCocktails": 1,
+        "name": "White port"
+    },
+    {
+        "id": 114,
+        "numberOfCocktails": 2,
+        "name": "Cinnamon"
+    },
+    {
+        "id": 115,
+        "numberOfCocktails": 3,
+        "name": "Brown sugar"
+    },
+    {
+        "id": 116,
+        "numberOfCocktails": 5,
+        "name": "Champagne"
+    },
+    {
+        "id": 117,
+        "numberOfCocktails": 2,
+        "name": "Strega"
+    },
+    {
+        "id": 118,
+        "numberOfCocktails": 1,
+        "name": "Charleston Follies"
+    },
+    {
+        "id": 119,
+        "numberOfCocktails": 1,
+        "name": "Cherry liqueur"
+    },
+    {
+        "id": 120,
+        "numberOfCocktails": 2,
+        "name": "Pepsi Cola"
+    },
+    {
+        "id": 121,
+        "numberOfCocktails": 1,
+        "name": "Cherry Grenadine"
+    },
+    {
+        "id": 122,
+        "numberOfCocktails": 2,
+        "name": "Cayenne pepper"
+    },
+    {
+        "id": 123,
+        "numberOfCocktails": 5,
+        "name": "Cognac"
+    },
+    {
+        "id": 124,
+        "numberOfCocktails": 3,
+        "name": "Campari"
+    },
+    {
+        "id": 125,
+        "numberOfCocktails": 16,
+        "name": "Dry Vermouth"
+    },
+    {
+        "id": 126,
+        "numberOfCocktails": 1,
+        "name": "Yukon Jack"
+    },
+    {
+        "id": 127,
+        "numberOfCocktails": 1,
+        "name": "Benedictine"
+    },
+    {
+        "id": 128,
+        "numberOfCocktails": 1,
+        "name": "Cucumber"
+    },
+    {
+        "id": 129,
+        "numberOfCocktails": 1,
+        "name": "Cherry Heering"
+    },
+    {
+        "id": 130,
+        "numberOfCocktails": 4,
+        "name": "Lemon peel"
+    },
+    {
+        "id": 131,
+        "numberOfCocktails": 2,
+        "name": "Cranberries"
+    },
+    {
+        "id": 132,
+        "numberOfCocktails": 3,
+        "name": "Orange"
+    },
+    {
+        "id": 133,
+        "numberOfCocktails": 1,
+        "name": "Yoghurt"
+    },
+    {
+        "id": 134,
+        "numberOfCocktails": 5,
+        "name": "Angostura bitters"
+    },
+    {
+        "id": 135,
+        "numberOfCocktails": 5,
+        "name": "Olive"
+    },
+    {
+        "id": 136,
+        "numberOfCocktails": 5,
+        "name": "Sweet Vermouth"
+    },
+    {
+        "id": 137,
+        "numberOfCocktails": 1,
+        "name": "Cynar"
+    },
+    {
+        "id": 138,
+        "numberOfCocktails": 2,
+        "name": "J\u00e4germeister"
+    },
+    {
+        "id": 139,
+        "numberOfCocktails": 1,
+        "name": "Red wine"
+    },
+    {
+        "id": 140,
+        "numberOfCocktails": 1,
+        "name": "White wine"
+    },
+    {
+        "id": 141,
+        "numberOfCocktails": 1,
+        "name": "Olive juice"
+    },
+    {
+        "id": 142,
+        "numberOfCocktails": 1,
+        "name": "Fruit punch"
+    },
+    {
+        "id": 143,
+        "numberOfCocktails": 1,
+        "name": "Horseradish"
+    },
+    {
+        "id": 144,
+        "numberOfCocktails": 1,
+        "name": "Thunderbird"
+    },
+    {
+        "id": 145,
+        "numberOfCocktails": 3,
+        "name": "Lemon-lime soda"
+    },
+    {
+        "id": 146,
+        "numberOfCocktails": 2,
+        "name": "Advocaat"
+    },
+    {
+        "id": 147,
+        "numberOfCocktails": 2,
+        "name": "Whisky"
+    },
+    {
+        "id": 148,
+        "numberOfCocktails": 2,
+        "name": "Orange bitters"
+    },
+    {
+        "id": 149,
+        "numberOfCocktails": 1,
+        "name": "Root beer"
+    },
+    {
+        "id": 150,
+        "numberOfCocktails": 4,
+        "name": "Frangelico"
+    },
+    {
+        "id": 151,
+        "numberOfCocktails": 2,
+        "name": "Galliano"
+    },
+    {
+        "id": 152,
+        "numberOfCocktails": 1,
+        "name": "Peppermint schnapps"
+    },
+    {
+        "id": 153,
+        "numberOfCocktails": 3,
+        "name": "Apricot brandy"
+    },
+    {
+        "id": 154,
+        "numberOfCocktails": 1,
+        "name": "Cinnamon schnapps"
+    },
+    {
+        "id": 155,
+        "numberOfCocktails": 2,
+        "name": "Sambuca"
+    },
+    {
+        "id": 156,
+        "numberOfCocktails": 2,
+        "name": "Green Chartreuse"
+    },
+    {
+        "id": 157,
+        "numberOfCocktails": 5,
+        "name": "Banana liqueur"
+    },
+    {
+        "id": 158,
+        "numberOfCocktails": 1,
+        "name": "Fernet Branca"
+    },
+    {
+        "id": 159,
+        "numberOfCocktails": 1,
+        "name": "Dark Creme de Cacao"
+    },
+    {
+        "id": 160,
+        "numberOfCocktails": 1,
+        "name": "Food coloring"
+    },
+    {
+        "id": 161,
+        "numberOfCocktails": 2,
+        "name": "Green Creme de Menthe"
+    },
+    {
+        "id": 162,
+        "numberOfCocktails": 2,
+        "name": "Peach Vodka"
+    },
+    {
+        "id": 163,
+        "numberOfCocktails": 1,
+        "name": "Sirup of roses"
+    },
+    {
+        "id": 164,
+        "numberOfCocktails": 1,
+        "name": "Melon liqueur"
+    },
+    {
+        "id": 165,
+        "numberOfCocktails": 1,
+        "name": "Lemon vodka"
+    },
+    {
+        "id": 166,
+        "numberOfCocktails": 1,
+        "name": "Whipped cream"
+    },
+    {
+        "id": 167,
+        "numberOfCocktails": 1,
+        "name": "Cherries"
+    },
+    {
+        "id": 168,
+        "numberOfCocktails": 1,
+        "name": "Coconut"
+    },
+    {
+        "id": 169,
+        "numberOfCocktails": 1,
+        "name": "Goldschlager"
+    },
+    {
+        "id": 170,
+        "numberOfCocktails": 2,
+        "name": "Nutmeg"
+    },
+    {
+        "id": 171,
+        "numberOfCocktails": 1,
+        "name": "Grape juice"
+    },
+    {
+        "id": 172,
+        "numberOfCocktails": 2,
+        "name": "Egg yolk"
+    },
+    {
+        "id": 173,
+        "numberOfCocktails": 1,
+        "name": "Raspberry syrup"
+    },
+    {
+        "id": 174,
+        "numberOfCocktails": 1,
+        "name": "Zima"
+    },
+    {
+        "id": 175,
+        "numberOfCocktails": 1,
+        "name": "Kool-Aid"
+    },
+    {
+        "id": 176,
+        "numberOfCocktails": 1,
+        "name": "Pickled pepper"
+    },
+    {
+        "id": 177,
+        "numberOfCocktails": 1,
+        "name": "Crown Royal"
+    },
+    {
+        "id": 178,
+        "numberOfCocktails": 1,
+        "name": "Absolut Kurant"
+    },
+    {
+        "id": 179,
+        "numberOfCocktails": 1,
+        "name": "Sake"
+    },
+    {
+        "id": 180,
+        "numberOfCocktails": 1,
+        "name": "Cocktail onion"
+    },
+    {
+        "id": 181,
+        "numberOfCocktails": 2,
+        "name": "Butter"
+    },
+    {
+        "id": 182,
+        "numberOfCocktails": 2,
+        "name": "Cloves"
+    },
+    {
+        "id": 183,
+        "numberOfCocktails": 2,
+        "name": "Cardamom"
+    },
+    {
+        "id": 184,
+        "numberOfCocktails": 1,
+        "name": "Vanilla extract"
+    },
+    {
+        "id": 185,
+        "numberOfCocktails": 1,
+        "name": "Maple syrup"
+    },
+    {
+        "id": 186,
+        "numberOfCocktails": 1,
+        "name": "Ice-cream"
+    },
+    {
+        "id": 187,
+        "numberOfCocktails": 2,
+        "name": "Aperol"
+    },
+    {
+        "id": 188,
+        "numberOfCocktails": 1,
+        "name": "Hpnotiq"
+    },
+    {
+        "id": 189,
+        "numberOfCocktails": 1,
+        "name": "Vanilla schnapps"
+    },
+    {
+        "id": 190,
+        "numberOfCocktails": 1,
+        "name": "Apricot nectar"
+    },
+    {
+        "id": 191,
+        "numberOfCocktails": 1,
+        "name": "Heavy cream"
+    },
+    {
+        "id": 192,
+        "numberOfCocktails": 1,
+        "name": "Guava juice"
+    },
+    {
+        "id": 193,
+        "numberOfCocktails": 1,
+        "name": "Egg"
+    },
+    {
+        "id": 194,
+        "numberOfCocktails": 1,
+        "name": "Drambuie"
+    },
+    {
+        "id": 195,
+        "numberOfCocktails": 2,
+        "name": "Orange vodka"
+    },
+    {
+        "id": 196,
+        "numberOfCocktails": 1,
+        "name": "Chocolate"
+    },
+    {
+        "id": 197,
+        "numberOfCocktails": 1,
+        "name": "Monin bitter"
+    },
+    {
+        "id": 198,
+        "numberOfCocktails": 1,
+        "name": "Strawberries"
+    },
+    {
+        "id": 199,
+        "numberOfCocktails": 1,
+        "name": "Banana"
+    },
+    {
+        "id": 200,
+        "numberOfCocktails": 1,
+        "name": "Margarita mix"
+    },
+    {
+        "id": 201,
+        "numberOfCocktails": 1,
+        "name": "Sherry"
+    },
+    {
+        "id": 202,
+        "numberOfCocktails": 1,
+        "name": "Johnnie Walker"
+    },
+    {
+        "id": 203,
+        "numberOfCocktails": 1,
+        "name": "Almond syrup"
+    },
+    {
+        "id": 204,
+        "numberOfCocktails": 1,
+        "name": "Tropicana"
+    },
+    {
+        "id": 205,
+        "numberOfCocktails": 1,
+        "name": "Orange peel"
+    },
+    {
+        "id": 206,
+        "numberOfCocktails": 1,
+        "name": "Dubonnet Rouge"
+    },
+    {
+        "id": 207,
+        "numberOfCocktails": 1,
+        "name": "Maraschino liqueur"
+    },
+    {
+        "id": 208,
+        "numberOfCocktails": 1,
+        "name": "Chocolate syrup"
+    },
+    {
+        "id": 209,
+        "numberOfCocktails": 1,
+        "name": "Watermelon liqueur"
+    },
+    {
+        "id": 210,
+        "numberOfCocktails": 1,
+        "name": "Coconut rum"
+    },
+    {
+        "id": 211,
+        "numberOfCocktails": 1,
+        "name": "Pina colada mix"
+    },
+    {
+        "id": 212,
+        "numberOfCocktails": 1,
+        "name": "Daiquiri mix"
+    }
+]
