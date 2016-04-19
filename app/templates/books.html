@@ -72,14 +72,12 @@
 					<span ng-show="sortType == 'isbn' && !sortReverse" class="fa fa-caret-down"></span>
 					<span ng-show="sortType == 'isbn' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
-				<th>
-					Link
-				</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchBook | itemsPerPage:10">
 			{% raw %}
+			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchBook | itemsPerPage:10" class="clickable-row" data-href="{{x.link}}">
+			
 			  <td><img src="{{x.book_image}}" alt="{{x.title}}" height="80" width="50"></td>
 				<td>{{x.title}}</td>
 				<td>{{x.first_name}}</td>
@@ -88,7 +86,6 @@
 				<td>{{x.best_seller_list}}</td>
 				<td>{{x.best_seller_date}}</td>
 				<td>{{x.isbn}}</td>
-				<td><a href="{{x.link}}">Link</a></td>
 			{% endraw %}
 			</tr>
 		</tbody>
