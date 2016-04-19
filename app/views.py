@@ -122,6 +122,9 @@ class RunTests(MethodView):
 class Search(MethodView):
 
     def get(self, search_string):
+        print("*"*80)
+        print(search_string)
+        print("*"*80)
         search_result = []
         authors = Author.query.whoosh_search(search_string).all()
         books = Book.query.whoosh_search(search_string).all()

@@ -52,20 +52,23 @@ class Author(DB.Model):
         result_string = ""
         search_term = search_term.lower()
         search = search_term.lower().split(" ")
+        attributes = {
+            "id", "bio", "book_count", "best_seller_date", "Books", "link"}
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
-                if(c.name == "id" or c.name == "bio" or c.name == "book_count" or c.name == "best_seller_date" or c.name == "Books"  or c.name == "link"):
+                if(c.name in attributes):
                     attribute = str(getattr(self, c.name)).lower()
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
                 for s in search:
-                    attribute = attribute.replace(s, '<button>' + s + '</button>', 999)
+                    attribute = attribute.replace(
+                        s, '<button class="btn btn-primary" disabled=True>' + s + '</button>', 999)
                 result_string += attribute + " "
-        return result_string
+        return "<td>" + self.first_name + " " + self.last_name + "</td>" + "<td>" + result_string + "</td>"
 
     def get_link(self):
-        return "/author/"+str(self.id)
+        return "/author/" + str(self.id)
 
 
 """
@@ -123,21 +126,24 @@ class Book(DB.Model):
         result_string = ""
         search_term = search_term.lower()
         search = search_term.lower().split(" ")
+        attributes = {"summary", "best_seller_date", "book_image",
+                      "amazon_link", "author_id", "author", "description"}
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
-                if(c.name == "summary" or c.name == "best_seller_date" or c.name == "book_image" or c.name == "amazon_link"  or c.name == "author_id" or c.name == "author" or c.name == "description"):
+                if(c.name in attributes):
                     attribute = str(getattr(self, c.name))
                     attribute = TAG_RE.sub('', attribute)
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
                 for s in search:
-                    attribute = attribute.replace(s, '<button>' + s + '</button>')
+                    attribute = attribute.replace(
+                        s, '<button class="btn btn-primary" disabled=True>' + s + '</button>')
                 result_string += attribute + " "
-        return result_string
+        return "<td>" + self.title + "</td>" + "<td>" + result_string + "</td>"
 
     def get_link(self):
-        return "/book/"+str(self.id)
+        return "/book/" + str(self.id)
 
 """
 A TeamMember model

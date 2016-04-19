@@ -21,15 +21,16 @@
     <![endif]-->
 </head>
 <body>
-    <table>
+    <table class="table col-lg-8 table-hover" align="center">
         <thead>
             <tr>
-            <td> search results </td>
+            <th> book/author name </th>
+            <th> Text hit </th>
             </tr>
         </thead>
         <tbody>
     {% for entry in result %}
-        <tr class="clickable-row" data-href="{{entry.get_link()}}"><td>{{entry.get_html(search)|safe }}</td></tr> 
+        <tr class="clickable-row" data-href="{{entry.get_link()}}">{{entry.get_html(search)|safe }}</tr> 
     {% endfor %}
         </tbody>
     </table>
