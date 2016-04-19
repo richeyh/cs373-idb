@@ -74,16 +74,21 @@ class TestModels (TestCase):
             htmlauthor = testauthor.get_html('anthony')
             self.assertEqual("<td>Anthony Doerr</td><td><b><i>anthony</i></b> doerr none None None None</td>", htmlauthor)
 
-    # def test_author_get_html_1(self):
-    #     with app.app_context():
-    #         testauthor = Author(id=1, first_name='Anthony', last_name='Doerr')
-    #         htmlauthor = testauthor.get_html('doerr')
-    #         self.assertEqual("<td>Anthony Doerr</td><td>anthony <button class='btn btn-primary' disabled=True>doerr</button></td>", htmlauthor)
+    def test_author_get_html_2(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Anthony', last_name='Doerr')
+            htmlauthor = testauthor.get_html('doerr')
+            self.assertEqual("<td>Anthony Doerr</td><td>anthony <b><i>doerr</i></b> none None None None</td>", htmlauthor)
+            
     
     # -----------------
     # Author.get_link()
     # -----------------
-    # def test_author_get_link_1(self):
+    def test_author_get_link_1(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Anthony', last_name='Doerr')
+            linkauthor = testauthor.get_link()
+            self.assertEqual("/author/1", linkauthor)
 
     # ----
     # Book
