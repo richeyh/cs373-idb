@@ -139,9 +139,9 @@ class CocktailIngredients(MethodView):
 
     def get(self):
         url = 'http://mixopedia.me/api/ingredient'
-	ingredients = requests.get(url).json()
-	for i in range(len(ingredients)):
+        ingredients = requests.get(url).json()
+        for i in range(len(ingredients)):
             r = requests.get(url + '/' + str(i['id'])).json()
-	    ingredients[i]['numberOfCocktails'] = r['numberOfCockTails']
-	return ingredients.json()
+            ingredients[i]['numberOfCocktails'] = r['numberOfCockTails']
+        return ingredients.json()
 
