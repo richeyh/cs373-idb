@@ -4,7 +4,7 @@ Author: Richard Huettel <richeyh@users.noreply.github.com>
 Date:   Thu Apr 7 21:05:50 2016 -0500
 
     Merge pull request #47 from richeyh/dev
-    
+
     feature/fixed-tests-running
 
 commit f3ee8f42d516f63f504db4a3ffd0c7bbfc08a199
@@ -73,7 +73,7 @@ Author: Richard Huettel <richeyh@users.noreply.github.com>
 Date:   Thu Apr 7 19:37:05 2016 -0500
 
     Merge pull request #46 from richeyh/dev
-    
+
     commit and issues added back for project 2
 
 commit 045d34b5a17686263bd841cbd454519e8432ccf3
@@ -82,7 +82,7 @@ Author: Richard Huettel <richeyh@users.noreply.github.com>
 Date:   Thu Apr 7 18:24:08 2016 -0500
 
     Merge pull request #45 from richeyh/dev
-    
+
     Phase 2 of Project complete
 
 commit f67cd3d1a9d5ad938d9da81b28ae264c4f5602e3
@@ -128,7 +128,7 @@ Author: Richard Huettel <richeyh@cs.utexas.edu>
 Date:   Thu Apr 7 18:04:42 2016 -0500
 
     Revert "active tabs"
-    
+
     This reverts commit 560f5086864fcaa340d1c507e6c8013e6c0b128f.
 
 commit 560f5086864fcaa340d1c507e6c8013e6c0b128f
@@ -1082,7 +1082,7 @@ Author: Timothy Lo <tklo101@cs.utexas.edu>
 Date:   Thu Mar 24 19:45:36 2016 -0500
 
     Revert "deleted unnecessary files"
-    
+
     This reverts commit 2d7e1cd510db7869d99feb5691f9adbc6d6fd81a.
 
 commit 95bfdd874015f0f4444e0aa1c3b42df0178fed0a
@@ -1090,7 +1090,7 @@ Author: Timothy Lo <tklo101@cs.utexas.edu>
 Date:   Thu Mar 24 19:44:50 2016 -0500
 
     Revert "Revert "mirrored the two models files""
-    
+
     This reverts commit 7de2b8641b4f456ef3f38a7be84fdbe87cf44488.
 
 commit 7de2b8641b4f456ef3f38a7be84fdbe87cf44488
@@ -1098,7 +1098,7 @@ Author: Timothy Lo <tklo101@cs.utexas.edu>
 Date:   Thu Mar 24 19:42:56 2016 -0500
 
     Revert "mirrored the two models files"
-    
+
     This reverts commit 72c1053fdbdba4fe9b090d4702c2e04a4cbafd8d.
 
 commit 1ab9a43822b16216dd1cd8c3745d337d94ad84fb
@@ -1678,7 +1678,7 @@ Author: ruzseth <r.delacruz@utexas.edu>
 Date:   Thu Mar 24 14:40:40 2016 -0500
 
     Update about.html
-    
+
     profile pic test
 
 commit 8deadc585650431ac36d493036758255594c14ab
@@ -2082,7 +2082,7 @@ Author: ruzseth <r.delacruz@utexas.edu>
 Date:   Tue Mar 22 15:51:51 2016 -0500
 
     Update .travis.yml
-    
+
     success and failure notifications for slack
 
 commit 64625606fda09a587c8c7715db243cf1c430b441
@@ -2090,7 +2090,7 @@ Author: ruzseth <r.delacruz@utexas.edu>
 Date:   Tue Mar 22 15:50:24 2016 -0500
 
     Update .travis.yml
-    
+
     added slack integration
 
 commit 832821f1ddadc84ed7e9fe32bd8efd3757609314

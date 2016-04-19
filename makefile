@@ -90,11 +90,11 @@ docker-push:
 	docker-compose --file docker-compose-prod.yml up -d
 
 docker-db:
-	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make init
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make init
 
 docker-db-update:
-	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make upgrade
-	docker-compose --file docker-compose-prod.yml run -d --rm --no-deps app make migrate
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make upgrade
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make migrate
 
 docker-db-fetch:
 	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make fetch
