@@ -29,7 +29,7 @@ def generate_application(config=None):
     admin.add_view(ModelView(TeamMember, DB.session))
     admin.add_view(ModelView(Author, DB.session))
     admin.add_view(ModelView(Book, DB.session))
-    return app
+return app
 
 
 if __name__ == "__main__":

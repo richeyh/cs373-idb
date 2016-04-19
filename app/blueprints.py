@@ -4,6 +4,7 @@ from views import BooksView, AuthorsView
 from views import BookView, AuthorView
 from views import BookAPI, AuthorAPI
 from views import RunTests, Search
+from views import CocktailIngredients
 
 blueprint = Blueprint('idb', __name__, template_folder='templates')
 
@@ -28,3 +29,5 @@ blueprint.add_url_rule(
 blueprint.add_url_rule('/tests', view_func=RunTests.as_view('RunTests'))
 blueprint.add_url_rule(
     '/search/<search_string>', view_func=Search.as_view('Search'))
+blueprint.add_url_rule(
+    '/CocktailIngredients', view_func=CocktailIngredients.as_view('CocktailIngredients'))
