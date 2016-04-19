@@ -1,10 +1,44 @@
-<table>
-    <thead>
-        <td> search results </td>
-    </thead>
-    <tbody>
-{% for entry in result %}
-    <tr class="clickable-row" data-href="{{entry.get_link()}}"><td>{{entry.get_html(search)|safe }}</td></tr> 
-{% endfor %}
-    </tbody>
-</table>
+<head>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css')}}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Modernizr JS -->
+    <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+    <![endif]-->
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+            <td> search results </td>
+            </tr>
+        </thead>
+        <tbody>
+    {% for entry in result %}
+        <tr class="clickable-row" data-href="{{entry.get_link()}}"><td>{{entry.get_html(search)|safe }}</td></tr> 
+    {% endfor %}
+        </tbody>
+    </table>
+</body>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+                    window.document.location = $(this).data("href");
+                });
+        });
+</script>
+

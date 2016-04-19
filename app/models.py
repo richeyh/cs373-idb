@@ -2,6 +2,9 @@
 The module for all SQLAlchemy database models
 """
 from extensions import DB
+import re
+
+TAG_RE = re.compile(r'<[^>]+>')
 
 
 """
@@ -46,18 +49,19 @@ class Author(DB.Model):
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
     def get_html(self, search_term):
-        result_string = "<button> START </button>"
+        result_string = ""
+        search_term = search_term.lower()
         search = search_term.lower().split(" ")
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
                 if(c.name == "id" or c.name == "bio" or c.name == "book_count" or c.name == "best_seller_date" or c.name == "Books"  or c.name == "link"):
-                    attribute = str(getattr(self, c.name))
+                    attribute = str(getattr(self, c.name)).lower()
                 else:
                     attribute = str(getattr(self, c.name)).lower()
-                    for s in search:
-                        attribute.replace(s, '<button>' + s + '</button>')
+                attribute = TAG_RE.sub('', attribute)
+                for s in search:
+                    attribute = attribute.replace(s, '<button>' + s + '</button>', 999)
                 result_string += attribute + " "
-        result_string += "<button> End </button>"
         return result_string
 
     def get_link(self):
@@ -116,18 +120,20 @@ class Book(DB.Model):
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
     def get_html(self, search_term):
-        result_string = "<button> START </button>"
+        result_string = ""
+        search_term = search_term.lower()
         search = search_term.lower().split(" ")
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
                 if(c.name == "summary" or c.name == "best_seller_date" or c.name == "book_image" or c.name == "amazon_link"  or c.name == "author_id" or c.name == "author" or c.name == "description"):
                     attribute = str(getattr(self, c.name))
+                    attribute = TAG_RE.sub('', attribute)
                 else:
                     attribute = str(getattr(self, c.name)).lower()
-                    for s in search:
-                        attribute.replace(s, '<button>' + s + '</button>')
+                attribute = TAG_RE.sub('', attribute)
+                for s in search:
+                    attribute = attribute.replace(s, '<button>' + s + '</button>')
                 result_string += attribute + " "
-        result_string += "<button> End </button>"
         return result_string
 
     def get_link(self):
