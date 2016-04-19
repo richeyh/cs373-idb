@@ -3,6 +3,7 @@ from flask import render_template
 from models import Book, Author
 import json
 import subprocess
+import requests
 
 # temporary list for the no DB stage of this project
 members = {
