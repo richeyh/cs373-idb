@@ -1,122 +1,3 @@
-commit a3509c455057b23382a021e5a5ba1f1926ab8bfa
-Merge: 3e4302b f3ee8f4
-Author: Richard Huettel <richeyh@users.noreply.github.com>
-Date:   Thu Apr 7 21:05:50 2016 -0500
-
-    Merge pull request #47 from richeyh/dev
-    
-    feature/fixed-tests-running
-
-commit f3ee8f42d516f63f504db4a3ffd0c7bbfc08a199
-Author: Rachel Choi <rachelychoi@utexas.edu>
-Date:   Thu Apr 7 21:04:41 2016 -0500
-
-    env files
-
-commit 5c6e57ee5846cea0b781e7e769deff6fa2bb45f3
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 21:01:30 2016 -0500
-
-    added ui paddding
-
-commit 3ab9a896d0cd1785cbc760ab002d1742c2a7dee5
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:59:36 2016 -0500
-
-    added byte decoding
-
-commit 57918867e0cefe837be381ad77b0ef1272d29d1a
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:58:16 2016 -0500
-
-    more ui changes for tests
-
-commit 22f02427793c4a5cf6d5ef64f31799812a3a740c
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:53:40 2016 -0500
-
-    added max bound
-
-commit 6caad384c72dd005c65b074b41fb99b42f8c445c
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:52:22 2016 -0500
-
-    fixed bytes cast issue
-
-commit 70e213a99b8d5da6d419cc2963db0fede7022c7e
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:51:30 2016 -0500
-
-    fixed formating on front end issue
-
-commit 95eb8e9ee0d5ce3ee01fe077f6005242a982bd06
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:48:26 2016 -0500
-
-    made template for tests
-
-commit c74a123df6fd16d9a5c842c6ba8ff347655e358b
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:45:02 2016 -0500
-
-    adding cast
-
-commit 4ebb1e370e7d33bd8df7d0ecc6956aa02eccd59f
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 20:44:10 2016 -0500
-
-    changed run test
-
-commit 3e4302b4d2f0d51a4aa8fb3bd24964877a62ba14
-Merge: 045d34b 9c91258
-Author: Richard Huettel <richeyh@users.noreply.github.com>
-Date:   Thu Apr 7 19:37:05 2016 -0500
-
-    Merge pull request #46 from richeyh/dev
-    
-    commit and issues added back for project 2
-
-commit 045d34b5a17686263bd841cbd454519e8432ccf3
-Merge: 9ca1d4d f67cd3d
-Author: Richard Huettel <richeyh@users.noreply.github.com>
-Date:   Thu Apr 7 18:24:08 2016 -0500
-
-    Merge pull request #45 from richeyh/dev
-    
-    Phase 2 of Project complete
-
-commit f67cd3d1a9d5ad938d9da81b28ae264c4f5602e3
-Author: Richard Huettel <richeyhuettel@yahoo.com>
-Date:   Thu Apr 7 18:22:30 2016 -0500
-
-    Transferring API Description file from Apiary.io
-
-commit 0443664442812a196ec4b411bf5fd8f3a7cdfaf9
-Author: Rachel Choi <rachelychoi@utexas.edu>
-Date:   Thu Apr 7 18:17:34 2016 -0500
-
-    Updated makefile and .travis.yml
-
-commit a1ae8c84a4bd259e2473bb7ac51c9b7a4165e1cb
-Merge: 4cdd007 6f06a4c
-Author: Richard Huettel <richeyh@cs.utexas.edu>
-Date:   Thu Apr 7 18:13:51 2016 -0500
-
-    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
-
-commit 4cdd007f9926e79238603f0c0fbb737b7c87dbd4
-Merge: 8ababec 9ca1d4d
-Author: Richard Huettel <richeyh@cs.utexas.edu>
-Date:   Thu Apr 7 18:13:34 2016 -0500
-
-    updated the api
-
-commit 6f06a4cdc60777d8135ebc7a1730626f3a7d2032
-Author: Rachel Choi <rachelychoi@utexas.edu>
-Date:   Thu Apr 7 18:12:11 2016 -0500
-
-    Added temp  IDB2.log
-
 commit 8ababec9d84db54520ce515e43b5c2c98768fbc3
 Author: Rachel Choi <rachelychoi@utexas.edu>
 Date:   Thu Apr 7 18:07:44 2016 -0500
@@ -526,25 +407,6 @@ Date:   Tue Apr 5 21:13:49 2016 -0500
 
     added view for running unit test
 
-commit 9c912585f3205af0aa9fe24e48077af301ef5a7a
-Author: root <root@localhost.localdomain>
-Date:   Tue Apr 5 21:56:54 2016 -0400
-
-    added coverage report
-
-commit a30515c0e5093af0be617a9ea1b7337b521d4917
-Merge: 568ef9b f67cd3d
-Author: Richard Huettel <richeyh@cs.utexas.edu>
-Date:   Thu Apr 7 18:28:11 2016 -0500
-
-    Merge branch 'dev' of https://github.com/richeyh/cs373-idb into dev
-
-commit 568ef9b14116e5c83e124d01082be10fbf6ba08d
-Author: Richard Huettel <richeyh@cs.utexas.edu>
-Date:   Thu Apr 7 18:27:58 2016 -0500
-
-    updated commits and issues
-
 commit 7dcd0c588946f9f63109307fbc448e5813f7fcf6
 Author: Richard Huettel <richeyhuettel@yahoo.com>
 Date:   Tue Apr 5 20:50:53 2016 -0500
@@ -953,19 +815,6 @@ Author: Timothy Lo <tklo101@cs.utexas.edu>
 Date:   Tue Mar 29 15:24:19 2016 -0500
 
     removed unnecessary files in preparation for phase 2
-
-commit 9ca1d4d0d5461b485d9bc7eca5e322009f0dd20a
-Author: Rachel Choi <rachelychoi@utexas.edu>
-Date:   Thu Mar 24 21:09:12 2016 -0500
-
-    New IDB1.log
-
-commit 65cac7108381d525066caa2332f1918825aad52f
-Merge: 7a2daec 51c7eef
-Author: Rachel Choi <rachelychoi@utexas.edu>
-Date:   Thu Mar 24 21:08:16 2016 -0500
-
-    Merge branch 'dev'
 
 commit 51c7eef9f739648bb53ae5f128919f9a7be14ded
 Author: Rachel Choi <rachelychoi@utexas.edu>
