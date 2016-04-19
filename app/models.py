@@ -51,19 +51,17 @@ class Author(DB.Model):
     def get_html(self, search_term):
         result_string = ""
         search_term = search_term.lower()
-        search = search_term.lower().split(" ")
         attributes = {
             "id", "bio", "book_count", "best_seller_date", "Books", "link"}
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
                 if(c.name in attributes):
-                    attribute = str(getattr(self, c.name)).lower()
+                    attribute = str(getattr(self, c.name))
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
-                for s in search:
-                    attribute = attribute.replace(
-                        s, '<button class="btn btn-primary" disabled=True>' + s + '</button>', 999)
+                attribute = attribute.replace(
+                    search_term, '<b><i>' + search_term + '</i></b>', 999)
                 result_string += attribute + " "
         return "<td>" + self.first_name + " " + self.last_name + "</td>" + "<td>" + result_string + "</td>"
 
@@ -125,20 +123,17 @@ class Book(DB.Model):
     def get_html(self, search_term):
         result_string = ""
         search_term = search_term.lower()
-        search = search_term.lower().split(" ")
         attributes = {"summary", "best_seller_date", "book_image",
                       "amazon_link", "author_id", "author", "description"}
         if hasattr(self, '__table__'):
             for c in self.__table__.columns:
                 if(c.name in attributes):
                     attribute = str(getattr(self, c.name))
-                    attribute = TAG_RE.sub('', attribute)
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
-                for s in search:
-                    attribute = attribute.replace(
-                        s, '<button class="btn btn-primary" disabled=True>' + s + '</button>')
+                attribute = attribute.replace(
+                    search_term, '<b><i>' + search_term + '</i></b>')
                 result_string += attribute + " "
         return "<td>" + self.title + "</td>" + "<td>" + result_string + "</td>"
 
