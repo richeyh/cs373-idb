@@ -60,9 +60,10 @@ class Author(DB.Model):
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
-                attribute = attribute.replace(
+                rep_attribute = attribute.replace(
                     search_term, '<b><i>' + search_term + '</i></b>', 999)
-                result_string += attribute + " "
+                if(rep_attribute != attribute):
+                    result_string += rep_attribute + " "
         return "<td>" + self.first_name + " " + self.last_name + "</td>" + "<td>" + result_string + "</td>"
 
     def get_link(self):
@@ -132,9 +133,10 @@ class Book(DB.Model):
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
-                attribute = attribute.replace(
+                rep_attribute = attribute.replace(
                     search_term, '<b><i>' + search_term + '</i></b>')
-                result_string += attribute + " "
+                if (rep_attribute != attribute):
+                    result_string += rep_attribute + " "
         return "<td>" + self.title + "</td>" + "<td>" + result_string + "</td>"
 
     def get_link(self):
