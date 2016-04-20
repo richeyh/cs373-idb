@@ -159,8 +159,6 @@ class Search(MethodView):
             authors = Author.query.whoosh_search(search_string).all()
             books = Book.query.whoosh_search(search_string).all()
         search_result = [x for y in zip(authors, books) for x in y]
-        for entry in search_result:
-            print(entry)
         return render_template("search.html", result=search_result, search=search_string)
 
 

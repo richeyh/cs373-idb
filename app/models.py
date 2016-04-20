@@ -61,7 +61,6 @@ class Author(DB.Model):
         else:
             search_term = search_term.lower()
             search_term = [search_term]
-        print(search_term)
         attributes = {
             "id", "book_count", "best_seller_date", "Books", "link"}
         if hasattr(self, '__table__'):
