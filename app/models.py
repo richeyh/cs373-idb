@@ -50,7 +50,18 @@ class Author(DB.Model):
 
     def get_html(self, search_term):
         result_string = ""
-        search_term = search_term.lower()
+        if "AND" in search_term:
+            search_term = search_term.split("AND")
+            search_term[0] = search_term[0].lower().strip()
+            search_term[1] = search_term[1].lower().strip()
+        elif "OR" in search_term:
+            search_term = search_term.split("OR")
+            search_term[0] = search_term[0].lower().strip()
+            search_term[1] = search_term[1].lower().strip()
+        else:
+            search_term = search_term.lower()
+            search_term = [search_term]
+        print(search_term)
         attributes = {
             "id", "book_count", "best_seller_date", "Books", "link"}
         if hasattr(self, '__table__'):
@@ -60,8 +71,10 @@ class Author(DB.Model):
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
-                rep_attribute = attribute.replace(
-                    search_term, '<b><i>' + search_term + '</i></b>', 999)
+                rep_attribute = attribute
+                for s in search_term:
+                    rep_attribute = rep_attribute.replace(
+                        s, '<b><i>' + s + '</i></b>')
                 if(rep_attribute != attribute):
                     result_string += rep_attribute + " "
         return "<td>" + self.first_name + " " + self.last_name + "</td>" + "<td>" + result_string + "</td>"
@@ -123,7 +136,17 @@ class Book(DB.Model):
 
     def get_html(self, search_term):
         result_string = ""
-        search_term = search_term.lower()
+        if "AND" in search_term:
+            search_term = search_term.split("AND")
+            search_term[0] = search_term[0].lower().strip()
+            search_term[1] = search_term[1].lower().strip()
+        elif "OR" in search_term:
+            search_term = search_term.split("OR")
+            search_term[0] = search_term[0].lower().strip()
+            search_term[1] = search_term[1].lower().strip()
+        else:
+            search_term = search_term.lower()
+            search_term = [search_term]
         attributes = {"best_seller_date", "book_image",
                       "amazon_link", "author_id", "author"}
         if hasattr(self, '__table__'):
@@ -133,8 +156,10 @@ class Book(DB.Model):
                 else:
                     attribute = str(getattr(self, c.name)).lower()
                 attribute = TAG_RE.sub('', attribute)
-                rep_attribute = attribute.replace(
-                    search_term, '<b><i>' + search_term + '</i></b>')
+                rep_attribute = attribute
+                for s in search_term:
+                    rep_attribute = rep_attribute.replace(
+                        s, '<b><i>' + s + '</i></b>')
                 if (rep_attribute != attribute):
                     result_string += rep_attribute + " "
         return "<td>" + self.title + "</td>" + "<td>" + result_string + "</td>"
