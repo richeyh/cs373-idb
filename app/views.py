@@ -126,7 +126,23 @@ class Search(MethodView):
         search_result = []
         if "AND" in search_string:
             search_string = search_string.split("AND")
-            print(search_string)
+            if len(search_string) != 2:
+                return "error occured OR expects two terms"
+            # get both sets then need to find elements in both
+            authors_one = Author.query.whoosh_search(search_string[0]).all()
+            authors_two = Author.query.whoosh_search(search_string[1]).all()
+            authors = []
+            for author in authors_one:
+                if author in authors_two:
+                    authors.append(author)
+            # now to repeat above steps but with books
+            books_one = Book.query.whoosh_search(search_string[0]).all()
+            books_two = Book.query.whoosh_search(search_string[1]).all()
+            books = []
+            for book in books_one:
+                if book in books_two:
+                    books.append(book)
+            search_string = search_string[0]+" AND "+search_string[1]
         elif "OR" in search_string:
             search_string = search_string.split("OR")
             if len(search_string) != 2:
@@ -143,6 +159,8 @@ class Search(MethodView):
             authors = Author.query.whoosh_search(search_string).all()
             books = Book.query.whoosh_search(search_string).all()
         search_result = [x for y in zip(authors, books) for x in y]
+        for entry in search_result:
+            print(entry)
         return render_template("search.html", result=search_result, search=search_string)
 
 
