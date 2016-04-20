@@ -151,14 +151,26 @@ class Search(MethodView):
             authors_two = Author.query.whoosh_search(search_string[1]).all()
             # snippet to merge two lists
             authors = [x for y in zip(authors_one, authors_two) for x in y]
+            if len(authors_one) > len(authors_two):
+                authors += authors_one[len(authors_two):len(authors_one)]
+            if len(authors_two) > len(authors_one):
+                authors += authors_two[len(authors_one):len(authors_two)]
             books_one = Book.query.whoosh_search(search_string[0]).all()
             books_two = Book.query.whoosh_search(search_string[1]).all()
             books = [x for y in zip(books_one, books_two) for x in y]
+            if len(books_one) > len(books_two):
+                books += books_one[len(books_two):len(books_one)]
+            if len(books_two) > len(books_one):
+                books += books_two[len(books_one):len(books_two)]
             search_string = search_string[0]+" OR "+search_string[1]
         else:
             authors = Author.query.whoosh_search(search_string).all()
             books = Book.query.whoosh_search(search_string).all()
         search_result = [x for y in zip(authors, books) for x in y]
+        if len(authors) > len(books):
+            search_result += authors[len(books):len(authors)]
+        if len(books) > len(authors):
+            search_result += books[len(authors):len(books)]
         return render_template("search.html", result=search_result, search=search_string)
 
 
