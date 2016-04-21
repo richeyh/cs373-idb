@@ -60,9 +60,57 @@ class TestModels (TestCase):
 
     def test_author_to_dict_3(self):
         with app.app_context():
-            testauthor = Author(id=1, first_name='Harper', last_name='Lee', bio='hi')
+            testauthor = Author(
+                id=1, first_name='Harper', last_name='Lee', bio='hi')
             dictauthor = testauthor.to_dict()
             self.assertEqual(testauthor.bio, dictauthor['bio'])
+
+    # -----------------
+    # Author.get_html()
+    # -----------------
+
+    def test_author_get_html_1(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Anthony', last_name='Doerr')
+            htmlauthor = testauthor.get_html('anthony')
+            self.assertEqual(
+                "<td>Anthony Doerr</td><td><b><i>anthony</i></b> </td>", htmlauthor)
+
+    def test_author_get_html_2(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Anthony', last_name='Doerr')
+            htmlauthor = testauthor.get_html('doerr')
+            self.assertEqual(
+                "<td>Anthony Doerr</td><td><b><i>doerr</i></b> </td>", htmlauthor)
+
+    def test_author_get_html_3(self):
+        with app.app_context():
+            testauthor = Author(id=2, first_name='John', last_name='Green')
+            htmlauthor = testauthor.get_html('john')
+            self.assertEqual(
+                "<td>John Green</td><td><b><i>john</i></b> </td>", htmlauthor)
+
+    # -----------------
+    # Author.get_link()
+    # -----------------
+    def test_author_get_link_1(self):
+        with app.app_context():
+            testauthor = Author(id=1, first_name='Anthony', last_name='Doerr')
+            linkauthor = testauthor.get_link()
+            self.assertEqual("/author/1", linkauthor)
+
+    def test_author_get_link_2(self):
+        with app.app_context():
+            testauthor = Author(id=10000, first_name='John', last_name='Green')
+            linkauthor = testauthor.get_link()
+            self.assertEqual("/author/10000", linkauthor)
+
+    def test_author_get_link_3(self):
+        with app.app_context():
+            testauthor = Author(id=9999999999, first_name='Rick', last_name='Riordan')
+            linkauthor = testauthor.get_link()
+            self.assertEqual("/author/9999999999", linkauthor)
+
 
     # ----
     # Book
@@ -91,21 +139,72 @@ class TestModels (TestCase):
 
     def test_book_to_dict_1(self):
         with app.app_context():
-            testbook = Book(id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
+            testbook = Book(
+                id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
             dictbook = testbook.to_dict()
             self.assertEqual(testbook.title, dictbook['title'])
 
     def test_book_to_dict_2(self):
         with app.app_context():
-            testbook = Book(id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
+            testbook = Book(
+                id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
             dictbook = testbook.to_dict()
             self.assertEqual(testbook.isbn, dictbook['isbn'])
 
     def test_book_to_dict_3(self):
         with app.app_context():
-            testbook = Book(id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
+            testbook = Book(
+                id=1, title='ALL THE LIGHT WE CANNOT SEE', isbn='1', summary='hi')
             dictbook = testbook.to_dict()
             self.assertEqual(testbook.summary, dictbook['summary'])
+
+    # -----------------
+    # Book.get_html()
+    # -----------------
+    def test_book_get_html_1(self):
+        with app.app_context():
+            testbook = Book(title="moonshinning for dummies")
+            htmlbook = testbook.get_html('dummies')
+            self.assertEqual(
+                "<td>moonshinning for dummies</td><td>moonshinning for <b><i>dummies</i></b> </td>",
+                htmlbook)
+
+    def test_book_get_html_2(self):
+        with app.app_context():
+            testbook = Book(title="Going Bananas")
+            htmlbook = testbook.get_html('Bananas')
+            self.assertEqual(
+                "<td>Going Bananas</td><td>going <b><i>bananas</i></b> </td>",
+                htmlbook)
+
+    def test_book_get_html_3(self):
+        with app.app_context():
+            testbook = Book(title="Moonshine with Bananas")
+            htmlbook = testbook.get_html('Bananas')
+            self.assertEqual(
+                "<td>Moonshine with Bananas</td><td>moonshine with <b><i>bananas</i></b> </td>",
+                htmlbook)
+
+    # -----------------
+    # Book.get_link()
+    # -----------------
+    def test_book_get_link_1(self):
+        with app.app_context():
+            testbook = Book(id=5, title="The art of distilling good whiskey")
+            linkbook = testbook.get_link()
+            self.assertEqual("/book/5", linkbook)
+
+    def test_book_get_link_2(self):
+        with app.app_context():
+            testbook = Book(id=999999999999, title="Jim and Jack and Hank")
+            linkbook = testbook.get_link()
+            self.assertEqual("/book/999999999999", linkbook)
+
+    def test_book_get_link_3(self):
+        with app.app_context():
+            testbook = Book(id=1010101010, title="Daddy's Gone a Hunting")
+            linkbook = testbook.get_link()
+            self.assertEqual("/book/1010101010", linkbook)
 
 # ----
 # Main
