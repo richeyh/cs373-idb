@@ -56,8 +56,8 @@ status:
 models.html: models.py
 	pydoc3 -w models
 
-IDB2.log:
-	git log > IDB2.log
+IDB3.log:
+	git log > IDB3.log
 
 db-init:
 	docker-compose run --rm --no-deps app make init
