@@ -12,6 +12,14 @@
     <p><tt>The&nbsp;module&nbsp;for&nbsp;all&nbsp;SQLAlchemy&nbsp;database&nbsp;models</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ee77aa">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
@@ -63,6 +71,10 @@ Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
 attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
 for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</tt></dd></dl>
 
+<dl><dt><a name="Author-get_html"><strong>get_html</strong></a>(self, search_term)</dt><dd><tt>Method&nbsp;to&nbsp;get&nbsp;html&nbsp;of&nbsp;authors&nbsp;relevant&nbsp;to&nbsp;the&nbsp;search&nbsp;term(s).</tt></dd></dl>
+
+<dl><dt><a name="Author-get_link"><strong>get_link</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;get&nbsp;link&nbsp;of&nbsp;the&nbsp;author&nbsp;page.</tt></dd></dl>
+
 <dl><dt><a name="Author-to_dict"><strong>to_dict</strong></a>(self, query_instance=None)</dt><dd><tt>Method&nbsp;to&nbsp;convert&nbsp;sqlalchmey&nbsp;object&nbsp;to&nbsp;python&nbsp;dict<br>
 Stolen&nbsp;from&nbsp;https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html</tt></dd></dl>
 
@@ -86,7 +98,9 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103e7db00; Author&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103e94198; Author&gt;</dl>
+
+<dl><dt><strong>__searchable__</strong> = ['first_name', 'last_name', 'bio', 'link']</dl>
 
 <dl><dt><strong>__table__</strong> = Table('author', MetaData(bind=None), Column('id'...String(length=256), table=&lt;author&gt;), schema=None)</dl>
 
@@ -158,6 +172,10 @@ Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
 attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
 for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</tt></dd></dl>
 
+<dl><dt><a name="Book-get_html"><strong>get_html</strong></a>(self, search_term)</dt><dd><tt>Method&nbsp;to&nbsp;get&nbsp;html&nbsp;of&nbsp;the&nbsp;books&nbsp;relevant&nbsp;to&nbsp;the&nbsp;search&nbsp;term(s).</tt></dd></dl>
+
+<dl><dt><a name="Book-get_link"><strong>get_link</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;get&nbsp;link&nbsp;of&nbsp;the&nbsp;book&nbsp;page.</tt></dd></dl>
+
 <dl><dt><a name="Book-to_dict"><strong>to_dict</strong></a>(self, query_instance=None)</dt><dd><tt>Method&nbsp;to&nbsp;convert&nbsp;sqlalchmey&nbsp;object&nbsp;to&nbsp;python&nbsp;dict<br>
 Stolen&nbsp;from&nbsp;https://www.prahladyeri.com/blog/2015/07/sqlalchemy-hack-convert-dict.html</tt></dd></dl>
 
@@ -189,7 +207,9 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103ea5320; Book&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103e94978; Book&gt;</dl>
+
+<dl><dt><strong>__searchable__</strong> = ['isbn', 'title', 'summary', 'best_seller_list', 'book_image', 'amazon_link', 'publisher', 'description']</dl>
 
 <dl><dt><strong>__table__</strong> = Table('book', MetaData(bind=None), Column('id', ...description', Text(), table=&lt;book&gt;), schema=None)</dl>
 
@@ -277,7 +297,7 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103ea5908; TeamMember&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x103e94f60; TeamMember&gt;</dl>
 
 <dl><dt><strong>__table__</strong> = Table('team_member', MetaData(bind=None), Column...s', Integer(), table=&lt;team_member&gt;), schema=None)</dl>
 
@@ -316,5 +336,6 @@ standard&nbsp;query&nbsp;as&nbsp;well.</tt></dl>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
     
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><strong>DB</strong> = &lt;SQLAlchemy engine=None&gt;</td></tr></table>
+<td width="100%"><strong>DB</strong> = &lt;SQLAlchemy engine=None&gt;<br>
+<strong>TAG_RE</strong> = re.compile('&lt;[^&gt;]+&gt;')</td></tr></table>
 </body></html>
