@@ -168,7 +168,7 @@ class TestModels (TestCase):
             self.assertEqual(
                 "<td>moonshinning for dummies</td><td>moonshinning for <b><i>dummies</i></b> </td>",
                 htmlbook)
-             
+
     def test_book_get_html_2(self):
         with app.app_context():
             testbook = Book(title="Going Bananas")
@@ -176,7 +176,7 @@ class TestModels (TestCase):
             self.assertEqual(
                 "<td>Going Bananas</td><td>Going <b><i>Bananas</i></b> </td>",
                 htmlbook)
-    
+
     def test_book_get_html_3(self):
         with app.app_context():
             testbook = Book(title="Moonshine with Bananas")
@@ -199,12 +199,12 @@ class TestModels (TestCase):
             testbook = Book(id=999999999999, title="Jim and Jack and Hank")
             linkbook = testbook.get_link()
             self.assertEqual("/book/999999999999", linkbook)
-            
+
     def test_book_get_link_3(self):
         with app.app_context():
-            testbook = Book(id=01010101010, title="Daddy's Gone a Hunting")
+            testbook = Book(id=1010101010, title="Daddy's Gone a Hunting")
             linkbook = testbook.get_link()
-            self.assertEqual("/book/01010101010", linkbook)
+            self.assertEqual("/book/1010101010", linkbook)
 
 # ----
 # Main

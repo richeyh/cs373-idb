@@ -7,10 +7,10 @@ import requests
 
 # temporary list for the no DB stage of this project
 members = {
-    "Richard": {"issues": 17, "commits": 134, "tests": 0, "resp": "Back-end, Flask"},
-    "Rachel": {"issues": 5, "commits": 32, "tests": 0, "resp": "Docker/Carina, Database, UML"},
-    "Ruzseth": {"issues": 9, "commits": 50, "tests": 0, "resp": "Documentation, Front-end, Scraping"},
-    "Timothy": {"issues": 7, "commits": 65, "tests": 0, "resp": "Front-end, Angular, API requests"},
+    "Richard": {"issues": 18, "commits": 134, "tests": 3, "resp": "Back-end, Flask, Database"},
+    "Rachel": {"issues": 8, "commits": 32, "tests": 3, "resp": "Phase 3 leader, Docker/Carina, Database, UML"},
+    "Ruzseth": {"issues": 9, "commits": 50, "tests": 3, "resp": "Phase 1 leader, Documentation, Front-end, Data Scraping"},
+    "Timothy": {"issues": 7, "commits": 65, "tests": 3, "resp": "Phase 2 leader, Front-end, Angular, API requests"},
     "Kyung": {"issues": 2, "commits": 18, "tests": 12, "resp": "Testing, RESTful API, Apiary"}
 }
 total = {"issues": 0, "commits": 0, "tests": 0}
