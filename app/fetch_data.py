@@ -13,17 +13,14 @@ times_keys = {"books": "f431b40e10777623a234404cda616c35:12:74671670",
               "popular": "b90ce9925426c6515a4d912e1f3d5851:10:74671670"}
 best_seller_url = "http://api.nytimes.com/svc/books/v3/"
 
-lists = ["combined-print-and-e-book-fiction",
-         "combined-print-and-e-book-nonfiction",
-         "hardcover-fiction",
+lists = ["hardcover-fiction",
          "hardcover-nonfiction",
+         "paperback-nonfiction",
          "trade-fiction-paperback",
          "mass-market-paperback",
-         "paperback-nonfiction",
-         "e-book-fiction",
-         "e-book-nonfiction",
+         "combined-print-fiction",
+         "combined-print-nonfiction",
          "hardcover-advice",
-         "paperback-advice",
          "advice-how-to-and-miscellaneous",
          "picture-books",
          "chapter-books",
@@ -31,17 +28,10 @@ lists = ["combined-print-and-e-book-fiction",
          "young-adult",
          "paperback-books",
          "childrens-middle-grade-hardcover",
-         "childrens-middle-grade-paperback",
-         "childrens-middle-grade-e-book",
          "young-adult-hardcover",
-         "young-adult-paperback",
-         "young-adult-e-book",
          "series-books",
          "hardcover-graphic-books",
          "paperback-graphic-books",
-         "manga",
-         "combined-print-fiction",
-         "combined-print-nonfiction",
          "animals",
          "business-books",
          "celebrities",
@@ -54,11 +44,9 @@ lists = ["combined-print-and-e-book-fiction",
          "fashion-manners-and-customs",
          "food-and-fitness",
          "games-and-activities",
-         "hardcover-business-books",
          "health",
          "humor",
          "indigenous-americans",
-         "paperback-business-books",
          "hardcover-political-books",
          "race-and-civil-rights",
          "relationships",
@@ -66,6 +54,7 @@ lists = ["combined-print-and-e-book-fiction",
          "science",
          "sports",
          "travel"]
+
 
 def run_scraper():
     """Function to run the scraper for every book"""
@@ -76,10 +65,11 @@ def run_scraper():
         for book in Book.query.all():
             hits += bookScrape(book)
             total += 1
-            if total%10 == 0: 
-                print(str(total)+" scrapes completed")
-    print("succesfully loaded in "+str(total)+" books")
-    print("succesfully loaded in "+str(hits)+" authors")
+            if total % 10 == 0:
+                print(str(total) + " scrapes completed")
+    print("succesfully loaded in " + str(total) + " books")
+    print("succesfully loaded in " + str(hits) + " authors")
+
 
 def get_book_counts():
     """function to update book counts for all authors """
@@ -119,7 +109,7 @@ def run_api():
             rRaw = r.read().decode(rInfo.get_content_charset('utf8'))
             result = json.loads(rRaw)
         except Exception as e:
-            print(category+" has given us an error")
+            print(category + " has given us an error")
             break
 
         # Make a dictionary of the list categories
@@ -130,10 +120,10 @@ def run_api():
         try:
             books = result["results"]["books"]
         except Exception as e:
-            print("*"*80)
+            print("*" * 80)
             print(result)
             print(category)
-            print("*"*80)
+            print("*" * 80)
             books = []
         for book in books:
 
@@ -173,11 +163,14 @@ def run_api():
                 lastName = "None"
             firstName = single_author.split(' ')[0]
             with app.app_context():
-                author = Author.query.filter_by(first_name=firstName).filter_by(last_name=lastName).all()
+                author = Author.query.filter_by(
+                    first_name=firstName).filter_by(last_name=lastName).all()
             if len(author) > 0:
                 book_author = author[0]
             else:
-                book_author = Author(first_name=firstName, last_name=lastName)
+                book_author = Author(
+                    first_name=firstName, last_name=lastName,
+                    book_count=0, bio="not found", link=None)
                 with app.app_context():
                     DB.session.add(book_author)
                     DB.session.commit()
@@ -185,7 +178,8 @@ def run_api():
                 q_book = Book.query.filter_by(isbn=book_isbn).all()
             if len(q_book) > 0:
                 b = q_book[0]
-                b.best_seller_list = b.best_seller_list+", "+book_best_seller_list
+                b.best_seller_list = b.best_seller_list + \
+                    ", " + book_best_seller_list
             else:
                 b = Book(isbn=book_isbn,
                          title=book_title,
@@ -215,6 +209,3 @@ if __name__ == "__main__":
     get_book_counts()
     get_best_seller_dates()
     run_scraper()
-
-
-

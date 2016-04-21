@@ -27,19 +27,19 @@
 		</div>
 	</form>
 	<table class="col-lg-8 table table-hover" align="center">
-		<thead>
+		<thead class="thead-inverse">
 			<tr>
-				<th>
-					<a href='#' ng-click="sortType = 'last_name'; sortReverse = !sortReverse">
-					Last Name
-					<span ng-show="sortType == 'last_name' && !sortReverse" class="fa fa-caret-down"></span>
-					<span ng-show="sortType == 'last_name' && sortReverse" class="fa fa-caret-up"></span>
-				</th>
 				<th>
 					<a href='#' ng-click="sortType = 'first_name'; sortReverse = !sortReverse">
 						First Name
 					<span ng-show="sortType == 'first_name' && !sortReverse" class="fa fa-caret-down"></span>
 					<span ng-show="sortType == 'first_name' && sortReverse" class="fa fa-caret-up"></span>
+				</th>
+				<th>
+					<a href='#' ng-click="sortType = 'last_name'; sortReverse = !sortReverse">
+					Last Name
+					<span ng-show="sortType == 'last_name' && !sortReverse" class="fa fa-caret-down"></span>
+					<span ng-show="sortType == 'last_name' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
 				<th>
 					<a href='#' ng-click="sortType = 'book_count'; sortReverse = !sortReverse">
@@ -59,20 +59,16 @@
 					<span ng-show="sortType == 'best_seller_date' && !sortReverse" class="fa fa-caret-down"></span>
 					<span ng-show="sortType == 'best_seller_date' && sortReverse" class="fa fa-caret-up"></span>
 				</th>
-				<th>
-					Link
-				</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchAuthor | itemsPerPage:10">
-				{% raw %}
-				<td>{{x.last_name}}</td>
+			{% raw %}
+			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchAuthor | itemsPerPage:10" class="clickable-row" data-href="{{x.link}}">
 				<td>{{x.first_name}}</td>
+				<td>{{x.last_name}}</td>
 				<td>{{x.book_count}}</td>
 				<td>{{x.recent_book}}</td>
 				<td>{{x.best_seller_date}}</td>
-				<td><a href="{{x.link}}">Link</a></td>
 				{% endraw %}
 			</tr>
 		</tbody>
@@ -82,7 +78,7 @@
 {% endblock %}
 
 {% block javascript %}
-var a = angular.element( document.querySelector( '.authors' ) );
+var a = angular.element( document.querySelector( '#authors' ) );
 	a.addClass('active');
 
 var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);

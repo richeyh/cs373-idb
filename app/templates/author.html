@@ -25,7 +25,7 @@
             <div class="row-fluid">
                 <div align="center" class="col-lg-4 col-md-6 col-lg-offset-2">
                     {% raw %}
-                    <img src="{{array.link}}" alt="Author picture" width="266" height="400"></img>
+                    <img src="{{array.link}}" alt="Author picture"></img>
                     {% endraw %}
                 </div>
                 <div align="center" class="col-lg-3 col-md-6">
@@ -33,16 +33,18 @@
                      <h4>NO. OF BOOKS ON BEST SELLERS LIST</h4>
                      <p>{{array.book_count}}</p>
                    {% endraw %}
-                    <h4>LATEST BEST SELLER</h4>
-                   
-                     <p><a href = "{{url_for('.Book',book_id= author['book_id'])}}">{% raw %}{{array.recent_book}}{% endraw %}</a></p>
-                   
+                    <h4>BOOKS ON BEST SELLERS LIST</h4>
+                    {% for book in books %}
+                     <p><a href = "{{url_for('.Book',book_id=book.id)}}">{{book.title}}</a></p>
+                    {% endfor %}
+
+
                    {% raw %}
                      <h4>LATEST WEEK ON THE LIST</h4>
                      <p>{{array.best_seller_date}}</p>
 
                      <h4>Biography</h4>
-                     <p>{{array.bio}}</p>
+                     <p>{% endraw %}{{author['bio']|safe}}{% raw %}</p>
                 </div>
                     {% endraw %}
             </div>
@@ -55,7 +57,7 @@
 
 
 {% block javascript %}
-var a = angular.element( document.querySelector( '.authors' ) );
+var a = angular.element( document.querySelector( '#authors' ) );
     a.addClass('active');
 
 var happ = angular.module('myHeader', []);

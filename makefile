@@ -59,6 +59,16 @@ models.html: models.py
 IDB2.log:
 	git log > IDB2.log
 
+db-init:
+	docker-compose run --rm --no-deps app make init
+
+db-update:
+	docker-compose run --rm --no-deps app make upgrade
+	docker-compose run --rm --no-deps app make migrate
+
+fetch:
+	docker-compose run --rm --no-deps app make fetch
+
 docker-build:
 	@if [ -z "$$CONTINUE" ]; then \
 		read -r -p "Have you sourced the docker.env file for our Carina cluster? (y/n): " CONTINUE; \
@@ -79,12 +89,22 @@ docker-build:
 docker-push:
 	docker-compose --file docker-compose-prod.yml up -d
 
+docker-db:
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make init
+
+docker-db-update:
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make upgrade
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make migrate
+
+docker-db-fetch:
+	docker-compose --file docker-compose-prod.yml run --rm --no-deps app make fetch
+
 docker-proxy:
 	docker run -it --rm \
 	--name temp-proxy \
 	--net cs373idb_backend \
 	--publish 3306:3306 \
 	--env PROTOCOL=TCP \
-	--env UPSTREAM=ibdb_db \
+	--env UPSTREAM=cs373idb_db \
 	--env UPSTREAM_PORT=3306 \
 	carinamarina/nginx-proxy

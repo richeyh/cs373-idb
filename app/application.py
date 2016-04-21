@@ -4,6 +4,7 @@ from flask import Flask
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_admin.contrib.fileadmin import FileAdmin
+import flask.ext.whooshalchemy as whooshalchemy
 
 
 from extensions import DB
@@ -18,6 +19,9 @@ def generate_application(config=None):
     DB.init_app(app)
     # blueprint registration
     app.register_blueprint(blueprint)
+    # whoosh registration
+    whooshalchemy.whoosh_index(app, Book)
+    whooshalchemy.whoosh_index(app, Author)
     # admin registration below
     admin = Admin(app, name="IDB", template_mode='bootstrap3')
     path1 = op.join(op.dirname(__file__), 'static')

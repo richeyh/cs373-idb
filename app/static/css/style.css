@@ -5946,6 +5946,38 @@ pre {
   border-style: solid;
   border-width: 5px; }
 
+@media (max-width: 768px) {
+  .mobile-image-nyc {
+      body {
+        background-image: url("/static/images/nyc-1000.jpg");
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-image-nyc {
+      body {
+        background-image: url("/static/images/library-1000.jpg");
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-image-nyc {
+      body {
+        background-image: url("/static/images/author-1000.jpg");
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-image-nyc {
+      body {
+        background-image: url("/static/images/puppy-1000.jpg");
+      }
+  }
+}
+
 /* Image Alignment */
 img.fh5co-align-right {
   float: right;

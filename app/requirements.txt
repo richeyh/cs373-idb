@@ -17,4 +17,8 @@ python-editor==1.0
 gunicorn~=19.3
 beautifulsoup4==4.4.1
 MechanicalSoup==0.4.0
+six==1.10.0
+blinker==1.4
+Whoosh==2.7.4
 requests==2.9.1
+git+https://github.com/miguelgrinberg/flask-whooshalchemy.git
