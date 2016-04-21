@@ -177,10 +177,13 @@ class Search(MethodView):
 class CocktailIngredients(MethodView):
 
     def get(self):
-        url = 'http://mixopedia.me/api/ingredient'
-        ingredients = requests.get(url).json()
-        for i in range(len(ingredients)):
-            r = requests.get(url + '/' + str(ingredients[i]['id'])).json()[0]
-            ingredients[i]['numberOfCocktails'] = r['numberOfCocktails']
-            print(i)
-        return json.dumps(ingredients)
+        ingredients = {}
+        data = []
+        with open("mixopedia.out") as json_file:
+            ingredients = json.load(json_file)
+        for ingredient in ingredients:
+            temp = {}
+            temp['value'] = ingredient['numberOfCocktails']
+            temp['label'] = ingredient['name']
+            data.append(temp)
+        return render_template("cocktails.html", data=data)
