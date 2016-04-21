@@ -49,6 +49,9 @@ class Author(DB.Model):
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
     def get_html(self, search_term):
+        """
+            Method to get html of authors relevant to the search term(s).
+        """
         result_string = ""
         if "AND" in search_term:
             search_term = search_term.split("AND")
@@ -79,6 +82,9 @@ class Author(DB.Model):
         return "<td>" + self.first_name + " " + self.last_name + "</td>" + "<td>" + result_string + "</td>"
 
     def get_link(self):
+        """
+            Method to get link of the author page.
+        """
         return "/author/" + str(self.id)
 
 
@@ -134,6 +140,9 @@ class Book(DB.Model):
             return {cols[i]['name']: self[i] for i in range(len(cols))}
 
     def get_html(self, search_term):
+        """
+            Method to get html of the books relevant to the search term(s).
+        """
         result_string = ""
         if "AND" in search_term:
             search_term = search_term.split("AND")
@@ -164,6 +173,9 @@ class Book(DB.Model):
         return "<td>" + self.title + "</td>" + "<td>" + result_string + "</td>"
 
     def get_link(self):
+        """
+            Method to get link of the book page.
+        """
         return "/book/" + str(self.id)
 
 """

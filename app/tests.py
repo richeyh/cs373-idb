@@ -174,7 +174,7 @@ class TestModels (TestCase):
             testbook = Book(title="Going Bananas")
             htmlbook = testbook.get_html('Bananas')
             self.assertEqual(
-                "<td>Going Bananas</td><td>Going <b><i>Bananas</i></b> </td>",
+                "<td>Going Bananas</td><td>going <b><i>bananas</i></b> </td>",
                 htmlbook)
 
     def test_book_get_html_3(self):
@@ -182,7 +182,7 @@ class TestModels (TestCase):
             testbook = Book(title="Moonshine with Bananas")
             htmlbook = testbook.get_html('Bananas')
             self.assertEqual(
-                "<td>Moonshine with Bananas</td><td>Moonshine with  <b><i>Bananas</i></b> </td>",
+                "<td>Moonshine with Bananas</td><td>moonshine with <b><i>bananas</i></b> </td>",
                 htmlbook)
 
     # -----------------
