@@ -184,6 +184,11 @@
         				window.document.location = $(this).data("href");
     				});
     			});
+    			$(".thead-inverse").click(function()  {
+    				$(".clickable-row").click(function() {
+        				window.document.location = $(this).data("href");
+    				});
+    			});
 		});
 			{% block javascript %}
 			{% endblock %}
