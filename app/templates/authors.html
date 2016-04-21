@@ -65,8 +65,8 @@
 			</tr>
 		</thead>
 		<tbody>
+			{% raw %}
 			<tr dir-paginate="x in array | orderBy:sortType:sortReverse | filter:searchAuthor | itemsPerPage:10" class="clickable-row" data-href="{{x.link}}">
-				{% raw %}
 				<td>{{x.first_name}}</td>
 				<td>{{x.last_name}}</td>
 				<td>{{x.book_count}}</td>

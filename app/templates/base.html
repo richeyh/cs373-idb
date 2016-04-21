@@ -168,6 +168,7 @@
 
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
+				alert("test");
     			$( "#search" ).submit(function( event ) {
     				event.preventDefault();
     				var search_string = $('#search-field').val();
@@ -177,6 +178,7 @@
     				}}); 
     			});
     			$(".clickable-row").click(function() {
+    				alert("test");
         			window.document.location = $(this).data("href");
     			});
 		});
