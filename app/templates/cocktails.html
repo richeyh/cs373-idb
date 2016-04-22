@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
 <canvas id="myChart" width="400" height="400"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
 {% endblock %}
 
 {% block javascript %}
 var ctx = document.getElementById("myChart").getContext("2d");
-var ingredients = {{ data|tojson }}
+var ingredients = {{ data|tojson }};
 var myNewChart = new Chart(ctx).Pie(ingredients);
-
 {% endblock %}
