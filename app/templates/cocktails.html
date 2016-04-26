@@ -1,5 +1,5 @@
 {% block content %}
-<canvas id="myChart" width="400" height="400"></canvas>
+<canvas id="myChart"></canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.js"></script>
 <script>
 var ingredients = {labels: [{% for x in labels %}"{{ x|safe }}", {% endfor %}],
