@@ -4,6 +4,7 @@ from models import Book, Author
 import json
 import subprocess
 import requests
+import random
 
 # temporary list for the no DB stage of this project
 members = {
@@ -177,13 +178,22 @@ class Search(MethodView):
 class CocktailIngredients(MethodView):
 
     def get(self):
-        ingredients = {}
-        data = []
+        labels = []
+        values = []
+        colors = []
+        other = 0
         with open("mixopedia.out") as json_file:
             ingredients = json.load(json_file)
         for ingredient in ingredients:
-            temp = {}
-            temp['value'] = ingredient['numberOfCocktails']
-            temp['label'] = ingredient['name']
-            data.append(temp)
-        return render_template("cocktails.html", data=data)
+            if(ingredient['numberOfCocktails'] > 10):
+                labels.append(ingredient['name'])
+                values.append(ingredient['numberOfCocktails'])
+                color = "#%06x" % random.randint(0, 0xFFFFFF)
+                colors.append(color)
+            else:
+                other = other + ingredient['numberOfCocktails']
+        labels.append("Other")
+        values.append(other)
+        color = "#%06x" % random.randint(0, 0xFFFFFF)
+        colors.append(color)
+        return render_template("cocktails.html", labels=labels, values=values, colors=colors)
