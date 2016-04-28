@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="controller" ng-app="myHeader" ng-controller="headerCtrl">
+	<aside class="fh5co-page-heading">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="fh5co-page-heading-lead">Cocktail Ingredients</h1>
+          <h3>From <a href="http://mixopedia.me/">Mixopedia</a></h3>
+				</div>
+			</div>
+		</div>
+	</aside>
+</div>
+<!-- <div class="fh5co-spacer fh5co-spacer-lg"></div> -->
+<canvas id="myChart"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.js"></script>
+{% endblock %}
+
+{% block javascript %}
+var ingredients = {labels: [{% for x in labels %}"{{ x|safe }}", {% endfor %}],
+datasets: [{data: [{% for y in values %}{{ y|safe }}, {% endfor %}],
+backgroundColor: [{% for z in colors %}"{{ z|safe }}", {% endfor %}]}]};
+window.onload = function() {
+    var ctx = document.getElementById("myChart").getContext("2d");
+    window.myPie = new Chart(ctx, {type: 'pie', data: ingredients, options: {responsive: true}});
+};
+{% endblock %}

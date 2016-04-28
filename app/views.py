@@ -4,14 +4,15 @@ from models import Book, Author
 import json
 import subprocess
 import requests
+import random
 
 # temporary list for the no DB stage of this project
 members = {
-    "Richard": {"issues": 18, "commits": 163, "tests": 3, "resp": "Back-end, Flask, Database"},
-    "Rachel": {"issues": 11, "commits": 45, "tests": 3, "resp": "Phase 3 leader, Docker/Carina, Database, UML"},
+    "Richard": {"issues": 18, "commits": 163, "tests": 3, "resp": "Back-end, Flask, Database setup"},
+    "Rachel": {"issues": 11, "commits": 46, "tests": 3, "resp": "Phase 3 leader, Docker/Carina, Database mgmt, UML"},
     "Ruzseth": {"issues": 10, "commits": 57, "tests": 3, "resp": "Phase 1 leader, Documentation, Front-end, Data Scraping"},
-    "Timothy": {"issues": 10, "commits": 91, "tests": 3, "resp": "Phase 2 leader, Front-end, Angular, API requests"},
-    "Kyung": {"issues": 5, "commits": 18, "tests": 12, "resp": "Testing, RESTful API, Apiary"}
+    "Timothy": {"issues": 10, "commits": 91, "tests": 3, "resp": "Phase 2 leader, Front-end, Angular, NYTimes API"},
+    "Kyung": {"issues": 6, "commits": 27, "tests": 12, "resp": "Testing, RESTful API/Apiary, Mixopedia API"}
 }
 total = {"issues": 0, "commits": 0, "tests": 0}
 # dynamic snippet to total issues and commits
@@ -177,10 +178,22 @@ class Search(MethodView):
 class CocktailIngredients(MethodView):
 
     def get(self):
-        url = 'http://mixopedia.me/api/ingredient'
-        ingredients = requests.get(url).json()
-        for i in range(len(ingredients)):
-            r = requests.get(url + '/' + str(ingredients[i]['id'])).json()[0]
-            ingredients[i]['numberOfCocktails'] = r['numberOfCocktails']
-            print(i)
-        return json.dumps(ingredients)
+        labels = []
+        values = []
+        colors = []
+        other = 0
+        with open("mixopedia.out") as json_file:
+            ingredients = json.load(json_file)
+        for ingredient in ingredients:
+            if(ingredient['numberOfCocktails'] > 10):
+                labels.append(ingredient['name'])
+                values.append(ingredient['numberOfCocktails'])
+                color = "#%06x" % random.randint(0, 0xFFFFFF)
+                colors.append(color)
+            else:
+                other = other + ingredient['numberOfCocktails']
+        labels.append("Other")
+        values.append(other)
+        color = "#%06x" % random.randint(0, 0xFFFFFF)
+        colors.append(color)
+        return render_template("cocktails.html", labels=labels, values=values, colors=colors)
